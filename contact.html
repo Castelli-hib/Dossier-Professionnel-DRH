@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez la Direction des Ressources Humaines">
+    <title>Contact - Direction des Ressources Humaines</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Direction des Ressources Humaines</h1>
+                    <p class="subtitle">Service Public</p>
+                </div>
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <nav class="navigation" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Nos Services</a></li>
+                    <li><a href="equipe.html">Notre Équipe</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p class="lead">Notre équipe est à votre disposition pour répondre à vos questions</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Coordonnées</h3>
+                        
+                        <div class="contact-item">
+                            <h4>📍 Adresse</h4>
+                            <p>Direction des Ressources Humaines<br>
+                            123 Avenue de la République<br>
+                            75000 Paris</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>📞 Téléphone</h4>
+                            <p>Standard : 01 23 45 67 89<br>
+                            Du lundi au vendredi<br>
+                            De 9h00 à 17h00</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>✉️ Email</h4>
+                            <p><a href="mailto:contact@drh.gouv.fr">contact@drh.gouv.fr</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>🕐 Horaires d'ouverture</h4>
+                            <p>Lundi - Vendredi : 9h00 - 17h00<br>
+                            Fermé les weekends et jours fériés</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h3>Formulaire de contact</h3>
+                        <form class="contact-form" id="contactForm" aria-label="Formulaire de contact">
+                            <div class="form-group">
+                                <label for="nom">Nom <span class="required" aria-label="requis">*</span></label>
+                                <input type="text" id="nom" name="nom" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prenom">Prénom <span class="required" aria-label="requis">*</span></label>
+                                <input type="text" id="prenom" name="prenom" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required" aria-label="requis">*</span></label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service concerné</label>
+                                <select id="service" name="service">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="carrieres">Carrières et Mobilité</option>
+                                    <option value="formation">Formation</option>
+                                    <option value="recrutement">Recrutement</option>
+                                    <option value="gestion">Gestion Administrative</option>
+                                    <option value="sante">Santé et Sécurité au Travail</option>
+                                    <option value="social">Action Sociale</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="objet">Objet de votre demande <span class="required" aria-label="requis">*</span></label>
+                                <input type="text" id="objet" name="objet" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required" aria-label="requis">*</span></label>
+                                <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="rgpd" name="rgpd" required aria-required="true">
+                                    <span>J'accepte que mes données personnelles soient utilisées pour traiter ma demande <span class="required" aria-label="requis">*</span></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        </form>
+
+                        <div id="form-success" class="form-message success" style="display: none;" role="alert">
+                            Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.
+                        </div>
+
+                        <div id="form-error" class="form-message error" style="display: none;" role="alert">
+                            Une erreur est survenue. Veuillez réessayer ultérieurement.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Questions Fréquentes</h3>
+                    <details class="faq-item">
+                        <summary>Comment puis-je consulter mon dossier administratif ?</summary>
+                        <p>Vous pouvez contacter le service de gestion administrative par téléphone ou email pour prendre rendez-vous et consulter votre dossier.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Quels sont les délais de traitement d'une demande ?</summary>
+                        <p>Les délais varient selon la nature de votre demande. Comptez en moyenne 5 à 10 jours ouvrés pour une réponse.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Comment m'inscrire à une formation ?</summary>
+                        <p>Consultez le catalogue de formations disponible et adressez votre demande au service formation via le formulaire ou par email.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Où trouver les offres d'emploi ?</summary>
+                        <p>Les offres d'emploi et les avis de concours sont publiés sur notre site et sur les plateformes officielles de recrutement de la fonction publique.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Direction des Ressources Humaines</h3>
+                    <p>Service public au service des agents</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="services.html">Nos services</a></li>
+                        <li><a href="equipe.html">Notre équipe</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Informations légales</h3>
+                    <ul>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="#accessibilite">Accessibilité</a></li>
+                        <li><a href="#donnees-personnelles">Données personnelles</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Direction des Ressources Humaines - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
