@@ -923,7 +923,13 @@ section {
 }
 
 /* Focus visible for keyboard navigation */
-*:focus-visible {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
     outline: 3px solid var(--color-primary);
     outline-offset: 2px;
 }

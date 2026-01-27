@@ -114,6 +114,7 @@
             
             // Simulate form submission
             // In a real application, this would send data to a server
+            // TODO: Replace with actual API call before production (e.g., fetch('/api/contact', {...}))
             simulateFormSubmission();
         });
     }
@@ -267,11 +268,14 @@
     // PERFORMANCE MONITORING (Optional)
     // ===================================
     
-    // Log page load time for performance monitoring
+    // Log page load time for performance monitoring using modern API
     window.addEventListener('load', function() {
-        if (window.performance && window.performance.timing) {
-            const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-            console.log('Page load time: ' + loadTime + 'ms');
+        if (window.performance && window.performance.getEntriesByType) {
+            const navigationEntries = window.performance.getEntriesByType('navigation');
+            if (navigationEntries.length > 0) {
+                const loadTime = navigationEntries[0].loadEventEnd - navigationEntries[0].fetchStart;
+                console.log('Page load time: ' + Math.round(loadTime) + 'ms');
+            }
         }
     });
 
