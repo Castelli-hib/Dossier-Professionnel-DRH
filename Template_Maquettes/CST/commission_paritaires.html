@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CAP - Joint Administrative Commissions Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Material Symbols Outlined -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1763cf",
+              "nav-bg": "#10142d",
+              "link-text": "#275b80",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111821",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gastramond-style {
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: capitalize;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#0e131b] dark:text-slate-100 transition-colors duration-200"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 bg-nav-bg text-white border-b border-white/10 px-4 md:px-10 lg:px-40 py-3"
+    >
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4">
+            <div
+              class="size-8 bg-primary rounded flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-white"
+                >account_balance</span
+              >
+            </div>
+            <h1 class="text-xl font-bold tracking-tight">CAP Portal</h1>
+          </div>
+          <nav class="hidden lg:flex items-center gap-9">
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >HR Services</a
+            >
+            <a
+              class="text-white text-sm font-bold border-b-2 border-primary pb-1"
+              href="#"
+              >CAP</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Calendar</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Resources</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative hidden sm:block">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/50 text-[20px]"
+              >search</span
+            >
+            <input
+              class="bg-white/10 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-64 placeholder:text-white/40"
+              placeholder="Search resources..."
+              type="text"
+            />
+          </div>
+          <button
+            class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-4 py-6">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 mb-8 text-sm font-medium">
+        <a
+          class="text-link-text hover:underline flex items-center gap-1"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[18px]">home</span> Home
+        </a>
+        <span class="text-slate-400">/</span>
+        <a class="text-link-text hover:underline" href="#">HR Portal</a>
+        <span class="text-slate-400">/</span>
+        <span class="text-slate-900 dark:text-slate-100">CAP</span>
+      </nav>
+      <!-- Page Heading -->
+      <section class="mb-10">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="text-[#10142d] dark:text-slate-50 text-5xl gastramond-style leading-tight"
+          >
+            Commissions Administratives Paritaires (CAP)
+          </h1>
+          <p
+            class="text-slate-600 dark:text-slate-400 text-lg max-w-3xl leading-relaxed"
+          >
+            Institutional human resources portal for local government
+            commissions. The CAP provides advice on individual career issues for
+            permanent civil servants.
+          </p>
+        </div>
+      </section>
+      <!-- Category Tabs -->
+      <section class="mb-12">
+        <div class="border-b border-slate-200 dark:border-slate-800 flex gap-8">
+          <button
+            class="border-b-4 border-primary text-[#10142d] dark:text-white font-bold px-4 py-4 transition-all flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined">grade</span> Category A
+          </button>
+          <button
+            class="border-b-4 border-transparent text-slate-500 hover:text-primary px-4 py-4 transition-all font-bold flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined">military_tech</span>
+            Category B
+          </button>
+          <button
+            class="border-b-4 border-transparent text-slate-500 hover:text-primary px-4 py-4 transition-all font-bold flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined">person</span> Category C
+          </button>
+        </div>
+      </section>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Main Content Area (2/3) -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Role & Operation -->
+          <section>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >info</span
+              >
+              <h2
+                class="text-[#10142d] dark:text-slate-100 text-2xl gastramond-style"
+              >
+                Role &amp; Operation
+              </h2>
+            </div>
+            <div
+              class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm"
+            >
+              <div
+                class="space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed"
+              >
+                <p>
+                  The Joint Administrative Commissions are parity bodies
+                  (composed of equal numbers of administration and personnel
+                  representatives) that are consulted on decisions regarding the
+                  individual situation of civil servants.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    class="p-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 border-l-4 border-primary"
+                  >
+                    <h3
+                      class="font-bold text-[#10142d] dark:text-slate-100 mb-2"
+                    >
+                      Career Management
+                    </h3>
+                    <ul class="text-sm space-y-2 list-disc ml-4">
+                      <li>Refusal of professional training</li>
+                      <li>Availability and part-time requests</li>
+                      <li>Evaluation and notation review</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="p-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 border-l-4 border-red-500"
+                  >
+                    <h3
+                      class="font-bold text-[#10142d] dark:text-slate-100 mb-2"
+                    >
+                      Discipline &amp; Discharge
+                    </h3>
+                    <ul class="text-sm space-y-2 list-disc ml-4">
+                      <li>Disciplinary procedures</li>
+                      <li>Dismissal for professional insufficiency</li>
+                      <li>Non-renewal of contract</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Member List -->
+          <section>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >group</span
+                >
+                <h2
+                  class="text-[#10142d] dark:text-slate-100 text-2xl gastramond-style"
+                >
+                  Member List
+                </h2>
+              </div>
+              <div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+                <button
+                  class="px-3 py-1 bg-white dark:bg-slate-700 shadow-sm rounded text-xs font-bold"
+                >
+                  All
+                </button>
+                <button class="px-3 py-1 text-xs font-bold text-slate-500">
+                  Elected
+                </button>
+                <button class="px-3 py-1 text-xs font-bold text-slate-500">
+                  Admin
+                </button>
+              </div>
+            </div>
+            <div
+              class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800"
+            >
+              <table class="w-full text-left bg-white dark:bg-background-dark">
+                <thead class="bg-slate-50 dark:bg-slate-900">
+                  <tr>
+                    <th
+                      class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500"
+                    >
+                      Name
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500"
+                    >
+                      Representing
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500"
+                    >
+                      Role
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500"
+                    >
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                    <td
+                      class="px-6 py-4 font-bold text-slate-900 dark:text-white"
+                    >
+                      Jean-Pierre Bernard
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-[10px] font-bold rounded uppercase"
+                        >Administration</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-sm">President</td>
+                    <td class="px-6 py-4">
+                      <a
+                        class="text-link-text flex items-center gap-1 font-bold text-sm hover:underline"
+                        href="mailto:jp.bernard@city.gov"
+                        ><span class="material-symbols-outlined text-sm"
+                          >mail</span
+                        >
+                        Contact</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                    <td
+                      class="px-6 py-4 font-bold text-slate-900 dark:text-white"
+                    >
+                      Sarah Lefebvre
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-[10px] font-bold rounded uppercase"
+                        >Personnel (FO)</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-sm">Main Representative</td>
+                    <td class="px-6 py-4">
+                      <a
+                        class="text-link-text flex items-center gap-1 font-bold text-sm hover:underline"
+                        href="#"
+                        ><span class="material-symbols-outlined text-sm"
+                          >mail</span
+                        >
+                        Contact</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                    <td
+                      class="px-6 py-4 font-bold text-slate-900 dark:text-white"
+                    >
+                      Marc Durand
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-[10px] font-bold rounded uppercase"
+                        >Personnel (CGT)</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-sm">Substitute</td>
+                    <td class="px-6 py-4">
+                      <a
+                        class="text-link-text flex items-center gap-1 font-bold text-sm hover:underline"
+                        href="#"
+                        ><span class="material-symbols-outlined text-sm"
+                          >mail</span
+                        >
+                        Contact</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+        <!-- Sidebar (1/3) -->
+        <div class="space-y-10">
+          <!-- Meeting Calendar -->
+          <section>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >event</span
+              >
+              <h2
+                class="text-[#10142d] dark:text-slate-100 text-2xl gastramond-style"
+              >
+                Meetings
+              </h2>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex gap-4 hover:border-primary transition-colors cursor-pointer group"
+              >
+                <div
+                  class="bg-primary/10 text-primary w-16 h-16 rounded flex flex-col items-center justify-center font-bold"
+                >
+                  <span class="text-xs uppercase">Oct</span>
+                  <span class="text-xl leading-none">12</span>
+                </div>
+                <div class="flex flex-col justify-center">
+                  <h3
+                    class="font-bold text-sm group-hover:text-primary transition-colors"
+                  >
+                    CAP Category A Session
+                  </h3>
+                  <p class="text-xs text-slate-500">
+                    Submission deadline: Sept 28
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex gap-4 hover:border-primary transition-colors cursor-pointer group"
+              >
+                <div
+                  class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 w-16 h-16 rounded flex flex-col items-center justify-center font-bold"
+                >
+                  <span class="text-xs uppercase">Nov</span>
+                  <span class="text-xl leading-none">05</span>
+                </div>
+                <div class="flex flex-col justify-center">
+                  <h3
+                    class="font-bold text-sm group-hover:text-primary transition-colors"
+                  >
+                    CAP Category C Session
+                  </h3>
+                  <p class="text-xs text-slate-500">
+                    Submission deadline: Oct 15
+                  </p>
+                </div>
+              </div>
+              <button
+                class="w-full py-3 text-sm font-bold text-link-text bg-slate-50 dark:bg-slate-900 rounded-lg hover:bg-slate-100 transition-all border border-slate-200 dark:border-slate-800"
+              >
+                View Full Calendar
+              </button>
+            </div>
+          </section>
+          <!-- Practical Guides -->
+          <section>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >menu_book</span
+              >
+              <h2
+                class="text-[#10142d] dark:text-slate-100 text-2xl gastramond-style"
+              >
+                Guides
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 gap-3">
+              <a
+                class="group flex items-center justify-between p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:shadow-md transition-all"
+                href="#"
+              >
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-red-500"
+                    >picture_as_pdf</span
+                  >
+                  <span
+                    class="text-sm font-bold text-slate-700 dark:text-slate-300"
+                    >CAP Operation Guide</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors"
+                  >download</span
+                >
+              </a>
+              <a
+                class="group flex items-center justify-between p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:shadow-md transition-all"
+                href="#"
+              >
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-red-500"
+                    >picture_as_pdf</span
+                  >
+                  <span
+                    class="text-sm font-bold text-slate-700 dark:text-slate-300"
+                    >Appeal Procedures</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors"
+                  >download</span
+                >
+              </a>
+              <a
+                class="group flex items-center justify-between p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:shadow-md transition-all"
+                href="#"
+              >
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-blue-500"
+                    >description</span
+                  >
+                  <span
+                    class="text-sm font-bold text-slate-700 dark:text-slate-300"
+                    >Referral Form (DOC)</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors"
+                  >download</span
+                >
+              </a>
+            </div>
+          </section>
+          <!-- Help Banner -->
+          <div
+            class="bg-[#10142d] text-white p-6 rounded-xl relative overflow-hidden"
+          >
+            <div class="relative z-10">
+              <h3 class="text-lg font-bold mb-2">Need Assistance?</h3>
+              <p class="text-sm text-white/70 mb-4">
+                Contact your HR delegate for individual support regarding CAP
+                referrals.
+              </p>
+              <button
+                class="bg-white text-[#10142d] px-4 py-2 rounded font-bold text-sm hover:bg-slate-100 transition-colors"
+              >
+                Find my delegate
+              </button>
+            </div>
+            <div class="absolute -bottom-6 -right-6 opacity-10">
+              <span class="material-symbols-outlined text-[120px]"
+                >help_center</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-12 px-10 lg:px-40"
+    >
+      <div
+        class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="size-6 bg-primary rounded flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-white text-xs"
+                >account_balance</span
+              >
+            </div>
+            <h2
+              class="text-lg font-bold text-[#10142d] dark:text-white uppercase tracking-widest"
+            >
+              Local Government Portal
+            </h2>
+          </div>
+          <p class="text-sm text-slate-500 max-w-sm">
+            The official HR resource for municipal agents and administrators.
+            Providing transparency and professional support across all
+            commissions.
+          </p>
+        </div>
+        <div>
+          <h3
+            class="font-bold mb-4 text-[#10142d] dark:text-white uppercase text-xs tracking-widest"
+          >
+            Navigation
+          </h3>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li><a class="hover:text-primary" href="#">Legal Notices</a></li>
+            <li>
+              <a class="hover:text-primary" href="#">Accessibility Statement</a>
+            </li>
+            <li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+            <li><a class="hover:text-primary" href="#">Contact HR</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3
+            class="font-bold mb-4 text-[#10142d] dark:text-white uppercase text-xs tracking-widest"
+          >
+            Connect
+          </h3>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li><a class="hover:text-primary" href="#">Intranet Portal</a></li>
+            <li><a class="hover:text-primary" href="#">Newsletter</a></li>
+            <li><a class="hover:text-primary" href="#">Directory</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400"
+      >
+        <p>© 2024 Institutional Human Resources Portal. All rights reserved.</p>
+        <p>v2.4.1-stable</p>
+      </div>
+    </footer>
+  </body>
+</html>

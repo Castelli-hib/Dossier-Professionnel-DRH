@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RH Portail Local - Bibliothèque d'outils</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Public Sans for UI & Noto Serif as proxy for Gastramond for headings -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Noto+Serif:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              "serif-heading": ["Noto Serif", "serif"], // Proxy for Gastramond
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .serif-title {
+        font-family: "Noto Serif", serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#101519] dark:text-gray-100"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- TopNavBar -->
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e9eef1] dark:border-gray-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-primary">
+              <div class="size-8">
+                <svg
+                  fill="none"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-[#101519] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                RH Portail Local
+              </h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a
+                class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#"
+                >Accueil</a
+              >
+              <a
+                class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#"
+                >Offres d'emploi</a
+              >
+              <a
+                class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#"
+                >Conseils Carrière</a
+              >
+              <a class="text-primary text-sm font-bold leading-normal" href="#"
+                >Outils &amp; Ressources</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-4">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#5b778b] flex border-none bg-[#e9eef1] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg"
+                >
+                  <span class="material-symbols-outlined text-xl">search</span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 border-none bg-[#e9eef1] dark:bg-gray-800 text-[#101519] dark:text-white focus:ring-0 h-full placeholder:text-[#5b778b] px-4 rounded-r-lg pl-2 text-sm font-normal"
+                  placeholder="Rechercher un outil..."
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-opacity-90 transition-all"
+            >
+              <span>Mon Compte</span>
+            </button>
+          </div>
+        </header>
+        <main class="flex-1 overflow-y-auto">
+          <div class="max-w-[1200px] mx-auto px-4 sm:px-10 py-8">
+            <!-- PageHeading -->
+            <div class="flex flex-wrap justify-between items-end gap-6 mb-8">
+              <div class="flex flex-col gap-2 max-w-2xl">
+                <h1
+                  class="text-[#101519] dark:text-white text-5xl font-black leading-tight tracking-tight serif-title"
+                >
+                  Bibliothèque d'outils
+                </h1>
+                <p
+                  class="text-[#5b778b] dark:text-gray-400 text-lg font-normal leading-relaxed"
+                >
+                  Accédez à notre sélection de ressources gratuites pour
+                  optimiser vos candidatures et réussir chaque étape de votre
+                  parcours professionnel.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <button
+                  class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center rounded-lg h-11 px-6 bg-[#e9eef1] dark:bg-gray-800 text-[#101519] dark:text-white text-sm font-bold transition-all hover:bg-[#d4dde3]"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >help_outline</span
+                  >
+                  <span>Guide d'utilisation</span>
+                </button>
+              </div>
+            </div>
+            <!-- Tabs & Filters -->
+            <div
+              class="bg-white dark:bg-background-dark rounded-xl border border-[#e9eef1] dark:border-gray-800 p-1 mb-10 shadow-sm"
+            >
+              <div class="flex flex-wrap gap-2">
+                <a
+                  class="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >grid_view</span
+                  >
+                  <span>Tous les outils</span>
+                </a>
+                <a
+                  class="flex items-center gap-2 text-[#5b778b] dark:text-gray-400 hover:bg-[#e9eef1] dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-bold text-sm transition-all"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >description</span
+                  >
+                  <span>Modèles de CV</span>
+                </a>
+                <a
+                  class="flex items-center gap-2 text-[#5b778b] dark:text-gray-400 hover:bg-[#e9eef1] dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-bold text-sm transition-all"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  <span>Lettres de Motivation</span>
+                </a>
+                <a
+                  class="flex items-center gap-2 text-[#5b778b] dark:text-gray-400 hover:bg-[#e9eef1] dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-bold text-sm transition-all"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm">forum</span>
+                  <span>Préparation Entretien</span>
+                </a>
+              </div>
+            </div>
+            <!-- Category: CV Templates -->
+            <section class="mb-12">
+              <div
+                class="flex items-center justify-between border-b border-[#e9eef1] dark:border-gray-800 pb-4 mb-6"
+              >
+                <h2
+                  class="text-[#101519] dark:text-white text-2xl font-bold serif-title"
+                >
+                  Modèles de CV Professionnels
+                </h2>
+                <a
+                  class="text-primary font-bold text-sm hover:underline"
+                  href="#"
+                  >Voir tout</a
+                >
+              </div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              >
+                <!-- Card 1 -->
+                <div
+                  class="group bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 overflow-hidden flex flex-col hover:shadow-lg transition-all border-b-4 border-b-primary/40"
+                >
+                  <div
+                    class="w-full bg-slate-200 dark:bg-slate-900 bg-center bg-no-repeat aspect-[3/4] bg-cover relative overflow-hidden"
+                    data-alt="Modern CV template thumbnail with clean layout"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1KAyfevDQFpbSxSMbqv-cl1_3ITQEcGvFmGcVbE_sQez6dpArhxXRBWj1-hWE3j1AmpwRzHEfvKEvwIGVmOsHQdnVTEiduBTIZ0-_8bKvYXGGEX8Yu1kLkM8SSkKBeX7wvByueor5-F0i21mJcRhWfuAvKVI-3hBdfxGXbCryyBFCkTfmM0QvAjVxYoqPmL5hlREBDjMZiFQZUliM5SRZp9XK1ljrt5lK_nccnVuOs-e9_cQF9-YHrw9PVJYMUyprwVVUPjVFDmw');
+                    "
+                  >
+                    <div
+                      class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"
+                    ></div>
+                  </div>
+                  <div class="p-5 flex flex-col grow">
+                    <h3
+                      class="text-[#101519] dark:text-white text-lg font-bold leading-snug mb-1"
+                    >
+                      CV Moderne &amp; Épuré
+                    </h3>
+                    <p
+                      class="text-[#5b778b] dark:text-gray-400 text-xs font-medium mb-4 flex items-center gap-1"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >insert_drive_file</span
+                      >
+                      PDF / DOCX • 1.2 Mo
+                    </p>
+                    <div class="mt-auto">
+                      <button
+                        class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-opacity-90 transition-all text-sm"
+                      >
+                        <span class="material-symbols-outlined text-sm"
+                          >download</span
+                        >
+                        Télécharger
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                  class="group bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 overflow-hidden flex flex-col hover:shadow-lg transition-all border-b-4 border-b-primary/40"
+                >
+                  <div
+                    class="w-full bg-slate-200 dark:bg-slate-900 bg-center bg-no-repeat aspect-[3/4] bg-cover relative"
+                    data-alt="Classic professional CV template on white paper"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyvejHzdn8KA9nYMhflt0n5ZEcZJDA_TtISQkWAySgRuFy6bnkrNsRU1f_Z-QAT2_oNQ826jpxpjDPnjENIpehkgrLCrklZopqS2uGs9XNkwIwq2AXtzEU0cuOzGppP4LIF8Rg13q6GjWJxg_zC6xw1L3KHXsuUPY9gOl4H0ivNjMFpwMGfZOLXvKBF9L9ZEGczWManGLDwp-E52boVdTfKsQE0vjTHpWijQwtc8bI_fHhmJkjyrLr6dumEvM8-A2gqIpDYObUdkI');
+                    "
+                  ></div>
+                  <div class="p-5 flex flex-col grow">
+                    <h3
+                      class="text-[#101519] dark:text-white text-lg font-bold leading-snug mb-1"
+                    >
+                      CV Exécutif Senior
+                    </h3>
+                    <p
+                      class="text-[#5b778b] dark:text-gray-400 text-xs font-medium mb-4 flex items-center gap-1"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >insert_drive_file</span
+                      >
+                      DOCX • 950 Ko
+                    </p>
+                    <div class="mt-auto">
+                      <button
+                        class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-opacity-90 transition-all text-sm"
+                      >
+                        <span class="material-symbols-outlined text-sm"
+                          >download</span
+                        >
+                        Télécharger
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                  class="group bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 overflow-hidden flex flex-col hover:shadow-lg transition-all border-b-4 border-b-primary/40"
+                >
+                  <div
+                    class="w-full bg-slate-200 dark:bg-slate-900 bg-center bg-no-repeat aspect-[3/4] bg-cover relative"
+                    data-alt="Creative colorful resume template design"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzvA-q8XJS4Adpym-y_PCwEYjy6GnxLbeXJsXpsBaIEh86jX79wtxxlNOUepR6x5phShGrLXEwQ2-gXikv8y3xk83DO7E-W-9spl2F0Qem9pF8IL6mrWXolBz8Ba7xLOdbfwpxTnXbX2DHXG4GeSzuPlHy4wSyW9XDTMp2UuIxYHKS_vg3bBKF6IANRPXI2LRvzFfzyx3d2qi1lVXfycFbpQpesQWLWTgabim58TYdKpFyN8CszyQ0pu7HfKJz1n6AAvt7IRT94Zg');
+                    "
+                  ></div>
+                  <div class="p-5 flex flex-col grow">
+                    <h3
+                      class="text-[#101519] dark:text-white text-lg font-bold leading-snug mb-1"
+                    >
+                      Portfolio Créatif
+                    </h3>
+                    <p
+                      class="text-[#5b778b] dark:text-gray-400 text-xs font-medium mb-4 flex items-center gap-1"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >insert_drive_file</span
+                      >
+                      INDD / PDF • 4.5 Mo
+                    </p>
+                    <div class="mt-auto">
+                      <button
+                        class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-opacity-90 transition-all text-sm"
+                      >
+                        <span class="material-symbols-outlined text-sm"
+                          >download</span
+                        >
+                        Télécharger
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                  class="group bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 overflow-hidden flex flex-col hover:shadow-lg transition-all border-b-4 border-b-primary/40"
+                >
+                  <div
+                    class="w-full bg-slate-200 dark:bg-slate-900 bg-center bg-no-repeat aspect-[3/4] bg-cover relative"
+                    data-alt="Technical skill focused resume layout"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5MCbYR9aBiccxuHftCJ9TaRW8Y8nruri6fHf9ZfOYdq7Ja0q-5LUOt3VCNMain5LiKURCOQxIBd1CHqcUZ-cI0Rnx8qQbAQkGzP_AlvkdC2kqpB5vO78xfWaU_e6h508HkX2WZfejUf40-g_DCRA9lZGacLIqoCPV2Txm4B8qqHekhh_OMOKZGXBEE9zP1zMq_rxjCHc1WQ4iFXsv8BlVqRoCBCwMtyHFt0FtDVH99itZnwzKg86FtUzO0UqEHp_x8lR9zkGBygI');
+                    "
+                  ></div>
+                  <div class="p-5 flex flex-col grow">
+                    <h3
+                      class="text-[#101519] dark:text-white text-lg font-bold leading-snug mb-1"
+                    >
+                      CV Profil Technique
+                    </h3>
+                    <p
+                      class="text-[#5b778b] dark:text-gray-400 text-xs font-medium mb-4 flex items-center gap-1"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >insert_drive_file</span
+                      >
+                      PDF • 1.1 Mo
+                    </p>
+                    <div class="mt-auto">
+                      <button
+                        class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-opacity-90 transition-all text-sm"
+                      >
+                        <span class="material-symbols-outlined text-sm"
+                          >download</span
+                        >
+                        Télécharger
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Category: Guides & Checklists -->
+            <section class="mb-12">
+              <div
+                class="flex items-center justify-between border-b border-[#e9eef1] dark:border-gray-800 pb-4 mb-6"
+              >
+                <h2
+                  class="text-[#101519] dark:text-white text-2xl font-bold serif-title"
+                >
+                  Préparation &amp; Réussite
+                </h2>
+                <a
+                  class="text-primary font-bold text-sm hover:underline"
+                  href="#"
+                  >Voir tout</a
+                >
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Horizontal Item 1 -->
+                <div
+                  class="flex items-start gap-4 p-5 bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 hover:border-primary transition-all shadow-sm"
+                >
+                  <div
+                    class="size-20 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-4xl"
+                      >checklist</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="text-[#101519] dark:text-white font-bold leading-tight"
+                    >
+                      Checklist J-1 Entretien
+                    </h3>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-xs">
+                      Les 10 points essentiels à vérifier avant votre
+                      rendez-vous.
+                    </p>
+                    <button
+                      class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
+                    >
+                      Télécharger (PDF)
+                      <span class="material-symbols-outlined text-base"
+                        >arrow_forward</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <!-- Horizontal Item 2 -->
+                <div
+                  class="flex items-start gap-4 p-5 bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 hover:border-primary transition-all shadow-sm"
+                >
+                  <div
+                    class="size-20 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-4xl"
+                      >menu_book</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="text-[#101519] dark:text-white font-bold leading-tight"
+                    >
+                      Guide : Posture &amp; Pitch
+                    </h3>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-xs">
+                      Comment se présenter efficacement en 2 minutes chrono.
+                    </p>
+                    <button
+                      class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
+                    >
+                      Télécharger (PDF)
+                      <span class="material-symbols-outlined text-base"
+                        >arrow_forward</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <!-- Horizontal Item 3 -->
+                <div
+                  class="flex items-start gap-4 p-5 bg-white dark:bg-gray-800 rounded-xl border border-[#e9eef1] dark:border-gray-700 hover:border-primary transition-all shadow-sm"
+                >
+                  <div
+                    class="size-20 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-4xl"
+                      >rate_review</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="text-[#101519] dark:text-white font-bold leading-tight"
+                    >
+                      Lettre de Relance Type
+                    </h3>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-xs">
+                      Le modèle idéal pour relancer un recruteur après une
+                      semaine.
+                    </p>
+                    <button
+                      class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
+                    >
+                      Télécharger (DOCX)
+                      <span class="material-symbols-outlined text-base"
+                        >arrow_forward</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Feedback/Support -->
+            <div
+              class="bg-primary/5 dark:bg-primary/20 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-primary/10"
+            >
+              <div class="flex-1">
+                <h3 class="text-primary text-2xl font-bold serif-title mb-2">
+                  Vous ne trouvez pas ce que vous cherchez ?
+                </h3>
+                <p class="text-[#101519] dark:text-gray-300 font-medium">
+                  Nos conseillers RH peuvent vous aider à personnaliser vos
+                  documents lors d'un rendez-vous individuel.
+                </p>
+              </div>
+              <div class="flex gap-4 shrink-0">
+                <button
+                  class="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:bg-opacity-90 transition-all"
+                >
+                  Prendre rendez-vous
+                </button>
+                <button
+                  class="bg-white dark:bg-gray-800 border border-[#e9eef1] dark:border-gray-700 px-8 py-3 rounded-xl font-bold hover:bg-gray-50 transition-all"
+                >
+                  Nous contacter
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer -->
+        <footer
+          class="bg-white dark:bg-background-dark border-t border-[#e9eef1] dark:border-gray-800 py-10"
+        >
+          <div
+            class="max-w-[1200px] mx-auto px-10 grid grid-cols-1 md:grid-cols-4 gap-8"
+          >
+            <div class="col-span-1 md:col-span-1">
+              <div class="flex items-center gap-2 text-primary mb-4">
+                <div class="size-6">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="font-bold">RH Portail Local</span>
+              </div>
+              <p class="text-[#5b778b] text-sm">
+                Service d'accompagnement professionnel pour les résidents de la
+                collectivité.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Navigation</h4>
+              <ul class="text-sm text-[#5b778b] space-y-2">
+                <li><a class="hover:text-primary" href="#">Accueil</a></li>
+                <li>
+                  <a class="hover:text-primary" href="#">Offres d'emploi</a>
+                </li>
+                <li><a class="hover:text-primary" href="#">Formations</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Ressources</h4>
+              <ul class="text-sm text-[#5b778b] space-y-2">
+                <li>
+                  <a class="hover:text-primary" href="#">Modèles de CV</a>
+                </li>
+                <li>
+                  <a class="hover:text-primary" href="#">Guides Entretien</a>
+                </li>
+                <li>
+                  <a class="hover:text-primary" href="#">Fiches Métiers</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Contact</h4>
+              <ul class="text-sm text-[#5b778b] space-y-2">
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  contact@rh-portail.fr
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm">call</span> 01
+                  23 45 67 89
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="max-w-[1200px] mx-auto px-10 mt-10 pt-6 border-t border-[#e9eef1] dark:border-gray-800 text-center text-xs text-[#5b778b]"
+          >
+            © 2024 Portail Local de l'Emploi. Tous droits réservés. Mentions
+            Légales | Politique de Confidentialité
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

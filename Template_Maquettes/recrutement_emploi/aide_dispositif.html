@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Employee Benefits &amp; Protections | GovHR Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "header-dark": "#10142d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              serif: ["Georgia", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .serif-title {
+        font-family: "Georgia", serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#101519] dark:text-gray-100"
+  >
+    <!-- TopNavBar (Modified for Restricted Access Branding) -->
+    <header
+      class="bg-header-dark text-white border-b border-white/10 px-6 py-3 sticky top-0 z-50"
+    >
+      <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4">
+            <div class="size-8 text-white">
+              <svg
+                fill="none"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_6_319)">
+                  <path
+                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_6_319">
+                    <rect fill="white" height="48" width="48"></rect>
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              <h2
+                class="text-white text-lg font-bold leading-tight tracking-tight"
+              >
+                GovHR Portal
+              </h2>
+              <p
+                class="text-[10px] uppercase tracking-widest text-blue-300 font-bold"
+              >
+                Restricted Access
+              </p>
+            </div>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium"
+              href="#"
+              >Dashboard</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium border-b-2 border-primary pb-1"
+              href="#"
+              >Benefits</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium"
+              href="#"
+              >Documents</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium"
+              href="#"
+              >Career</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <div
+            class="hidden lg:flex items-center bg-white/10 rounded-lg px-3 py-1.5 gap-2 border border-white/10"
+          >
+            <span class="material-symbols-outlined text-sm text-white/60"
+              >search</span
+            >
+            <input
+              class="bg-transparent border-none text-white text-sm focus:ring-0 w-40 placeholder:text-white/40"
+              placeholder="Find benefit..."
+              type="text"
+            />
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right hidden sm:block">
+              <p class="text-xs font-bold text-white">Marc-Antoine Durand</p>
+              <p class="text-[10px] text-white/60">Senior Administrator</p>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border-2 border-primary/50"
+              data-alt="Employee profile picture headshot"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqKzAVgYEwDqRsJXSEIVq0nqirk8B-8R9rvif-Yu70MC_OtmPuHVqfZbdl4NLdaOkCyPwegH1sQCtzJk1Wcxr5FEdv_mU8Ts9MiGn2BIJ0BypcPIP7O-iTmzspglIQKtNRJuOki0h8O4-nu3y1WKqcsqSuS0yOSSKiDHYE9w6dLlcVPBNv3SGOB1f90mEVWAROoQ4wNfZk7X2EWuUMfUQMdJ9mdHD5tg1LuLguz_gARGkZCMuCszZGdbybiFoG52uhaqecw9ddLnw');
+              "
+            ></div>
+          </div>
+          <button
+            class="bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 px-4 rounded-lg flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-sm">logout</span> Logout
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-6 py-8">
+      <!-- Breadcrumbs -->
+      <div class="flex flex-wrap gap-2 items-center mb-6">
+        <a
+          class="text-[#5b778b] text-sm font-medium hover:text-primary transition-colors"
+          href="#"
+          >Home</a
+        >
+        <span class="material-symbols-outlined text-sm text-[#5b778b]"
+          >chevron_right</span
+        >
+        <a
+          class="text-[#5b778b] text-sm font-medium hover:text-primary transition-colors"
+          href="#"
+          >My Career</a
+        >
+        <span class="material-symbols-outlined text-sm text-[#5b778b]"
+          >chevron_right</span
+        >
+        <span class="text-[#101519] dark:text-white text-sm font-bold"
+          >Benefits &amp; Social Protection</span
+        >
+      </div>
+      <!-- Page Heading -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10"
+      >
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center gap-3 mb-1">
+            <span
+              class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg"
+              >verified_user</span
+            >
+            <span
+              class="text-primary text-xs font-black uppercase tracking-widest"
+              >Confidential View</span
+            >
+          </div>
+          <h1
+            class="text-[#101519] dark:text-white text-4xl font-black leading-tight tracking-tight serif-title"
+          >
+            Benefits &amp; Social Protection
+          </h1>
+          <p
+            class="text-[#5b778b] text-lg font-normal max-w-2xl leading-relaxed"
+          >
+            Secure overview of your institutional employer contributions, health
+            coverage eligibility, and social aid status.
+          </p>
+        </div>
+        <div class="flex gap-3">
+          <button
+            class="flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-2.5 rounded-lg text-sm font-bold shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <span class="material-symbols-outlined text-sm">download</span>
+            <span>Benefit Summary (PDF)</span>
+          </button>
+          <button
+            class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-md hover:brightness-110 transition-all"
+          >
+            <span class="material-symbols-outlined text-sm">edit</span>
+            <span>Update Coverage</span>
+          </button>
+        </div>
+      </div>
+      <!-- Stats Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+        <div
+          class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 shadow-sm"
+        >
+          <p class="text-[#5b778b] text-xs font-bold uppercase tracking-wider">
+            Monthly Net Subsidy
+          </p>
+          <div class="flex items-baseline gap-1">
+            <p class="text-primary text-3xl font-black leading-tight">
+              €145.50
+            </p>
+            <p class="text-green-600 text-[10px] font-bold">+2% vs 2023</p>
+          </div>
+          <p class="text-xs text-gray-500">Employer-paid portion</p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 shadow-sm"
+        >
+          <p class="text-[#5b778b] text-xs font-bold uppercase tracking-wider">
+            Coverage Status
+          </p>
+          <div class="flex items-center gap-2">
+            <p
+              class="text-[#101519] dark:text-white text-3xl font-black leading-tight"
+            >
+              Active
+            </p>
+            <span class="size-3 rounded-full bg-green-500 animate-pulse"></span>
+          </div>
+          <p class="text-xs text-gray-500">Last verified: 4 days ago</p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 shadow-sm"
+        >
+          <p class="text-[#5b778b] text-xs font-bold uppercase tracking-wider">
+            Next Renewal
+          </p>
+          <p
+            class="text-[#101519] dark:text-white text-3xl font-black leading-tight"
+          >
+            Jan 2025
+          </p>
+          <p class="text-xs text-gray-500">Automatic extension active</p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl p-6 bg-primary dark:bg-primary/20 border border-primary shadow-lg"
+        >
+          <p
+            class="text-white/80 dark:text-primary text-xs font-bold uppercase tracking-wider"
+          >
+            Social Aid Balance
+          </p>
+          <p
+            class="text-white dark:text-white text-3xl font-black leading-tight"
+          >
+            €1,200.00
+          </p>
+          <p class="text-white/60 dark:text-gray-400 text-xs">
+            Available Welfare Credit
+          </p>
+        </div>
+      </div>
+      <!-- Detailed Table Section -->
+      <div class="flex flex-col gap-6">
+        <div
+          class="flex items-center justify-between border-b border-gray-200 pb-2"
+        >
+          <h2
+            class="text-[#101519] dark:text-white text-2xl font-bold tracking-tight"
+          >
+            Employer Participations &amp; Aid
+          </h2>
+          <div class="flex gap-4">
+            <button class="text-primary text-sm font-bold hover:underline">
+              Collapse All
+            </button>
+            <button class="text-primary text-sm font-bold hover:underline">
+              Filter Categories
+            </button>
+          </div>
+        </div>
+        <div
+          class="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
+        >
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-gray-50 dark:bg-gray-900/50">
+              <tr>
+                <th
+                  class="px-6 py-4 text-xs font-bold text-[#5b778b] uppercase tracking-wider border-b border-gray-200 dark:border-gray-700"
+                >
+                  Benefit Type
+                </th>
+                <th
+                  class="px-6 py-4 text-xs font-bold text-[#5b778b] uppercase tracking-wider border-b border-gray-200 dark:border-gray-700"
+                >
+                  Participation Amount
+                </th>
+                <th
+                  class="px-6 py-4 text-xs font-bold text-[#5b778b] uppercase tracking-wider border-b border-gray-200 dark:border-gray-700"
+                >
+                  Eligibility Status
+                </th>
+                <th
+                  class="px-6 py-4 text-xs font-bold text-[#5b778b] uppercase tracking-wider border-b border-gray-200 dark:border-gray-700"
+                >
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+              <!-- Health Insurance -->
+              <tr
+                class="hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors"
+              >
+                <td class="px-6 py-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600"
+                    >
+                      <span class="material-symbols-outlined"
+                        >health_and_safety</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm font-bold text-gray-900 dark:text-white"
+                      >
+                        Health Insurance (Mutuelle)
+                      </p>
+                      <p class="text-xs text-gray-500">
+                        Group Contract - Enhanced Level 3
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-6">
+                  <p class="text-sm font-bold text-gray-900 dark:text-white">
+                    €85.00 / month
+                  </p>
+                  <p class="text-xs text-gray-500">60% Contribution Rate</p>
+                </td>
+                <td class="px-6 py-6">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800 border border-green-200"
+                  >
+                    <span
+                      class="size-1.5 rounded-full bg-green-500 mr-1.5"
+                    ></span>
+                    Confirmed
+                  </span>
+                </td>
+                <td class="px-6 py-6">
+                  <a
+                    class="text-primary text-sm font-bold hover:underline"
+                    href="#"
+                    >View Policy</a
+                  >
+                </td>
+              </tr>
+              <!-- Social Welfare -->
+              <tr
+                class="hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors"
+              >
+                <td class="px-6 py-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600"
+                    >
+                      <span class="material-symbols-outlined"
+                        >shield_person</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm font-bold text-gray-900 dark:text-white"
+                      >
+                        Provident Fund (Prévoyance)
+                      </p>
+                      <p class="text-xs text-gray-500">
+                        Disability &amp; Life Insurance
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-6">
+                  <p class="text-sm font-bold text-gray-900 dark:text-white">
+                    1.25% Gross Salary
+                  </p>
+                  <p class="text-xs text-gray-500">Employer-paid 100%</p>
+                </td>
+                <td class="px-6 py-6">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800 border border-green-200"
+                  >
+                    <span
+                      class="size-1.5 rounded-full bg-green-500 mr-1.5"
+                    ></span>
+                    Confirmed
+                  </span>
+                </td>
+                <td class="px-6 py-6">
+                  <a
+                    class="text-primary text-sm font-bold hover:underline"
+                    href="#"
+                    >Download PDF</a
+                  >
+                </td>
+              </tr>
+              <!-- Catering -->
+              <tr
+                class="hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors"
+              >
+                <td class="px-6 py-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600"
+                    >
+                      <span class="material-symbols-outlined">restaurant</span>
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm font-bold text-gray-900 dark:text-white"
+                      >
+                        Meal Vouchers (Ticket Resto)
+                      </p>
+                      <p class="text-xs text-gray-500">
+                        20 vouchers per full month
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-6">
+                  <p class="text-sm font-bold text-gray-900 dark:text-white">
+                    €11.50 / voucher
+                  </p>
+                  <p class="text-xs text-gray-500">50% Employer Contribution</p>
+                </td>
+                <td class="px-6 py-6">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800 border border-blue-200"
+                  >
+                    <span
+                      class="size-1.5 rounded-full bg-blue-500 mr-1.5"
+                    ></span>
+                    Active
+                  </span>
+                </td>
+                <td class="px-6 py-6">
+                  <a
+                    class="text-primary text-sm font-bold hover:underline"
+                    href="#"
+                    >Change Format</a
+                  >
+                </td>
+              </tr>
+              <!-- Transport -->
+              <tr
+                class="hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors"
+              >
+                <td class="px-6 py-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-10 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600"
+                    >
+                      <span class="material-symbols-outlined"
+                        >directions_bus</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm font-bold text-gray-900 dark:text-white"
+                      >
+                        Commuter Reimbursement
+                      </p>
+                      <p class="text-xs text-gray-500">
+                        Public Transport &amp; Sustainable Mobility
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-6">
+                  <p class="text-sm font-bold text-gray-900 dark:text-white">
+                    75% Monthly Pass
+                  </p>
+                  <p class="text-xs text-gray-500">Up to €60.50/mo</p>
+                </td>
+                <td class="px-6 py-6">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-yellow-100 text-yellow-800 border border-yellow-200"
+                  >
+                    <span
+                      class="size-1.5 rounded-full bg-yellow-500 mr-1.5"
+                    ></span>
+                    Pending Proof
+                  </span>
+                </td>
+                <td class="px-6 py-6">
+                  <a
+                    class="text-primary text-sm font-bold hover:underline"
+                    href="#"
+                    >Upload Receipt</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Sidebar / Conditions Info -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
+        <div
+          class="lg:col-span-2 bg-[#e9eef1] dark:bg-gray-800/50 rounded-xl p-8 border border-dashed border-[#d4dde3] dark:border-gray-700"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-primary">info</span>
+            <h3 class="text-lg font-bold text-[#101519] dark:text-white">
+              General Eligibility Conditions
+            </h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="flex flex-col gap-2">
+              <p class="font-bold">Seniority Requirement</p>
+              <p class="text-[#5b778b]">
+                Eligibility starts after 3 months of effective service. All
+                permanent contracts (CDI) and fixed-term (CDD) &gt; 6 months are
+                covered.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="font-bold">Family Status</p>
+              <p class="text-[#5b778b]">
+                Benefits can be extended to direct dependents (children, spouse)
+                through a complementary contribution adjustment.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="font-bold">Working Hours</p>
+              <p class="text-[#5b778b]">
+                Partial reimbursement applies for part-time staff (pro-rata
+                temporis) if working less than 50% of legal weekly hours.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="font-bold">Annual Review</p>
+              <p class="text-[#5b778b]">
+                Contribution rates are reviewed every December. New rates apply
+                from January 1st of the following year.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- HR Assistance Box -->
+        <div
+          class="bg-primary text-white rounded-xl p-8 flex flex-col gap-6 shadow-xl relative overflow-hidden"
+        >
+          <div
+            class="absolute -top-10 -right-10 size-40 bg-white/10 rounded-full"
+          ></div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Need HR Assistance?</h3>
+            <p class="text-sm text-white/80 leading-relaxed">
+              Our Social Benefits team is available to help you understand your
+              coverage or assist with applications.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-lg">mail</span>
+              <span class="text-sm font-medium">hr-benefits@gov-portal.fr</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-lg">call</span>
+              <span class="text-sm font-medium">+33 (0)1 45 82 90 00</span>
+            </div>
+          </div>
+          <button
+            class="w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Schedule a Consultation
+          </button>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer
+        class="mt-20 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[#5b778b] text-xs"
+      >
+        <p>© 2024 Municipal HR Services - Secure Portal Access</p>
+        <div class="flex gap-6">
+          <a class="hover:text-primary underline" href="#">Privacy Policy</a>
+          <a class="hover:text-primary underline" href="#"
+            >Security Statement</a
+          >
+          <a class="hover:text-primary underline" href="#"
+            >Accessibility Settings</a
+          >
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

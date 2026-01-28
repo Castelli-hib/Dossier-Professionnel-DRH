@@ -1,0 +1,69 @@
+* {
+    /*color: white;*/
+    background-image: url('Images/background.jpg');
+    background-size: cover;
+    /* Adapte l'image à la taille de la fenêtre */
+    background-repeat: no-repeat;
+    /* Évite que l'image se répète */
+    background-position: center;
+    /* Centre l'image */
+    background-attachment: fixed;
+
+
+}
+
+/*body {
+    background:linear-gradient(to top left, yellow, black);*/
+    /*background-attachment: fixed;
+}*/
+
+#wrapper {
+    /*background: rgb(6, 212, 212);*/
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    color: black;
+    text-shadow: black;
+
+}
+
+        /*#clickMe {
+background-color: azure;
+}*/
+
+#restartButton {
+    text-align: center;
+    background-color: white !important;
+}
+
+.yellowBalloon {
+    width: 100px;
+    height: 132px;
+    /*background: aqua;*/
+}
+
+.redBalloon {
+    width: 100px;
+    height: 132px;
+    /*background-color: aqua;*/
+}
+
+#gameTitle {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#gameInstructions {
+    color: rgb(38, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+#restart {
+    width: 100px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: black;
+
+}

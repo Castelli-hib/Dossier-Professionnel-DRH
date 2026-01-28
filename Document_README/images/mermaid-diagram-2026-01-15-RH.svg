@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="graph-137" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:ev="http://www.w3.org/2001/xml-events" viewBox="0 0 1251.28 659.89">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+        font-size: 6.13px;
+      }
+
+      .st0, .st1, .st2 {
+        isolation: isolate;
+      }
+
+      .st0, .st3, .st4 {
+        fill: #d3d3d3;
+      }
+
+      .st5, .st6, .st4, .st7, .st8 {
+        stroke-miterlimit: 1.53;
+      }
+
+      .st5, .st6, .st7 {
+        stroke-width: .77px;
+      }
+
+      .st5, .st6, .st7, .st8 {
+        stroke: #ccc;
+      }
+
+      .st5, .st8 {
+        fill: #1f2020;
+      }
+
+      .st9, .st6, .st7 {
+        fill: none;
+      }
+
+      .st2 {
+        font-family: HelveticaNeue-Roman, 'Helvetica Neue';
+        font-size: 4.6px;
+      }
+
+      .st4 {
+        stroke: #d3d3d3;
+      }
+
+      .st4, .st8 {
+        stroke-width: .38px;
+      }
+
+      .st7 {
+        stroke-dasharray: .77 .77;
+      }
+    </style>
+  </defs>
+  <path class="st9" d=""/>
+  <g id="viewport-20260115152348335">
+    <g>
+      <rect class="st8" x="1133.21" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(1158.32 546.54)"><tspan x="0" y="0">DB</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="1055.47" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(1077.51 546.54)"><tspan x="0" y="0">Repo</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="974.28" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(993.1 546.54)"><tspan x="0" y="0">Service</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="888.87" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(903.73 546.54)"><tspan x="0" y="0">Controller</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="799.26" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(816.94 546.54)"><tspan x="0" y="0">Firewall</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="718.83" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(736.61 546.54)"><tspan x="0" y="0">Browser</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="584.8" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(609.73 546.54)"><tspan x="0" y="0">RH</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="508.2" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(533.31 546.54)"><tspan x="0" y="0">DB</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="431.61" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(453.65 546.54)"><tspan x="0" y="0">Repo</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="355.01" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(373.84 546.54)"><tspan x="0" y="0">Service</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="278.42" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(293.27 546.54)"><tspan x="0" y="0">Controller</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="201.82" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(219.51 546.54)"><tspan x="0" y="0">Firewall</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st8" x="125.23" y="534.1" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+      <g class="st1">
+        <text class="st0" transform="translate(143 546.54)"><tspan x="0" y="0">Browser</tspan></text>
+      </g>
+    </g>
+    <g>
+      <line id="actor971" class="st6" x1="1161.93" y1="90.61" x2="1161.93" y2="534.1"/>
+      <g id="root-971">
+        <rect class="st8" x="1133.21" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(1158.32 78.17)"><tspan x="0" y="0">DB</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor970" class="st6" x1="1084.19" y1="90.61" x2="1084.19" y2="534.1"/>
+      <g id="root-970">
+        <rect class="st8" x="1055.47" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(1077.51 78.17)"><tspan x="0" y="0">Repo</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor969" class="st6" x1="1003" y1="90.61" x2="1003" y2="534.1"/>
+      <g id="root-969">
+        <rect class="st8" x="974.28" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(993.1 78.17)"><tspan x="0" y="0">Service</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor968" class="st6" x1="917.6" y1="90.61" x2="917.6" y2="534.1"/>
+      <g id="root-968">
+        <rect class="st8" x="888.87" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(903.73 78.17)"><tspan x="0" y="0">Controller</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor967" class="st6" x1="827.98" y1="90.61" x2="827.98" y2="534.1"/>
+      <g id="root-967">
+        <rect class="st8" x="799.26" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(816.94 78.17)"><tspan x="0" y="0">Firewall</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor966" class="st6" x1="747.56" y1="90.61" x2="747.56" y2="534.1"/>
+      <g id="root-966">
+        <rect class="st8" x="718.83" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(736.61 78.17)"><tspan x="0" y="0">Browser</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor965" class="st6" x1="613.52" y1="90.61" x2="613.52" y2="534.1"/>
+      <g id="root-965">
+        <rect class="st8" x="584.8" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(609.73 78.17)"><tspan x="0" y="0">RH</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor964" class="st6" x1="536.92" y1="90.61" x2="536.92" y2="534.1"/>
+      <g id="root-964">
+        <rect class="st8" x="508.2" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(533.31 78.17)"><tspan x="0" y="0">DB</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor963" class="st6" x1="460.33" y1="90.61" x2="460.33" y2="534.1"/>
+      <g id="root-963">
+        <rect class="st8" x="431.61" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(453.65 78.17)"><tspan x="0" y="0">Repo</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor962" class="st6" x1="383.74" y1="90.61" x2="383.74" y2="534.1"/>
+      <g id="root-962">
+        <rect class="st8" x="355.01" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(373.84 78.17)"><tspan x="0" y="0">Service</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor961" class="st6" x1="307.14" y1="90.61" x2="307.14" y2="534.1"/>
+      <g id="root-961">
+        <rect class="st8" x="278.42" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(293.27 78.17)"><tspan x="0" y="0">Controller</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor960" class="st6" x1="230.55" y1="90.61" x2="230.55" y2="534.1"/>
+      <g id="root-960">
+        <rect class="st8" x="201.82" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(219.51 78.17)"><tspan x="0" y="0">Firewall</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor959" class="st6" x1="153.95" y1="90.61" x2="153.95" y2="534.1"/>
+      <g id="root-959">
+        <rect class="st8" x="125.23" y="65.72" width="57.45" height="24.89" rx="1.15" ry="1.15"/>
+        <g class="st1">
+          <text class="st0" transform="translate(143 78.17)"><tspan x="0" y="0">Browser</tspan></text>
+        </g>
+      </g>
+    </g>
+    <line id="actor958" class="st6" x1="77.36" y1="96.36" x2="77.36" y2="534.1"/>
+    <g>
+      <line class="st7" x1="609.31" y1="308.14" x2="1166.14" y2="308.14"/>
+      <line class="st7" x1="1166.14" y1="308.14" x2="1166.14" y2="526.44"/>
+      <line class="st7" x1="609.31" y1="526.44" x2="1166.14" y2="526.44"/>
+      <line class="st7" x1="609.31" y1="308.14" x2="609.31" y2="526.44"/>
+      <line class="st7" x1="609.31" y1="455.97" x2="1166.14" y2="455.97"/>
+      <polygon class="st8" points="609.31 308.14 628.45 308.14 628.45 313.12 625.24 315.8 609.31 315.8 609.31 308.14"/>
+      <text class="st0" transform="translate(615.15 313.12)"><tspan x="0" y="0">alt</tspan></text>
+      <g class="st1">
+        <text class="st0" transform="translate(869.72 315.04)"><tspan x="0" y="0">[Contenu conforme]</tspan></text>
+      </g>
+      <text class="st0" transform="translate(854.24 462.86)"><tspan x="0" y="0">[Contenu non conforme]</tspan></text>
+    </g>
+    <g>
+      <line id="actor-man-torso958" class="st6" x1="77.36" y1="75.3" x2="77.36" y2="82.96"/>
+      <line id="actor-man-arms958" class="st6" x1="70.47" y1="78.36" x2="84.25" y2="78.36"/>
+      <line class="st6" x1="70.47" y1="88.7" x2="77.36" y2="82.96"/>
+      <line class="st6" x1="77.36" y1="82.96" x2="83.49" y2="88.7"/>
+      <circle class="st5" cx="77.36" cy="69.55" r="5.74"/>
+      <g class="st1">
+        <text class="st0" transform="translate(73.57 91.57)"><tspan x="0" y="0">RH</tspan></text>
+      </g>
+    </g>
+    <text class="st0" transform="translate(652.26 102.49)"><tspan x="0" y="0">Connexion sécurisée</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M742.62,107.08l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M746.03,109" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="613.9" cy="109" r="4.6"/>
+    <path class="st3" d="M613.9,109" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(612.62 110.53)"><tspan x="0" y="0">1</tspan></text>
+    <text class="st0" transform="translate(771.25 120.87)"><tspan x="0" y="0">POST /login</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M823.04,125.47l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M826.45,127.38" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="747.94" cy="127.38" r="4.6"/>
+    <path class="st3" d="M747.94,127.38" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(746.66 128.91)"><tspan x="0" y="0">2</tspan></text>
+    <text class="st0" transform="translate(764.7 139.25)"><tspan x="0" y="0">Session RH active</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M745.68,143.85l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M749.09,145.76" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="827.6" cy="145.76" r="4.6"/>
+    <path class="st3" d="M827.6,145.76" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(826.32 147.29)"><tspan x="0" y="0">3</tspan></text>
+    <text class="st0" transform="translate(651.29 157.63)"><tspan x="0" y="0">Accès back-office RH</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M742.62,162.23l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M746.03,164.15" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="613.9" cy="164.15" r="4.6"/>
+    <path class="st3" d="M613.9,164.15" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(612.62 165.68)"><tspan x="0" y="0">4</tspan></text>
+    <text class="st0" transform="translate(807.45 176.02)"><tspan x="0" y="0">GET /rh/contenus</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M912.66,180.61l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M916.06,182.53" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="747.94" cy="182.53" r="4.6"/>
+    <path class="st3" d="M747.94,182.53" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(746.66 184.06)"><tspan x="0" y="0">5</tspan></text>
+    <text class="st0" transform="translate(844.12 194.4)"><tspan x="0" y="0">Vérification ROLE_RH</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M826.1,199l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M829.51,200.91" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="917.21" cy="200.91" r="4.6"/>
+    <path class="st3" d="M917.21,200.91" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(915.94 202.44)"><tspan x="0" y="0">6</tspan></text>
+    <text class="st0" transform="translate(861.09 212.78)"><tspan x="0" y="0">Autorisé</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M912.66,217.38l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M916.06,219.29" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="828.36" cy="219.29" r="4.6"/>
+    <path class="st3" d="M828.36,219.29" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(827.09 220.83)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st0" transform="translate(630.98 231.17)"><tspan x="0" y="0">Création / modification contenu RH</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M742.62,235.76l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M746.03,237.68" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="613.9" cy="237.68" r="4.6"/>
+    <path class="st3" d="M613.9,237.68" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(612.62 239.21)"><tspan x="0" y="0">8</tspan></text>
+    <text class="st0" transform="translate(807.15 249.55)"><tspan x="0" y="0">POST /rh/contenu</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M912.66,254.14l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M916.06,256.06" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="747.94" cy="256.06" r="4.6"/>
+    <path class="st3" d="M747.94,256.06" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(746.66 257.59)"><tspan x="0" y="0">9</tspan></text>
+    <text class="st0" transform="translate(936.63 267.93)"><tspan x="0" y="0">validerContenu()</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M998.06,272.53l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M1001.47,274.44" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="917.98" cy="274.44" r="4.6"/>
+    <path class="st3" d="M917.98,274.44" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(915.42 275.97)"><tspan x="0" y="0">10</tspan></text>
+    <text class="st0" transform="translate(950.93 286.31)"><tspan x="0" y="0">Vérification conformité réglementaire</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M999.97,298.57l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M619.79,203.36" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1003.38" cy="292.82" r="4.6"/>
+    <path class="st3" d="M1003.38,292.82" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1000.83 294.36)"><tspan x="0" y="0">11</tspan></text>
+    <text class="st0" transform="translate(1023.87 333.42)"><tspan x="0" y="0">save(contenu)</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M1079.25,338.01l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M1082.66,339.93" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1003.38" cy="339.93" r="4.6"/>
+    <path class="st3" d="M1003.38,339.93" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1000.83 341.46)"><tspan x="0" y="0">12</tspan></text>
+    <text class="st0" transform="translate(1099.23 351.8)"><tspan x="0" y="0">INSERT / UPDATE</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M1156.99,356.4l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M1160.4,358.31" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1084.57" cy="358.31" r="4.6"/>
+    <path class="st3" d="M1084.57,358.31" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1082.02 359.84)"><tspan x="0" y="0">13</tspan></text>
+    <text class="st0" transform="translate(1119.81 370.18)"><tspan x="0" y="0">OK</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M1082.31,374.78l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M1085.72,376.69" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1161.55" cy="376.69" r="4.6"/>
+    <path class="st3" d="M1161.55,376.69" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1158.99 378.23)"><tspan x="0" y="0">14</tspan></text>
+    <text class="st0" transform="translate(1040.53 388.57)"><tspan x="0" y="0">OK</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M1001.12,393.16l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M1004.53,395.08" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1083.81" cy="395.08" r="4.6"/>
+    <path class="st3" d="M1083.81,395.08" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1081.25 396.61)"><tspan x="0" y="0">15</tspan></text>
+    <text class="st0" transform="translate(934.99 406.95)"><tspan x="0" y="0">Publication réussie</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M915.72,411.54l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M919.13,413.46" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1002.62" cy="413.46" r="4.6"/>
+    <path class="st3" d="M1002.62,413.46" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1000.06 414.99)"><tspan x="0" y="0">16</tspan></text>
+    <text class="st0" transform="translate(799.12 425.33)"><tspan x="0" y="0">Confirmation publication</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M745.68,429.93l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M749.09,431.84" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="917.21" cy="431.84" r="4.6"/>
+    <path class="st3" d="M917.21,431.84" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(914.66 433.37)"><tspan x="0" y="0">17</tspan></text>
+    <text class="st0" transform="translate(660.46 443.71)"><tspan x="0" y="0">Contenu publié</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M611.64,448.31l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M615.05,450.22" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="747.17" cy="450.22" r="4.6"/>
+    <path class="st3" d="M747.17,450.22" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(744.62 451.76)"><tspan x="0" y="0">18</tspan></text>
+    <text class="st0" transform="translate(937.78 479.33)"><tspan x="0" y="0">Erreur validation</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M915.72,483.93l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M919.13,485.84" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="1002.62" cy="485.84" r="4.6"/>
+    <path class="st3" d="M1002.62,485.84" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(1000.06 487.37)"><tspan x="0" y="0">19</tspan></text>
+    <text class="st0" transform="translate(809.86 497.71)"><tspan x="0" y="0">Message d’erreur</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M745.68,502.31l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M749.09,504.22" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="917.21" cy="504.22" r="4.6"/>
+    <path class="st3" d="M917.21,504.22" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(914.66 505.76)"><tspan x="0" y="0">20</tspan></text>
+    <text class="st0" transform="translate(651.67 516.1)"><tspan x="0" y="0">Correction demandée</tspan></text>
+    <path class="st9" d=""/>
+    <path class="st4" d="M611.64,520.69l4.21,1.91-3.83,1.91-.38-3.83Z"/>
+    <path class="st4" d="M615.05,522.61" marker-end="url(#arrowhead)"/>
+    <path class="st9" d=""/>
+    <circle class="st3" cx="747.17" cy="522.61" r="4.6"/>
+    <path class="st3" d="M747.17,522.61" marker-start="url(#sequencenumber)"/>
+    <text class="st2" transform="translate(744.62 524.14)"><tspan x="0" y="0">21</tspan></text>
+    <g>
+      <line id="actor-man-torso971" class="st6" x1="77.36" y1="543.67" x2="77.36" y2="551.33"/>
+      <line id="actor-man-arms971" class="st6" x1="70.47" y1="546.73" x2="84.25" y2="546.73"/>
+      <line class="st6" x1="70.47" y1="557.07" x2="77.36" y2="551.33"/>
+      <line class="st6" x1="77.36" y1="551.33" x2="83.49" y2="557.07"/>
+      <circle class="st5" cx="77.36" cy="537.92" r="5.74"/>
+      <g class="st1">
+        <text class="st0" transform="translate(73.57 559.95)"><tspan x="0" y="0">RH</tspan></text>
+      </g>
+    </g>
+  </g>
+  <path class="st9" d=""/>
+</svg>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CST Meeting Minutes Yearly Archive</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#284d81",
+              "header-dark": "#10142d",
+              "pdf-blue": "#275b80",
+              "background-light": "#f6f7f8",
+              "background-dark": "#14181e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#101419] dark:text-gray-100 min-h-screen"
+  >
+    <div class="flex flex-col min-h-screen">
+      <!-- TopNavBar -->
+      <header
+        class="w-full border-b border-solid border-[#e9edf1] dark:border-gray-800 bg-white dark:bg-[#1c222b] px-4 md:px-10 py-3"
+      >
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="text-primary size-6">
+              <svg
+                fill="currentColor"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-[#101419] dark:text-white text-lg font-bold leading-tight"
+            >
+              Local Government HR Portal
+            </h2>
+          </div>
+          <div class="hidden md:flex flex-1 justify-end gap-8">
+            <nav class="flex items-center gap-9">
+              <a
+                class="text-[#101419] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Home</a
+              >
+              <a
+                class="text-[#101419] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Departments</a
+              >
+              <a
+                class="text-[#101419] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >HR Policies</a
+              >
+              <a
+                class="text-[#101419] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Contact</a
+              >
+            </nav>
+            <div class="flex gap-2">
+              <button
+                class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e9edf1] dark:bg-gray-700 text-header-dark dark:text-gray-200"
+              >
+                <span class="material-symbols-outlined">person</span>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e9edf1] dark:bg-gray-700 text-header-dark dark:text-gray-200"
+              >
+                <span class="material-symbols-outlined">notifications</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="max-w-[960px] mx-auto w-full px-4 py-6 flex flex-col gap-6">
+        <!-- Breadcrumbs -->
+        <nav class="flex flex-wrap gap-2 text-sm md:text-base">
+          <a
+            class="text-[#5b6f8b] dark:text-gray-400 font-medium hover:underline"
+            href="#"
+            >Home</a
+          >
+          <span class="text-[#5b6f8b] dark:text-gray-500">/</span>
+          <a
+            class="text-[#5b6f8b] dark:text-gray-400 font-medium hover:underline"
+            href="#"
+            >HR Resources</a
+          >
+          <span class="text-[#5b6f8b] dark:text-gray-500">/</span>
+          <span class="text-[#101419] dark:text-white font-medium"
+            >CST Meeting Minutes</span
+          >
+        </nav>
+        <!-- PageHeading -->
+        <div class="flex flex-col md:flex-row justify-between gap-6 py-4">
+          <div class="flex flex-col gap-3 max-w-2xl">
+            <h1
+              class="text-[#101419] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]"
+            >
+              CST Meeting Minutes Archive
+            </h1>
+            <p
+              class="text-[#5b6f8b] dark:text-gray-400 text-base font-normal leading-normal"
+            >
+              Official records (Procès-verbaux) for the Comité Social
+              Territorial. Access documented summaries and full meeting
+              proceedings.
+            </p>
+          </div>
+          <div class="flex items-start">
+            <button
+              class="flex items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-[0.015em] hover:bg-opacity-90 transition-all"
+            >
+              <span class="material-symbols-outlined mr-2">mail</span>
+              Request Archive Access
+            </button>
+          </div>
+        </div>
+        <!-- SearchBar -->
+        <div
+          class="bg-white dark:bg-[#1c222b] p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800"
+        >
+          <label class="flex flex-col w-full h-12">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-gray-200 dark:border-gray-700 focus-within:border-primary transition-all"
+            >
+              <div
+                class="text-[#5b6f8b] dark:text-gray-400 flex bg-[#f0f2f5] dark:bg-gray-800 items-center justify-center px-4"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input
+                class="w-full flex-1 border-none bg-[#f0f2f5] dark:bg-gray-800 text-[#101419] dark:text-white focus:ring-0 placeholder:text-[#5b6f8b] px-2 text-base"
+                placeholder="Search keywords within meeting summaries..."
+              />
+              <div
+                class="text-[#5b6f8b] dark:text-gray-400 flex bg-[#f0f2f5] dark:bg-gray-800 items-center justify-center px-4 border-l border-gray-200 dark:border-gray-700 cursor-pointer hover:text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined">tune</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <!-- Yearly Archive Accordion Section -->
+        <div class="flex flex-col gap-4 mt-4">
+          <h2
+            class="text-[#101419] dark:text-white text-[22px] font-bold leading-tight px-1"
+          >
+            Yearly Archive
+          </h2>
+          <!-- Accordion Item: 2024 (Active) -->
+          <div
+            class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm"
+          >
+            <button
+              class="w-full flex items-center justify-between p-5 bg-header-dark text-white text-left"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-bold">2024</span>
+                <span
+                  class="bg-primary/40 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider"
+                  >4 Meetings</span
+                >
+              </div>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+            <div
+              class="bg-white dark:bg-[#1c222b] divide-y divide-gray-100 dark:divide-gray-800"
+            >
+              <!-- Meeting Entry 1 -->
+              <div class="p-6">
+                <div
+                  class="flex flex-col md:flex-row md:items-start justify-between gap-4"
+                >
+                  <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                      <h3
+                        class="text-lg font-bold text-[#101419] dark:text-white"
+                      >
+                        CST Meeting - March 12, 2024
+                      </h3>
+                      <span
+                        class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-bold px-2.5 py-1 rounded"
+                        >PUBLIC</span
+                      >
+                    </div>
+                    <p
+                      class="text-sm text-[#5b6f8b] dark:text-gray-400 mb-4 leading-relaxed"
+                    >
+                      Discussion focused on the annual professional development
+                      plan, workplace safety protocols for technical
+                      departments, and updates to the flexible work hours
+                      policy.
+                    </p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                      <button
+                        class="flex items-center gap-2 bg-[#f0f4f8] dark:bg-gray-800 hover:bg-primary/10 transition-colors px-4 py-2 rounded-lg text-pdf-blue dark:text-blue-300 font-bold text-sm"
+                      >
+                        <span class="material-symbols-outlined"
+                          >picture_as_pdf</span
+                        >
+                        Download Minutes (PDF)
+                        <span class="text-xs font-normal opacity-70"
+                          >1.4 MB</span
+                        >
+                      </button>
+                      <button
+                        class="flex items-center gap-2 text-[#5b6f8b] dark:text-gray-400 hover:text-primary transition-colors text-sm font-medium"
+                      >
+                        <span class="material-symbols-outlined text-xl"
+                          >description</span
+                        >
+                        View Summary
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Meeting Entry 2 -->
+              <div class="p-6">
+                <div
+                  class="flex flex-col md:flex-row md:items-start justify-between gap-4"
+                >
+                  <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                      <h3
+                        class="text-lg font-bold text-[#101419] dark:text-white"
+                      >
+                        CST Meeting - January 15, 2024
+                      </h3>
+                      <span
+                        class="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-bold px-2.5 py-1 rounded"
+                        >RESTRICTED</span
+                      >
+                    </div>
+                    <p
+                      class="text-sm text-[#5b6f8b] dark:text-gray-400 mb-4 leading-relaxed"
+                    >
+                      Inaugural meeting of the year addressing organizational
+                      restructuring within the administrative division and
+                      budgetary alignment for temporary staffing needs.
+                    </p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                      <button
+                        class="flex items-center gap-2 bg-[#f0f4f8] dark:bg-gray-800 hover:bg-primary/10 transition-colors px-4 py-2 rounded-lg text-pdf-blue dark:text-blue-300 font-bold text-sm"
+                      >
+                        <span class="material-symbols-outlined"
+                          >picture_as_pdf</span
+                        >
+                        Download Minutes (PDF)
+                        <span class="text-xs font-normal opacity-70"
+                          >2.1 MB</span
+                        >
+                      </button>
+                      <button
+                        class="flex items-center gap-2 text-[#5b6f8b] dark:text-gray-400 hover:text-primary transition-colors text-sm font-medium"
+                      >
+                        <span class="material-symbols-outlined text-xl"
+                          >description</span
+                        >
+                        View Summary
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion Item: 2023 -->
+          <div
+            class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm opacity-90"
+          >
+            <button
+              class="w-full flex items-center justify-between p-5 bg-[#e9edf1] dark:bg-gray-800 text-header-dark dark:text-gray-200 text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-bold">2023</span>
+                <span
+                  class="text-[#5b6f8b] dark:text-gray-400 text-xs font-medium"
+                  >12 Meetings</span
+                >
+              </div>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+          </div>
+          <!-- Accordion Item: 2022 -->
+          <div
+            class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm opacity-90"
+          >
+            <button
+              class="w-full flex items-center justify-between p-5 bg-[#e9edf1] dark:bg-gray-800 text-header-dark dark:text-gray-200 text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-bold">2022</span>
+                <span
+                  class="text-[#5b6f8b] dark:text-gray-400 text-xs font-medium"
+                  >10 Meetings</span
+                >
+              </div>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+          </div>
+          <!-- Accordion Item: 2021 -->
+          <div
+            class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm opacity-90"
+          >
+            <button
+              class="w-full flex items-center justify-between p-5 bg-[#e9edf1] dark:bg-gray-800 text-header-dark dark:text-gray-200 text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-bold">2021</span>
+                <span
+                  class="text-[#5b6f8b] dark:text-gray-400 text-xs font-medium"
+                  >9 Meetings</span
+                >
+              </div>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+          </div>
+        </div>
+        <!-- Footer Section -->
+        <footer
+          class="mt-12 py-8 border-t border-gray-200 dark:border-gray-800 text-center"
+        >
+          <p class="text-sm text-[#5b6f8b] dark:text-gray-500">
+            Showing archive records from 2021 to 2024. For older records, please
+            contact the HR Archives Department.
+          </p>
+          <div class="flex justify-center gap-6 mt-4">
+            <a
+              class="text-xs text-primary font-bold uppercase tracking-wider hover:underline"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-xs text-primary font-bold uppercase tracking-wider hover:underline"
+              href="#"
+              >Terms of Use</a
+            >
+            <a
+              class="text-xs text-primary font-bold uppercase tracking-wider hover:underline"
+              href="#"
+              >Accessibility Statement</a
+            >
+          </div>
+        </footer>
+      </main>
+    </div>
+    <!-- Optional: Image placeholder for background context if needed, though this design is clean and text-heavy -->
+    <div class="fixed bottom-0 right-0 p-8 opacity-5 pointer-events-none">
+      <img
+        class="w-40 h-40 object-cover grayscale"
+        data-alt="Official government building or architectural detail"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9o9xfL8j4M1urdNEczxIB2pcWdzBzq_0d5v5TcHUKrug2RWnZPlmJfxuEywj0ctg_mO-QBhAtw9wBELY_sLvmQc1dSQfi5yDulzC-OvLz5OrgsfKwTyXR1fdHz2D-g7E1ysgqReOlSrbMmuwEx9hhgc7LIKx48AZTFExnmjzrhd2371laD11sczh0kFMw7_yLmUCNPGps1-fQrMFLSIb-DaN1a6vQFT3vXgKLcwETwCTuETkivygyqDz9_VXd9maMsMn7-uUDS1Y"
+      />
+    </div>
+  </body>
+</html>

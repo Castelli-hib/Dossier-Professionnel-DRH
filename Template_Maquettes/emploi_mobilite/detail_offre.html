@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Détail de l'offre d'emploi | Portail RH Collectivité</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1b5a7e",
+              institutional: "#10142d",
+              "submit-btn": "#275b80",
+              "background-light": "#f6f7f8",
+              "background-dark": "#121b20",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              "serif-title": [
+                "Georgia",
+                "serif",
+              ] /* Fallback for Gastramond style */,
+              "form-label": ["Roboto", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      /* Custom institutional font feel */
+      .gastramond-style {
+        font-family: "Georgia", serif;
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-solid border-slate-200 dark:border-[#283943] bg-background-light dark:bg-background-dark px-4 md:px-10 lg:px-40 py-3"
+    >
+      <div class="flex items-center justify-between whitespace-nowrap">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4">
+            <div class="size-8 text-primary">
+              <svg
+                fill="none"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+                <path
+                  clip-rule="evenodd"
+                  d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Portail RH Public
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-9">
+            <a
+              class="text-slate-700 dark:text-white text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Offres d'emploi</a
+            >
+            <a
+              class="text-slate-700 dark:text-white text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Mes candidatures</a
+            >
+            <a
+              class="text-slate-700 dark:text-white text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Aide</a
+            >
+          </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+          <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-[#283943]"
+            >
+              <div
+                class="text-slate-400 flex items-center justify-center pl-4 rounded-l-lg"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input
+                class="form-input flex w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 px-4 pl-2 text-sm font-normal"
+                placeholder="Rechercher une offre..."
+              />
+            </div>
+          </label>
+          <div
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary"
+            data-alt="User profile avatar"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCy1lKQhbmwfJ7QgSzYvIyNgWlEBeT9XHkKGsGQHk3VL40l36nl8nEcJ0-VnPidhmkPme7qk82wlGD4Ko0MOyEgYz6rwFr3w0z9r-6G7h6APE9zcYaG3XFaMInsqE69yaATY3b1pyrhYvUtizTg4XFju_9PqE-L964yWZQrjYL2_QVv9u3GMyU9N2ckb_eu0p4AhQRz1C7tdnkvDiYAINNLLdfseUZ8Wgnqn_F0d5md04sE1ZQMX2j-KCC1pPVsibx0v34fxjROt4M');
+            "
+          ></div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-40 py-8">
+      <!-- Breadcrumbs -->
+      <div class="flex flex-wrap gap-2 mb-6">
+        <a
+          class="text-slate-500 dark:text-[#98b3c3] text-sm font-medium hover:underline"
+          href="#"
+          >Accueil</a
+        >
+        <span class="text-slate-400 dark:text-[#98b3c3] text-sm font-medium"
+          >/</span
+        >
+        <a
+          class="text-slate-500 dark:text-[#98b3c3] text-sm font-medium hover:underline"
+          href="#"
+          >Offres d'emploi</a
+        >
+        <span class="text-slate-400 dark:text-[#98b3c3] text-sm font-medium"
+          >/</span
+        >
+        <span class="text-slate-900 dark:text-white text-sm font-medium"
+          >Chef de Projet Infrastructure</span
+        >
+      </div>
+      <!-- PageHeading (Institutional Style) -->
+      <div
+        class="bg-institutional p-8 rounded-xl mb-8 text-white relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full -mr-20 -mt-20 blur-3xl"
+        ></div>
+        <div
+          class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6"
+        >
+          <div class="max-w-2xl">
+            <h1
+              class="gastramond-style text-4xl md:text-5xl font-bold leading-tight mb-4"
+            >
+              Chef de Projet Senior - Infrastructure Durable
+            </h1>
+            <div class="flex items-center gap-2 text-slate-300">
+              <span class="material-symbols-outlined text-primary"
+                >location_on</span
+              >
+              <p class="text-lg font-normal">
+                Direction de l'Urbanisme et de l'Aménagement Durable
+              </p>
+            </div>
+          </div>
+          <button
+            class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary/80 text-white text-base font-bold transition-all shadow-lg"
+          >
+            Postuler maintenant
+          </button>
+        </div>
+      </div>
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div
+          class="flex flex-col gap-2 rounded-lg p-5 border border-slate-200 dark:border-[#395260] bg-white dark:bg-background-dark shadow-sm"
+        >
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">
+            Rémunération
+          </p>
+          <p
+            class="text-slate-900 dark:text-white tracking-tight text-xl font-bold"
+          >
+            45k€ - 58k€
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-lg p-5 border border-slate-200 dark:border-[#395260] bg-white dark:bg-background-dark shadow-sm"
+        >
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">
+            Grade
+          </p>
+          <p
+            class="text-slate-900 dark:text-white tracking-tight text-xl font-bold"
+          >
+            Ingénieur / Attaché
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-lg p-5 border border-slate-200 dark:border-[#395260] bg-white dark:bg-background-dark shadow-sm"
+        >
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">
+            Catégorie
+          </p>
+          <p
+            class="text-slate-900 dark:text-white tracking-tight text-xl font-bold"
+          >
+            A
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-lg p-5 border border-slate-200 dark:border-[#395260] bg-white dark:bg-background-dark shadow-sm"
+        >
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">
+            Type de contrat
+          </p>
+          <p
+            class="text-slate-900 dark:text-white tracking-tight text-xl font-bold"
+          >
+            Titulaire ou CDD 3 ans
+          </p>
+        </div>
+      </div>
+      <!-- Main Content & Application Form -->
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Left: Job Details -->
+        <div class="flex-1 space-y-10">
+          <section>
+            <h2
+              class="text-institutional dark:text-white text-2xl font-bold mb-4 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-primary"
+                >assignment</span
+              >
+              Missions
+            </h2>
+            <div
+              class="prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 leading-relaxed"
+            >
+              <p class="mb-4">
+                Sous l’autorité du Directeur de l'Aménagement, vous pilotez les
+                opérations de construction et de rénovation des infrastructures
+                publiques de la ville. Vos principales responsabilités incluent
+                :
+              </p>
+              <ul class="list-disc pl-5 space-y-2">
+                <li>
+                  Définir et superviser le programme technique des opérations de
+                  génie civil.
+                </li>
+                <li>
+                  Coordonner les prestataires externes (maîtrise d'œuvre,
+                  bureaux d'études, entreprises de travaux).
+                </li>
+                <li>
+                  Assurer le suivi administratif, juridique et financier des
+                  marchés publics.
+                </li>
+                <li>
+                  Garantir le respect des délais, de la qualité et des normes
+                  environnementales (RE2020).
+                </li>
+                <li>
+                  Représenter la collectivité lors des réunions publiques et
+                  auprès des partenaires institutionnels.
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2
+              class="text-institutional dark:text-white text-2xl font-bold mb-4 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-primary"
+                >person_check</span
+              >
+              Profil Recherché
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="bg-slate-50 dark:bg-[#1a252b] p-6 rounded-lg border-l-4 border-primary"
+              >
+                <h3 class="font-bold mb-2">Compétences Techniques</h3>
+                <ul
+                  class="text-sm space-y-2 text-slate-600 dark:text-slate-400"
+                >
+                  <li>• Expertise en maîtrise d'ouvrage publique</li>
+                  <li>
+                    • Connaissance approfondie du Code de la Commande Publique
+                  </li>
+                  <li>• Maîtrise des logiciels de CAO/DAO (AutoCAD)</li>
+                </ul>
+              </div>
+              <div
+                class="bg-slate-50 dark:bg-[#1a252b] p-6 rounded-lg border-l-4 border-primary"
+              >
+                <h3 class="font-bold mb-2">Soft Skills</h3>
+                <ul
+                  class="text-sm space-y-2 text-slate-600 dark:text-slate-400"
+                >
+                  <li>• Aptitude au management transversal</li>
+                  <li>• Qualités rédactionnelles et de synthèse</li>
+                  <li>• Force de proposition et esprit d'initiative</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2
+              class="text-institutional dark:text-white text-2xl font-bold mb-4 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-primary">work</span>
+              Conditions de travail
+            </h2>
+            <div
+              class="bg-slate-50 dark:bg-[#1a252b] p-6 rounded-lg flex flex-col gap-4"
+            >
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-slate-400"
+                  >schedule</span
+                >
+                <span class="text-slate-700 dark:text-slate-300"
+                  >37h30 par semaine avec 15 jours de RTT</span
+                >
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-slate-400"
+                  >home_work</span
+                >
+                <span class="text-slate-700 dark:text-slate-300"
+                  >Télétravail possible jusqu'à 2 jours/semaine</span
+                >
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-slate-400"
+                  >restaurant</span
+                >
+                <span class="text-slate-700 dark:text-slate-300"
+                  >Tickets restaurant, participation mutuelle et transport</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Right: Application Sidebar -->
+        <aside class="w-full lg:w-[400px]">
+          <div
+            class="sticky top-24 bg-white dark:bg-[#1a252b] rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden"
+          >
+            <div class="p-6 bg-institutional text-white">
+              <h3 class="text-xl font-bold mb-2">Postuler à cette offre</h3>
+              <p class="text-sm text-slate-300">
+                Complétez votre candidature en 3 étapes simples.
+              </p>
+            </div>
+            <!-- Multi-step Stepper UI -->
+            <div
+              class="px-6 py-4 flex justify-between border-b border-slate-100 dark:border-slate-800"
+            >
+              <div class="flex flex-col items-center gap-1 group">
+                <div
+                  class="size-8 rounded-full bg-primary flex items-center justify-center text-white text-sm font-bold"
+                >
+                  1
+                </div>
+                <span class="text-[10px] uppercase font-bold text-primary"
+                  >Infos</span
+                >
+              </div>
+              <div
+                class="h-px bg-slate-200 dark:bg-slate-700 flex-1 self-center mx-2 mt-[-14px]"
+              ></div>
+              <div class="flex flex-col items-center gap-1">
+                <div
+                  class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 text-sm font-bold"
+                >
+                  2
+                </div>
+                <span class="text-[10px] uppercase font-bold text-slate-400"
+                  >Documents</span
+                >
+              </div>
+              <div
+                class="h-px bg-slate-200 dark:bg-slate-700 flex-1 self-center mx-2 mt-[-14px]"
+              ></div>
+              <div class="flex flex-col items-center gap-1">
+                <div
+                  class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 text-sm font-bold"
+                >
+                  3
+                </div>
+                <span class="text-[10px] uppercase font-bold text-slate-400"
+                  >Quiz</span
+                >
+              </div>
+            </div>
+            <!-- Application Form Content (Step 1 showing) -->
+            <form class="p-6 space-y-4 font-form-label">
+              <div class="space-y-4">
+                <div>
+                  <label
+                    class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                    >Nom complet *</label
+                  >
+                  <input
+                    class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-background-dark text-sm p-3 focus:border-primary focus:ring-primary"
+                    placeholder="Jean Dupont"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                    >Email *</label
+                  >
+                  <input
+                    class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-background-dark text-sm p-3 focus:border-primary focus:ring-primary"
+                    placeholder="jean.dupont@email.com"
+                    type="email"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                    >Téléphone *</label
+                  >
+                  <input
+                    class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-background-dark text-sm p-3 focus:border-primary focus:ring-primary"
+                    placeholder="06 00 00 00 00"
+                    type="tel"
+                  />
+                </div>
+              </div>
+              <!-- Upload Zone Example (Hidden logic for demonstration) -->
+              <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+                <p class="text-xs text-slate-500 mb-4 italic">
+                  * Champs obligatoires
+                </p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <button
+                  class="w-full h-12 rounded-lg bg-submit-btn hover:bg-submit-btn/90 text-white font-bold transition-all flex items-center justify-center gap-2"
+                  type="button"
+                >
+                  Suivant
+                  <span class="material-symbols-outlined text-sm"
+                    >arrow_forward</span
+                  >
+                </button>
+                <button
+                  class="w-full text-sm text-slate-500 dark:text-slate-400 font-medium hover:underline"
+                  type="button"
+                >
+                  Sauvegarder pour plus tard
+                </button>
+              </div>
+            </form>
+            <!-- Documents Preview (Example placeholder) -->
+            <div class="hidden p-6 space-y-6">
+              <div
+                class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-8 text-center hover:border-primary transition-colors cursor-pointer bg-slate-50 dark:bg-slate-900/50"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-slate-400 mb-2"
+                  >upload_file</span
+                >
+                <p class="text-sm font-bold text-slate-700 dark:text-white">
+                  Télécharger votre CV
+                </p>
+                <p class="text-xs text-slate-400 mt-1">PDF, DOCX jusqu'à 5MB</p>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Support Info -->
+          <div
+            class="mt-6 p-4 rounded-lg bg-primary/10 border border-primary/20"
+          >
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined text-primary"
+                >help_outline</span
+              >
+              <div>
+                <p class="text-sm font-bold text-primary">Besoin d'aide ?</p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Contactez le service recrutement au 01 23 45 67 89 ou par
+                  email.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer
+      class="mt-20 border-t border-slate-200 dark:border-slate-800 py-10 px-4 md:px-10 lg:px-40 bg-white dark:bg-background-dark"
+    >
+      <div
+        class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <div class="flex items-center gap-2 text-slate-400">
+          <div class="size-6 opacity-50">
+            <svg
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-sm"
+            >© 2024 Portail RH Collectivité Territoriale. Tous droits
+            réservés.</span
+          >
+        </div>
+        <div class="flex gap-8">
+          <a class="text-sm text-slate-500 hover:text-primary" href="#"
+            >Mentions légales</a
+          >
+          <a class="text-sm text-slate-500 hover:text-primary" href="#"
+            >Confidentialité</a
+          >
+          <a class="text-sm text-slate-500 hover:text-primary" href="#"
+            >Accessibilité</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

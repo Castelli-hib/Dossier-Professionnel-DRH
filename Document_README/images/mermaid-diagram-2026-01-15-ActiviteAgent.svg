@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="graph-92" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:ev="http://www.w3.org/2001/xml-events" viewBox="0 0 1148.28 1040.89">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+        font-size: 30.59px;
+      }
+
+      .st0, .st1 {
+        isolation: isolate;
+      }
+
+      .st0, .st2 {
+        fill: #d3d3d3;
+      }
+
+      .st3 {
+        fill: #fff;
+      }
+
+      .st4, .st5 {
+        fill: #1f2020;
+      }
+
+      .st4, .st5, .st6 {
+        stroke: #ccc;
+      }
+
+      .st4, .st5, .st6, .st2 {
+        stroke-miterlimit: 7.65;
+      }
+
+      .st4, .st2 {
+        stroke-width: 1.91px;
+      }
+
+      .st7, .st6 {
+        fill: none;
+      }
+
+      .st5, .st6 {
+        stroke-width: 3.82px;
+      }
+
+      .st2 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <rect class="st3" x="-2" y="-1.11" width="1155" height="1043"/>
+  <path class="st7" d=""/>
+  <g id="viewport-20260115145348612">
+    <g>
+      <rect class="st4" x="762.82" y="868.78" width="286.75" height="124.26" rx="5.73" ry="5.73"/>
+      <g class="st1">
+        <text class="st0" transform="translate(816.77 930.91)"><tspan x="0" y="0">Système DRH</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st4" x="380.49" y="868.78" width="286.75" height="124.26" rx="5.73" ry="5.73"/>
+      <g class="st1">
+        <text class="st0" transform="translate(424.51 930.91)"><tspan x="0" y="0">&quot;Système DRH&quot;</tspan></text>
+      </g>
+    </g>
+    <g>
+      <line id="actor951" class="st6" x1="906.19" y1="279.99" x2="906.19" y2="868.78"/>
+      <g id="root-951">
+        <rect class="st4" x="762.82" y="155.74" width="286.75" height="124.26" rx="5.73" ry="5.73"/>
+        <g class="st1">
+          <text class="st0" transform="translate(816.77 217.86)"><tspan x="0" y="0">Système DRH</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor950" class="st6" x1="523.86" y1="279.99" x2="523.86" y2="868.78"/>
+      <g id="root-950">
+        <rect class="st4" x="380.49" y="155.74" width="286.75" height="124.26" rx="5.73" ry="5.73"/>
+        <g class="st1">
+          <text class="st0" transform="translate(424.51 217.86)"><tspan x="0" y="0">&quot;Système DRH&quot;</tspan></text>
+        </g>
+      </g>
+    </g>
+    <line id="actor949" class="st6" x1="141.54" y1="308.67" x2="141.54" y2="868.78"/>
+    <g>
+      <line id="actor-man-torso949" class="st6" x1="141.54" y1="203.53" x2="141.54" y2="241.76"/>
+      <line id="actor-man-arms949" class="st6" x1="107.13" y1="218.82" x2="175.94" y2="218.82"/>
+      <line class="st6" x1="107.13" y1="270.43" x2="141.54" y2="241.76"/>
+      <line class="st6" x1="141.54" y1="241.76" x2="172.12" y2="270.43"/>
+      <circle class="st5" cx="141.54" cy="174.85" r="28.67"/>
+      <g class="st1">
+        <text class="st0" transform="translate(102.08 284.77)"><tspan x="0" y="0">Agent</tspan></text>
+      </g>
+    </g>
+    <text class="st0" transform="translate(377.13 339.25)"><tspan x="0" y="0">Se connecter (US-A1)</tspan></text>
+    <path class="st7" d=""/>
+    <path class="st2" d="M881.53,362.19l21.03,9.56-19.12,9.56-1.91-19.12Z"/>
+    <path class="st2" d="M898.54,371.75" marker-end="url(#arrowhead)"/>
+    <text class="st0" transform="translate(450.41 431.01)"><tspan x="0" y="0">Authentifié</tspan></text>
+    <path class="st7" d=""/>
+    <path class="st2" d="M132.17,453.95l21.03,9.56-19.12,9.56-1.91-19.12Z"/>
+    <path class="st2" d="M149.18,463.51" marker-end="url(#arrowhead)"/>
+    <text class="st0" transform="translate(298.65 522.77)"><tspan x="0" y="0">Consulter documents RH (US-A2)</tspan></text>
+    <path class="st7" d=""/>
+    <path class="st2" d="M881.53,545.71l21.03,9.56-19.12,9.56-1.91-19.12Z"/>
+    <path class="st2" d="M898.54,555.27" marker-end="url(#arrowhead)"/>
+    <text class="st0" transform="translate(301.4 614.53)"><tspan x="0" y="0">Télécharger formulaires (US-A3)</tspan></text>
+    <path class="st7" d=""/>
+    <path class="st2" d="M881.53,637.47l21.03,9.56-19.12,9.56-1.91-19.12Z"/>
+    <path class="st2" d="M898.54,647.03" marker-end="url(#arrowhead)"/>
+    <text class="st0" transform="translate(284.99 706.29)"><tspan x="0" y="0">Consulter notes de service (US-A4)</tspan></text>
+    <path class="st7" d=""/>
+    <path class="st2" d="M881.53,729.23l21.03,9.56-19.12,9.56-1.91-19.12Z"/>
+    <path class="st2" d="M898.54,738.79" marker-end="url(#arrowhead)"/>
+    <text class="st0" transform="translate(360.27 798.05)"><tspan x="0" y="0">Se déconnecter (US-A5)</tspan></text>
+    <path class="st7" d=""/>
+    <path class="st2" d="M881.53,820.99l21.03,9.56-19.12,9.56-1.91-19.12Z"/>
+    <path class="st2" d="M898.54,830.54" marker-end="url(#arrowhead)"/>
+    <g>
+      <line id="actor-man-torso951" class="st6" x1="141.54" y1="916.57" x2="141.54" y2="954.8"/>
+      <line id="actor-man-arms951" class="st6" x1="107.13" y1="931.86" x2="175.94" y2="931.86"/>
+      <line class="st6" x1="107.13" y1="983.48" x2="141.54" y2="954.8"/>
+      <line class="st6" x1="141.54" y1="954.8" x2="172.12" y2="983.48"/>
+      <circle class="st5" cx="141.54" cy="887.89" r="28.67"/>
+      <g class="st1">
+        <text class="st0" transform="translate(102.08 997.81)"><tspan x="0" y="0">Agent</tspan></text>
+      </g>
+    </g>
+  </g>
+  <path class="st7" d=""/>
+</svg>

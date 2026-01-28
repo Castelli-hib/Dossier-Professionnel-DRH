@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HR Contact Directory &amp; Referents</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "institutional-dark": "#10142d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              "serif-accent": ["Noto Serif", "serif"], // Using Noto Serif as a fallback/alternative for Gastramond style
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      /* Custom serif for names to approximate Gastramond requirement */
+      .name-accent {
+        font-family: "Noto Serif", serif;
+        letter-spacing: -0.01em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#101519] dark:text-gray-100"
+  >
+    <!-- Top Navigation Bar -->
+    <div
+      class="relative flex h-auto w-full flex-col bg-institutional-dark border-b border-white/10 overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="max-w-[1200px] mx-auto w-full">
+          <header
+            class="flex items-center justify-between whitespace-nowrap px-6 py-4"
+          >
+            <div class="flex items-center gap-4 text-white">
+              <div
+                class="size-8 bg-primary rounded-lg flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-white"
+                  >account_balance</span
+                >
+              </div>
+              <div class="flex flex-col">
+                <h2
+                  class="text-white text-lg font-bold leading-tight tracking-tight"
+                >
+                  HR Directory
+                </h2>
+                <p class="text-xs text-white/60 font-medium">
+                  City of Metropolis
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="hidden md:flex items-center gap-9">
+                <a
+                  class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+                  href="#"
+                  >Directory</a
+                >
+                <a
+                  class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+                  href="#"
+                  >Service Poles</a
+                >
+                <a
+                  class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+                  href="#"
+                  >Workplace</a
+                >
+                <a
+                  class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+                  href="#"
+                  >City Links</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <button
+                  class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-all"
+                >
+                  <span class="truncate">My Profile</span>
+                </button>
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/30"
+                  data-alt="Official profile portrait of current user"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASWKx21gc7TD_L5JKWENFfkD7abkWZWmSn7lF2KfZCMkgXT3CXLgVZkQYMLAUObcKAvBruXhydlxvgJ5LYyND2PKmTlUu3px9LAYiNLAabM7L_4rximgc1T1PL56nqIdJRynDKncrjUNukTrTQx4m8MUgXOFikH7utNPaFf73ulo5wMWXuMZrvCNfd8qeuS1Z5-bcGzs3okEccyPUrXLDNGW7HsDwc6jKzLq4OS-t0W_ejP7tyIxUlvC8fct8YNi3FP4s5swY_5N4');
+                  "
+                ></div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+    <main class="max-w-[1200px] mx-auto px-6 py-10 w-full">
+      <!-- Page Heading -->
+      <div class="flex flex-wrap justify-between gap-6 mb-8">
+        <div class="flex min-w-72 flex-col gap-3">
+          <h1
+            class="text-institutional-dark dark:text-white text-4xl font-black leading-tight tracking-tight"
+          >
+            HR Contact Directory
+          </h1>
+          <p
+            class="text-[#5b778b] dark:text-gray-400 text-lg font-normal max-w-2xl leading-relaxed"
+          >
+            Find and contact your dedicated HR referents. Our experts are
+            organized by service pole to provide specialized support for all
+            city employees.
+          </p>
+        </div>
+      </div>
+      <!-- Sticky Search & Tabs Container -->
+      <div
+        class="sticky top-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm pt-2"
+      >
+        <!-- Search Bar -->
+        <div class="mb-6">
+          <label class="flex flex-col min-w-40 h-14 w-full shadow-sm">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-xl h-full overflow-hidden border border-gray-200 dark:border-gray-700"
+            >
+              <div
+                class="text-[#5b778b] flex bg-white dark:bg-gray-800 items-center justify-center pl-5"
+                data-icon="search"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input
+                class="form-input flex w-full min-w-0 flex-1 resize-none border-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-0 h-full placeholder:text-gray-400 px-4 text-base font-normal"
+                placeholder="Search by name, expertise, or specific area (e.g., recruitment, payroll, mobility...)"
+                value=""
+              />
+            </div>
+          </label>
+        </div>
+        <!-- Tabs -->
+        <div
+          class="border-b border-gray-200 dark:border-gray-700 mb-8 overflow-x-auto"
+        >
+          <div class="flex gap-8 whitespace-nowrap min-w-max">
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-3 font-bold text-sm uppercase tracking-wider"
+              href="#"
+            >
+              All Contacts
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary pb-3 font-bold text-sm uppercase tracking-wider transition-all"
+              href="#"
+            >
+              Recruitment
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary pb-3 font-bold text-sm uppercase tracking-wider transition-all"
+              href="#"
+            >
+              Career &amp; Payroll
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary pb-3 font-bold text-sm uppercase tracking-wider transition-all"
+              href="#"
+            >
+              Health &amp; Prevention
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary pb-3 font-bold text-sm uppercase tracking-wider transition-all"
+              href="#"
+            >
+              Training
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Directory Content -->
+      <!-- Section: Recruitment & Mobility -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <h2
+            class="text-institutional-dark dark:text-white text-2xl font-bold tracking-tight"
+          >
+            Recruitment &amp; Mobility
+          </h2>
+          <div
+            class="h-[2px] flex-grow bg-gray-200 dark:bg-gray-800 rounded-full"
+          ></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Contact Card 1 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Claire Dubois"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2qR4RzExQjkKR6LwLiAI4L0OYofhXhS-Lznqq4TNa2hkhCmcAyyOExAaGq8pwpGxwi-IV3RjYVngY85RMIYnh64IeHSNWR_zJ4-H0lHpGIANm4oYRzooBXx2NQM6yQ42VWdAgSjHXPAhHOKRs6IfyeDMOOFtLIymJfvPuFnuduKlV0XNZus3JGuNbCqKh8E3nPycDQTwui_GUXXRCiYNVz1gU5LBVw4wUd0xoXvOVjOiK7lvPOFWfBbzd5RZSdWpRIFhN63aTTmM');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Claire Dubois
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  Head of Recruitment
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Senior Management &amp; Technical Poles
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="mailto:c.dubois@metropolis.gov"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="tel:+3312345678"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+          <!-- Contact Card 2 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Julien Martin"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCel2kWGDv1CwIWUeOrvQeGxJsgtZAOhCGo2ZkFIxWViXwBB91q-M1hrDOM5wEXMQWd5WUFQPvCV34GwCN4zvYnjSpQAcMM03OWxCv7J-tqcCfhaWVFQerXuosq7zJ3gfWnTnAHJFWT7A__pDthuep5e6XcuSLMHuM5Ptv07C8PCa0RQpFsx6GUeYZHuxDq4hKIJV2pknaBHUn5JJj9CUgJOUHOihIh6F9bgnJ4ubOi3TaDOLxAKe608exyih85HnfCdEPK2nPtv08');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Julien Martin
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  Mobility Advisor
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Internal Reclassifications &amp; Careers
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="mailto:j.martin@metropolis.gov"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="tel:+3312345679"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+          <!-- Contact Card 3 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Sophie Laurent"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSSwcIcf-238bk9HlsSUSz_TZcX0nTYGZLvhVN_tgWSknXe1-E1sYHe6fnM0_kjafAF2EEgoLiGaWVZoCP4Tt0eZWRUlo6AV-IGiGYndAVfFB-J5jgvnDGCBCdz3m2cXksRyxHcGXwYCSVyFBv0L4QJuxKu0jiHniFExoxBCzpFzevzfctUIUlUH9e3bPx6hvMAdPVZUlAbwYKFSZtzku7mglIkQ-GeTR2MBtjXtXsgZMPB_kMkctYC0x55v33AKaAin5f6Lpr6uo');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Sophie Laurent
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  Recruitment Officer
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Education &amp; Culture Department
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="mailto:s.laurent@metropolis.gov"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="tel:+3312345680"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Career & Payroll -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <h2
+            class="text-institutional-dark dark:text-white text-2xl font-bold tracking-tight"
+          >
+            Career &amp; Payroll
+          </h2>
+          <div
+            class="h-[2px] flex-grow bg-gray-200 dark:bg-gray-800 rounded-full"
+          ></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Contact Card 4 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Marc Lefebvre"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFn8JskaVdf4h3vivwT5szu1VLBkhpxKitwIb2OASFYaGfZNXnaUQUgS0s_raJkTkSTpF5IwcvNuIr_Tlm2QbKU14KJmGXKBZ4BJQPSAxNwzjFo6tXL4Keuhk-4zoYrATvWM0SlKjuF3lrkV4zGsqWhmLWQqR6GRzWmoc3pulzYQFgRevkWyWduegjbdvrVbaiKJwU0CPV25Yez1A5XxPVFik3-vSJZcYvwXTRWHupXRZiQeBuFeXp3wzp-TcvaikGaFg9t-nKLXg');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Marc Lefebvre
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  Payroll Manager
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Salary Corrections &amp; Tax Deductions
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+          <!-- Contact Card 5 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Emma Roussel"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3kCzdAZTvycyGCNrRA1h_vEtY5eTuZ2XQBCOnNKoMns6aXYvgOJRG2nTAuamzSQgub7hyFzYeQR_jCUr3JZd_1AJ-pCJr9oJz82iMvg8rBz_3x9vqj8G131TKSYfdBgbaozpDfGUKhSKnqx9v7A8VbD2lX9EeOF_JTN4JAjm49hCKCfBDBdq-zOmJyiA4uyKMUO9oAjHH8DXN5PnT8dAQZLYctoFx-mQyle_gRdvSMaeUDcXbmraPpfUg5HG_MjeIqvZevRBt0vM');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Emma Roussel
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  HR Administrator
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Leave Management &amp; Certifications
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Health & Prevention -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <h2
+            class="text-institutional-dark dark:text-white text-2xl font-bold tracking-tight"
+          >
+            Health, Safety &amp; Prevention
+          </h2>
+          <div
+            class="h-[2px] flex-grow bg-gray-200 dark:bg-gray-800 rounded-full"
+          ></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Contact Card 6 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Dr. Thomas Roux"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2p8GyteQKKgpMQs3FuJ2aUJ-vPHCbrT82wMcN5IImN1d3ZzOdsjNHMImsTn0Qy9uAWzzMiGI7Vys1VlxbmqDiDeslWUGmvSIEyvxSGCDsz9vgrdUCJYy5g17eegBlnjQiKW4JdQxsyJ2W86w1eSaj1CQInXPbMrAurTxVM7lT2cDkIDhRfb049_E2uLGmI4mWMeRTpNkAaXNx8xJkMeoaq0bq5B4Pa17Y29C5iE6PiRgfI4qLVg8AvR0NXubbquPDUXGipdc7En8');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Dr. Thomas Roux
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  Occupational Doctor
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Workplace Adaptations &amp; Medical Exams
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+          <!-- Contact Card 7 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
+          >
+            <div class="flex gap-4 items-start mb-4">
+              <div
+                class="size-16 rounded-lg bg-center bg-cover border border-gray-100 dark:border-gray-600 flex-shrink-0"
+                data-alt="Professional portrait of Isabelle Durand"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMwPdiuOLxknTiQfvLfP9zQXVdP08Ft4Cp4iREdCp1iv3nIexvBeb042at4cb8FiNKYzyUK9oxxO_moxqQeqLvVVH7xz65bfeJwW3KbTxaldiTaZuyr8FgDBYWYJVgniUuGjyD9hPYEJf3bZxj2sJRZJ0BpNNKmufLkPqDWUc-0CeOk0vuWEDFWnMoGqg5nBErj5qIMZ0W5EluZInmQ-zyZUSWG4qjJTF704foY-FFIyulYjWga9g2fhen35kQxisNLg4udqXRSgM');
+                "
+              ></div>
+              <div class="flex flex-col">
+                <h3
+                  class="name-accent text-xl font-bold text-institutional-dark dark:text-white"
+                >
+                  Isabelle Durand
+                </h3>
+                <p
+                  class="text-xs font-bold text-primary uppercase tracking-wider mt-0.5"
+                >
+                  Safety Engineer
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Specialist: Prevention of Occupational Risks (RPP)
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 border-t border-gray-50 dark:border-gray-700 pt-4"
+            >
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">mail</span>
+                Email
+              </a>
+              <a
+                class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-institutional-dark dark:text-white transition-colors font-semibold text-sm"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">call</span>
+                Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-institutional-dark text-white/70 py-12 border-t border-white/10"
+    >
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-3 text-white mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >account_balance</span
+              >
+              <h3 class="font-bold text-xl uppercase tracking-tighter">
+                HR Portal
+              </h3>
+            </div>
+            <p class="text-sm leading-relaxed mb-6">
+              The HR Contact Directory is an official tool of the Metropolis
+              Local Government Human Resources Department.
+            </p>
+            <div class="flex gap-4">
+              <a class="hover:text-white transition-colors" href="#"
+                ><span class="material-symbols-outlined">public</span></a
+              >
+              <a class="hover:text-white transition-colors" href="#"
+                ><span class="material-symbols-outlined">share</span></a
+              >
+              <a class="hover:text-white transition-colors" href="#"
+                ><span class="material-symbols-outlined">shield</span></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+            >
+              Workplace
+            </h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  href="#"
+                  ><span class="material-symbols-outlined text-sm">link</span>
+                  Employee Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  href="#"
+                  ><span class="material-symbols-outlined text-sm">link</span>
+                  Internal Job Board</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  href="#"
+                  ><span class="material-symbols-outlined text-sm">link</span>
+                  Leave Requests</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  href="#"
+                  ><span class="material-symbols-outlined text-sm">link</span>
+                  Training Catalog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+            >
+              City Links
+            </h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Official Portal</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Public Services</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Digital Library</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="#"
+                  >Emergency Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+            >
+              Support
+            </h4>
+            <p class="text-sm mb-4">Technical issues with the directory?</p>
+            <button
+              class="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-bold text-sm transition-all mb-4"
+            >
+              Contact IT Support
+            </button>
+            <div class="flex items-center gap-2 text-xs">
+              <span class="material-symbols-outlined text-sm">info</span>
+              <span>Version 2.4.0 (Stable)</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-medium uppercase tracking-tighter"
+        >
+          <p>© 2024 City of Metropolis - All Rights Reserved</p>
+          <div class="flex gap-8">
+            <a class="hover:text-white transition-colors" href="#"
+              >Legal Mentions</a
+            >
+            <a class="hover:text-white transition-colors" href="#"
+              >Privacy Policy</a
+            >
+            <a class="hover:text-white transition-colors" href="#"
+              >Accessibility Statement</a
+            >
+            <a class="hover:text-white transition-colors" href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

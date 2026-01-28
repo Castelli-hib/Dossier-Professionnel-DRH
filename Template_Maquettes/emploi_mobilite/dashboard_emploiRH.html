@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HR Recruitment Tracking Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Roboto:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+              "surface-dark": "#1e262c",
+              "border-dark": "#2a3741",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              data: ["Roboto", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .status-new {
+        @apply bg-blue-500/20 text-blue-400 border border-blue-500/30;
+      }
+      .status-screened {
+        @apply bg-purple-500/20 text-purple-400 border border-purple-500/30;
+      }
+      .status-interviewed {
+        @apply bg-green-500/20 text-green-400 border border-green-500/30;
+      }
+      .status-rejected {
+        @apply bg-red-500/20 text-red-400 border border-red-500/30;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-border-dark px-6 py-3 bg-white dark:bg-background-dark sticky top-0 z-50"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="size-8 bg-primary rounded-lg flex items-center justify-center text-white"
+        >
+          <span class="material-symbols-outlined">account_balance</span>
+        </div>
+        <h2 class="text-lg font-bold leading-tight tracking-tight">
+          HR Recruitment Portal
+        </h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-6 items-center">
+        <label class="flex flex-col min-w-40 h-10 max-w-md w-full">
+          <div
+            class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-surface-dark border border-slate-200 dark:border-border-dark"
+          >
+            <div
+              class="text-slate-500 dark:text-[#9cb0bf] flex items-center justify-center pl-4"
+            >
+              <span class="material-symbols-outlined text-[20px]">search</span>
+            </div>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-[#9cb0bf]"
+              placeholder="Search candidates, jobs, or departments..."
+              value=""
+            />
+          </div>
+        </label>
+        <div class="flex gap-3">
+          <button
+            class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-surface-dark text-slate-600 dark:text-white border border-slate-200 dark:border-border-dark hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors"
+          >
+            <span class="material-symbols-outlined text-[20px]"
+              >notifications</span
+            >
+          </button>
+          <button
+            class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-surface-dark text-slate-600 dark:text-white border border-slate-200 dark:border-border-dark hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors"
+          >
+            <span class="material-symbols-outlined text-[20px]"
+              >account_circle</span
+            >
+          </button>
+        </div>
+        <div
+          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-primary/20"
+          data-alt="Profile picture of HR Administrator"
+          style="
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpnjU2Tf84H5nKYADXmxH4TJ8PqqOXvHC5PKYIt0bzg9GtOsUGmmnzs2G2grCD8RGr6SxPJRvdBQCVL0b77Y0zMo4wM1lqSAABLFMAY8eU9yKuPW-U4td_WkBeR4HBmPrrmQDXOouHGGoFz9If6mEWZRJRYz4SfYV3Vbdqf823z2H4cr8Wvki5-7CmidMbJzbTRRJT5Ohbb2eOcuGtybCH8WZIcktUhoxfuv82wd44IFA9CGt8X4q0g2PoPFQOyVzYMgHrTaJandQ');
+          "
+        ></div>
+      </div>
+    </header>
+    <div class="flex flex-1 h-full">
+      <!-- Side Navigation Bar -->
+      <aside
+        class="w-64 border-r border-slate-200 dark:border-border-dark bg-white dark:bg-background-dark hidden lg:flex flex-col sticky top-[65px] h-[calc(100vh-65px)]"
+      >
+        <div class="flex flex-col h-full justify-between p-4">
+          <div class="flex flex-col gap-6">
+            <div class="flex flex-col px-2">
+              <h1 class="text-base font-bold text-primary">Local Government</h1>
+              <p
+                class="text-slate-500 dark:text-[#9cb0bf] text-xs font-medium uppercase tracking-wider"
+              >
+                HR Department
+              </p>
+            </div>
+            <nav class="flex flex-col gap-1">
+              <div
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white cursor-pointer shadow-lg shadow-primary/20"
+              >
+                <span class="material-symbols-outlined">dashboard</span>
+                <p class="text-sm font-semibold">Dashboard</p>
+              </div>
+              <div
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark cursor-pointer transition-colors"
+              >
+                <span class="material-symbols-outlined">work</span>
+                <p class="text-sm font-medium">Job Offers</p>
+              </div>
+              <div
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark cursor-pointer transition-colors"
+              >
+                <span class="material-symbols-outlined">groups</span>
+                <p class="text-sm font-medium">Candidates</p>
+              </div>
+              <div
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark cursor-pointer transition-colors"
+              >
+                <span class="material-symbols-outlined">event_available</span>
+                <p class="text-sm font-medium">Interviews</p>
+              </div>
+              <div
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark cursor-pointer transition-colors"
+              >
+                <span class="material-symbols-outlined">settings</span>
+                <p class="text-sm font-medium">Settings</p>
+              </div>
+            </nav>
+            <div class="pt-4 border-t border-slate-100 dark:border-border-dark">
+              <p
+                class="px-3 mb-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest"
+              >
+                Filters
+              </p>
+              <div class="flex flex-col gap-1">
+                <div
+                  class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark cursor-pointer"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-[20px]"
+                      >filter_list</span
+                    >
+                    <p class="text-sm">Job Offer</p>
+                  </div>
+                  <span class="material-symbols-outlined text-[16px]"
+                    >chevron_right</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark cursor-pointer"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-[20px]"
+                      >styler</span
+                    >
+                    <p class="text-sm">Recruitment Stage</p>
+                  </div>
+                  <span class="material-symbols-outlined text-[16px]"
+                    >chevron_right</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content Area -->
+      <main class="flex-1 overflow-y-auto">
+        <div class="max-w-6xl mx-auto p-6 flex flex-col gap-6">
+          <!-- Page Heading -->
+          <div class="flex flex-wrap justify-between items-end gap-3">
+            <div class="flex flex-col gap-1">
+              <p
+                class="text-3xl font-black leading-tight tracking-tight text-slate-900 dark:text-white"
+              >
+                Recruitment Overview
+              </p>
+              <p
+                class="text-slate-500 dark:text-[#9cb0bf] text-base font-normal"
+              >
+                Manage and track candidate pipelines for all departments
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <button
+                class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined">add_circle</span>
+                New Candidate
+              </button>
+            </div>
+          </div>
+          <!-- Stats Summary -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm"
+            >
+              <div class="flex justify-between items-start">
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider"
+                >
+                  Total Candidates
+                </p>
+                <span class="material-symbols-outlined text-primary"
+                  >groups</span
+                >
+              </div>
+              <p class="text-3xl font-bold leading-tight dark:text-white">
+                1,240
+              </p>
+              <div class="flex items-center gap-1">
+                <span class="text-emerald-500 font-bold text-sm">+12%</span>
+                <span class="text-slate-400 text-xs">from last month</span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm"
+            >
+              <div class="flex justify-between items-start">
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider"
+                >
+                  Pending Reviews
+                </p>
+                <span class="material-symbols-outlined text-amber-500"
+                  >pending_actions</span
+                >
+              </div>
+              <p class="text-3xl font-bold leading-tight dark:text-white">42</p>
+              <div class="flex items-center gap-1">
+                <span class="text-emerald-500 font-bold text-sm">+5%</span>
+                <span class="text-slate-400 text-xs">new since yesterday</span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm"
+            >
+              <div class="flex justify-between items-start">
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider"
+                >
+                  Upcoming Interviews
+                </p>
+                <span class="material-symbols-outlined text-rose-500"
+                  >event</span
+                >
+              </div>
+              <p class="text-3xl font-bold leading-tight dark:text-white">8</p>
+              <div class="flex items-center gap-1">
+                <span class="text-rose-500 font-bold text-sm">-2%</span>
+                <span class="text-slate-400 text-xs">scheduled today</span>
+              </div>
+            </div>
+          </div>
+          <!-- Filters Chips Section -->
+          <div
+            class="flex flex-wrap items-center gap-3 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-200 dark:border-border-dark"
+          >
+            <span
+              class="text-sm font-bold text-slate-400 px-2 uppercase tracking-widest text-[10px]"
+              >Quick Filters:</span
+            >
+            <button
+              class="flex h-9 items-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-4 hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors"
+            >
+              <p class="text-slate-700 dark:text-white text-sm font-medium">
+                All Jobs
+              </p>
+              <span class="material-symbols-outlined text-slate-400 text-[18px]"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <button
+              class="flex h-9 items-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-4 hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors"
+            >
+              <p class="text-slate-700 dark:text-white text-sm font-medium">
+                Public Works
+              </p>
+              <span class="material-symbols-outlined text-slate-400 text-[18px]"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <button
+              class="flex h-9 items-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-4 hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors"
+            >
+              <p class="text-slate-700 dark:text-white text-sm font-medium">
+                Administration
+              </p>
+              <span class="material-symbols-outlined text-slate-400 text-[18px]"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <button
+              class="flex h-9 items-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-4 hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors"
+            >
+              <p class="text-slate-700 dark:text-white text-sm font-medium">
+                IT &amp; Technology
+              </p>
+              <span class="material-symbols-outlined text-slate-400 text-[18px]"
+                >keyboard_arrow_down</span
+              >
+            </button>
+          </div>
+          <!-- Candidate Table -->
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm"
+          >
+            <div
+              class="px-6 py-4 border-b border-slate-200 dark:border-border-dark flex justify-between items-center"
+            >
+              <h3 class="text-lg font-bold">Recent Applications</h3>
+              <button class="text-primary text-sm font-bold hover:underline">
+                Export CSV
+              </button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse font-data">
+                <thead>
+                  <tr
+                    class="bg-slate-50 dark:bg-background-dark/50 text-slate-500 dark:text-[#9cb0bf] text-xs uppercase tracking-wider font-bold"
+                  >
+                    <th class="px-6 py-4">Candidate Name</th>
+                    <th class="px-6 py-4">Job Title</th>
+                    <th class="px-6 py-4">Submission Date</th>
+                    <th class="px-6 py-4">Status</th>
+                    <th class="px-6 py-4 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-slate-100 dark:divide-border-dark"
+                >
+                  <!-- Row 1 -->
+                  <tr
+                    class="hover:bg-slate-50 dark:hover:bg-background-dark/30 transition-colors group"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-9 rounded-full bg-slate-200 bg-cover bg-center"
+                          data-alt="Candidate Avatar Jane Doe"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1SWkJbjxelGK3SOsQXCn3MylJhXM-lwdmft91vh8ZtTa3rOuwVWfU4KClL3sdzlyRuRzMQ5TzOCJrBPlZN87U-X3O0jozz6TTKbyjbkNgCR89v6ZXYDNnKNvH4eQAVABdumKc-x8xkgr0wcv2W3h5wlRJwE0WLU3Txd1ZJBtyaUH47-M76uKEhD-SxUyMqW0f98cVp0wyTpoGgDE1rw9gm71b7XOvdYXSxZJEt8NDerXevmO7aEZM3lsTfHTRCRmTMxZvakPTCeQ');
+                          "
+                        ></div>
+                        <div class="flex flex-col">
+                          <span class="text-sm font-bold dark:text-white"
+                            >Jane Doe</span
+                          >
+                          <span
+                            class="text-xs text-slate-500 dark:text-slate-400"
+                            >jane.doe@example.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-300">
+                      Senior Urban Planner
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-400">
+                      Oct 24, 2023
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-[11px] font-bold uppercase status-screened"
+                        >Screened</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div
+                        class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <button
+                          class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90"
+                        >
+                          View Profile
+                        </button>
+                        <button
+                          class="p-1.5 rounded-lg border border-slate-200 dark:border-border-dark text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >more_vert</span
+                          >
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr
+                    class="hover:bg-slate-50 dark:hover:bg-background-dark/30 transition-colors group"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-9 rounded-full bg-slate-200 bg-cover bg-center"
+                          data-alt="Candidate Avatar Robert Chen"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANcwq8gD7jbGhFCGDj60Af_4_a6O9vfKmXPPlLn9V_psDZHm6H_BLptP0b45BF_BrOmwHPsiqCix_DfPbu7_unLtRQkNQkvJAg31m1Y4ptj10iYbMoX4TWoGLfEswecAAn1Pj0IH8xuImpsrHZHf6jsKbrmNaPxZZFnKN1VktciZlOlVU3nfemQLPAgYSnS9ECYkaFy5VWcJZ0TaVSkXuMio6LtX0B8oLzamT4HcmeGWRKoAi4t0ZwGmTlvQ2GR9UuxCbcLhSo0rg');
+                          "
+                        ></div>
+                        <div class="flex flex-col">
+                          <span class="text-sm font-bold dark:text-white"
+                            >Robert Chen</span
+                          >
+                          <span
+                            class="text-xs text-slate-500 dark:text-slate-400"
+                            >r.chen@outlook.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-300">
+                      IT Systems Admin
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-400">
+                      Oct 23, 2023
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-[11px] font-bold uppercase status-interviewed"
+                        >Interviewed</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div
+                        class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <button
+                          class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90"
+                        >
+                          View Profile
+                        </button>
+                        <button
+                          class="p-1.5 rounded-lg border border-slate-200 dark:border-border-dark text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >more_vert</span
+                          >
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Row 3 -->
+                  <tr
+                    class="hover:bg-slate-50 dark:hover:bg-background-dark/30 transition-colors group"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-9 rounded-full bg-slate-200 bg-cover bg-center"
+                          data-alt="Candidate Avatar Sarah Jenkins"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0zrRAq0pjF9aqOJtq1F1HKytD-XjF-OyNfyGAzKQFZXeeJ0mBbkHutk47GBD_ZWzN4aNgRzjoozZEyQRS2-LQnoC7C3DrmF_8UF3kELlGyXlkLTyNMzu2rxeli10Uf8BlOfLPtYze-9sKujZZ473A4eR5d1Jk7rRSikGRogXd9TBoEHTOonRjhcbFA7mEgcK6nmUNnzvUaKr6JqxiI28LSfh5DRWzWx6blrIAXOpFcgcK5LNgPGUc86ukNMSPt57YKqBDsdcts-Q');
+                          "
+                        ></div>
+                        <div class="flex flex-col">
+                          <span class="text-sm font-bold dark:text-white"
+                            >Sarah Jenkins</span
+                          >
+                          <span
+                            class="text-xs text-slate-500 dark:text-slate-400"
+                            >sjenks@gmail.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-300">
+                      Public Relations Officer
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-400">
+                      Oct 22, 2023
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-[11px] font-bold uppercase status-new"
+                        >New</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div
+                        class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <button
+                          class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90"
+                        >
+                          View Profile
+                        </button>
+                        <button
+                          class="p-1.5 rounded-lg border border-slate-200 dark:border-border-dark text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >more_vert</span
+                          >
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Row 4 -->
+                  <tr
+                    class="hover:bg-slate-50 dark:hover:bg-background-dark/30 transition-colors group"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-9 rounded-full bg-slate-200 bg-cover bg-center"
+                          data-alt="Candidate Avatar Michael Scott"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOtt9n9-EiSiOzA08KglUiFr8VCKsL-qe5meDNHjCSi8V6W9n4cYJmSSl1HT5iXpvxVlIXaZL8x0XYUFC5-S9EQPbSC3sXq3TvnJDttANap-B3unUMLpwihedi3P1Dvyho7Oe_ii_xbrzfhHIFwkTkdQKpFvJlxWfAX-Hd4hbnIon15yLEDMPxtOffjwEslMkFsLmg4Z1HUNYqaOxBbB2T_hctUoi9RBEV1Rxnr83y94vc4Yz7RNJXuzvCEa793YAYvKs-djP1crE');
+                          "
+                        ></div>
+                        <div class="flex flex-col">
+                          <span class="text-sm font-bold dark:text-white"
+                            >Michael Scott</span
+                          >
+                          <span
+                            class="text-xs text-slate-500 dark:text-slate-400"
+                            >mscott@dundermifflin.com</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-300">
+                      Regional Manager
+                    </td>
+                    <td class="px-6 py-4 text-sm dark:text-slate-400">
+                      Oct 21, 2023
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-3 py-1 rounded-full text-[11px] font-bold uppercase status-rejected"
+                        >Rejected</span
+                      >
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div
+                        class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <button
+                          class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90"
+                        >
+                          View Profile
+                        </button>
+                        <button
+                          class="p-1.5 rounded-lg border border-slate-200 dark:border-border-dark text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >more_vert</span
+                          >
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Pagination -->
+            <div
+              class="px-6 py-4 border-t border-slate-200 dark:border-border-dark flex items-center justify-between"
+            >
+              <p class="text-xs text-slate-500 dark:text-[#9cb0bf]">
+                Showing 1 to 4 of 1,240 candidates
+              </p>
+              <div class="flex gap-2">
+                <button
+                  class="p-1 rounded-lg border border-slate-200 dark:border-border-dark text-slate-400 hover:bg-slate-100 dark:hover:bg-surface-dark disabled:opacity-50"
+                  disabled=""
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >chevron_left</span
+                  >
+                </button>
+                <button
+                  class="p-1 rounded-lg border border-slate-200 dark:border-border-dark text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-surface-dark"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >chevron_right</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

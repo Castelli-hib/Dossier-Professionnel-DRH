@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kit d'accueil agent - Local Government HR</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#101519] dark:text-gray-100"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Top Navigation Bar -->
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e9eef1] dark:border-gray-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-primary dark:text-white">
+              <div class="size-6">
+                <svg
+                  fill="none"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-lg font-bold leading-tight tracking-[-0.015em] text-[#101519] dark:text-white"
+              >
+                RH Collectivité
+              </h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a
+                class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#"
+                >Accueil</a
+              >
+              <a
+                class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#"
+                >Ma Carrière</a
+              >
+              <a
+                class="text-primary dark:text-white text-sm font-bold leading-normal border-b-2 border-primary"
+                href="#"
+                >Intégration</a
+              >
+              <a
+                class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                href="#"
+                >Outils</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-4">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#5b778b] flex border-none bg-[#e9eef1] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >search</span
+                  >
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 border-none bg-[#e9eef1] dark:bg-gray-800 text-[#101519] dark:text-white focus:ring-0 h-full placeholder:text-[#5b778b] px-4 rounded-l-none rounded-r-lg text-sm font-normal"
+                  placeholder="Rechercher un document..."
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold"
+            >
+              <span>Mon Espace</span>
+            </button>
+          </div>
+        </header>
+        <main class="flex-1 flex justify-center py-10 px-6">
+          <div class="max-w-[1000px] w-full flex flex-col gap-8">
+            <!-- Page Heading -->
+            <div
+              class="flex flex-wrap justify-between items-end gap-6 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-[#e9eef1] dark:border-gray-800"
+            >
+              <div class="flex min-w-72 flex-col gap-3 max-w-2xl">
+                <h1
+                  class="text-[#101519] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]"
+                >
+                  Kit d'accueil agent
+                </h1>
+                <p
+                  class="text-[#5b778b] dark:text-gray-400 text-base font-normal leading-relaxed"
+                >
+                  Bienvenue au sein de notre collectivité. Ce pack numérique
+                  regroupe toutes les ressources essentielles pour faciliter
+                  votre intégration et vos premiers pas parmi nous.
+                </p>
+              </div>
+              <button
+                class="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-[#e9eef1] dark:bg-gray-800 text-[#101519] dark:text-white text-sm font-bold hover:bg-[#dce4e9] transition-all"
+              >
+                <span class="material-symbols-outlined"
+                  >download_for_offline</span
+                >
+                <span class="truncate">Tout télécharger (ZIP)</span>
+              </button>
+            </div>
+            <!-- Section 1: Welcome Message -->
+            <section>
+              <h2
+                class="text-primary dark:text-blue-400 text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">celebration</span> 1.
+                Mot de bienvenue
+              </h2>
+              <div class="p-4">
+                <div
+                  class="flex flex-col md:flex-row items-stretch justify-between gap-6 rounded-xl bg-white dark:bg-gray-900 p-6 shadow-sm border border-[#e9eef1] dark:border-gray-800"
+                >
+                  <div class="flex flex-[3_3_0px] flex-col gap-4">
+                    <div class="flex flex-col gap-2">
+                      <p
+                        class="text-[#101519] dark:text-white text-xl font-bold leading-tight"
+                      >
+                        Message du Maire et de la Direction Générale
+                      </p>
+                      <p
+                        class="text-[#5b778b] dark:text-gray-400 text-base font-normal leading-relaxed"
+                      >
+                        "Chaque nouvel agent contribue à la qualité du service
+                        public que nous rendons aux citoyens. Nous sommes fiers
+                        de vous accueillir pour porter ensemble nos valeurs de
+                        solidarité et d'innovation territoriale."
+                      </p>
+                    </div>
+                    <div class="flex gap-3">
+                      <button
+                        class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white gap-2 text-sm font-bold"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >play_circle</span
+                        >
+                        <span>Voir la vidéo</span>
+                      </button>
+                      <button
+                        class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#e9eef1] dark:bg-gray-800 text-[#101519] dark:text-white gap-2 text-sm font-medium"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >description</span
+                        >
+                        <span>Version PDF (1.2 Mo)</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full md:w-64 bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                    data-alt="Portrait of the Mayor and HR Director smiling"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGENB5cUGGCBylYvqWnz9NwbntpRvTel8r7-iO8PW4JwypmGiNVVxpqGrdsoe-19YYebthpzcZXhRaUwKKHMOPmummzL9NnXsg7CDScnIken4_46LkIYy-8VH4JFpt-iand_-ci7av6TmyVA7pVpTPPpL1f9ltktb_BxHgwYS70Hl8pFAoazO7MpWzUZgdMqCZzu6CP1t6Qtf0tLK1sBPMx6o56uj5ZjbZTWcxXetHaMRk-cYC3bzjLQEm1xKxOXsSL_8pHqd3c54');
+                    "
+                  ></div>
+                </div>
+              </div>
+            </section>
+            <!-- Section 2: The Local Authority -->
+            <section>
+              <h2
+                class="text-primary dark:text-blue-400 text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">account_balance</span>
+                2. La Collectivité
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+                <div
+                  class="flex items-center gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-[#e9eef1] dark:border-gray-800 group hover:border-primary transition-colors cursor-pointer"
+                >
+                  <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                    <span class="material-symbols-outlined text-3xl">hub</span>
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <p class="text-[#101519] dark:text-white font-bold">
+                      Organigramme Général
+                    </p>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-xs">
+                      Visualisez la structure des services
+                    </p>
+                  </div>
+                  <span class="material-symbols-outlined text-primary"
+                    >download</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-[#e9eef1] dark:border-gray-800 group hover:border-primary transition-colors cursor-pointer"
+                >
+                  <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                    <span class="material-symbols-outlined text-3xl"
+                      >verified_user</span
+                    >
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <p class="text-[#101519] dark:text-white font-bold">
+                      Valeurs et Charte Éthique
+                    </p>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-xs">
+                      Le socle de notre engagement public
+                    </p>
+                  </div>
+                  <span class="material-symbols-outlined text-primary"
+                    >download</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-4 rounded-xl bg-white dark:bg-gray-900 p-5 shadow-sm border border-[#e9eef1] dark:border-gray-800 group hover:border-primary transition-colors cursor-pointer md:col-span-2"
+                >
+                  <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                    <span class="material-symbols-outlined text-3xl"
+                      >bar_chart</span
+                    >
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <p class="text-[#101519] dark:text-white font-bold">
+                      Chiffres Clés de la Collectivité
+                    </p>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-xs">
+                      Population, budget, nombre d'agents et projets phares
+                    </p>
+                  </div>
+                  <span class="material-symbols-outlined text-primary"
+                    >visibility</span
+                  >
+                </div>
+              </div>
+            </section>
+            <!-- Section 3: Administrative Essentials -->
+            <section>
+              <h2
+                class="text-primary dark:text-blue-400 text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">gavel</span> 3. Les
+                Incontournables Administratifs
+              </h2>
+              <div class="px-4">
+                <div
+                  class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-[#e9eef1] dark:border-gray-800"
+                >
+                  <table class="w-full text-left border-collapse">
+                    <thead class="bg-[#f8fafb] dark:bg-gray-800">
+                      <tr>
+                        <th
+                          class="px-6 py-4 text-xs font-bold uppercase text-[#5b778b] dark:text-gray-400"
+                        >
+                          Document
+                        </th>
+                        <th
+                          class="px-6 py-4 text-xs font-bold uppercase text-[#5b778b] dark:text-gray-400 text-right"
+                        >
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody
+                      class="divide-y divide-[#e9eef1] dark:divide-gray-800"
+                    >
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                        <td class="px-6 py-4">
+                          <div class="flex flex-col">
+                            <span
+                              class="text-sm font-bold text-[#101519] dark:text-white"
+                              >Règlement Intérieur</span
+                            >
+                            <span
+                              class="text-xs text-[#5b778b] dark:text-gray-400"
+                              >Droits et obligations de l'agent</span
+                            >
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                          <a
+                            class="text-primary font-bold text-sm flex items-center justify-end gap-1 hover:underline"
+                            href="#"
+                          >
+                            <span class="material-symbols-outlined text-[18px]"
+                              >picture_as_pdf</span
+                            >
+                            PDF (2.4 Mo)
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                        <td class="px-6 py-4">
+                          <div class="flex flex-col">
+                            <span
+                              class="text-sm font-bold text-[#101519] dark:text-white"
+                              >Synthèse Protection Sociale</span
+                            >
+                            <span
+                              class="text-xs text-[#5b778b] dark:text-gray-400"
+                              >Mutuelle et prévoyance collective</span
+                            >
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                          <a
+                            class="text-primary font-bold text-sm flex items-center justify-end gap-1 hover:underline"
+                            href="#"
+                          >
+                            <span class="material-symbols-outlined text-[18px]"
+                              >picture_as_pdf</span
+                            >
+                            PDF (800 Ko)
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                        <td class="px-6 py-4">
+                          <div class="flex flex-col">
+                            <span
+                              class="text-sm font-bold text-[#101519] dark:text-white"
+                              >Calendrier de Paie 2024</span
+                            >
+                            <span
+                              class="text-xs text-[#5b778b] dark:text-gray-400"
+                              >Dates de virement et clôture des variables</span
+                            >
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                          <a
+                            class="text-primary font-bold text-sm flex items-center justify-end gap-1 hover:underline"
+                            href="#"
+                          >
+                            <span class="material-symbols-outlined text-[18px]"
+                              >calendar_month</span
+                            >
+                            Télécharger
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- Section 4: Practical Life -->
+            <section>
+              <h2
+                class="text-primary dark:text-blue-400 text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">map</span> 4. Vie
+                Pratique
+              </h2>
+              <div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                  class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-[#e9eef1] dark:border-gray-800 flex flex-col"
+                >
+                  <div class="h-40 bg-gray-200 dark:bg-gray-800 relative">
+                    <div
+                      class="absolute inset-0 bg-cover bg-center"
+                      data-alt="Simplified city map showing government buildings"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlIanZ02A4QAj7xNNkF_wTZ_z0UCvPWJ8ABi5p_VNAzRqnqApuiBjb0Z5oUpdmZDLGEc_lt1zqC-yS7dcjXGjKOGGQ3dH3Y0yyFG_sCBsYinmvSPkUGD0klkweoQK3batkaPVaRSjBwcxrxjsBWzy-lq1T5t-voXDROFe-_HyfNeFFKTW2ysAY5HE4RrfGgRBnX1iVBhq7R0Xq5dUKEQ0WeDTzhHXWq82as-4aTI_uRA9tMIQvZibFs2dyCnZeYms-sxIyPBO_JM0');
+                      "
+                    ></div>
+                    <div
+                      class="absolute inset-0 bg-primary/20 flex items-center justify-center"
+                    >
+                      <span
+                        class="bg-white dark:bg-gray-900 p-2 rounded-full text-primary shadow-lg"
+                      >
+                        <span class="material-symbols-outlined"
+                          >location_on</span
+                        >
+                      </span>
+                    </div>
+                  </div>
+                  <div class="p-4 flex-1 flex flex-col gap-2">
+                    <h3 class="font-bold text-[#101519] dark:text-white">
+                      Plan des sites
+                    </h3>
+                    <p class="text-xs text-[#5b778b] dark:text-gray-400 flex-1">
+                      Accès, parkings et bâtiments administratifs.
+                    </p>
+                    <button
+                      class="mt-2 text-primary text-sm font-bold text-left hover:underline"
+                    >
+                      Explorer le plan
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-[#e9eef1] dark:border-gray-800 flex flex-col"
+                >
+                  <div
+                    class="h-40 bg-gray-200 dark:bg-gray-800 flex items-center justify-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-5xl text-primary/40"
+                      >badge</span
+                    >
+                  </div>
+                  <div class="p-4 flex-1 flex flex-col gap-2">
+                    <h3 class="font-bold text-[#101519] dark:text-white">
+                      Accès &amp; Badge
+                    </h3>
+                    <p class="text-xs text-[#5b778b] dark:text-gray-400 flex-1">
+                      Modalités de création de badge et horaires d'ouverture.
+                    </p>
+                    <button
+                      class="mt-2 text-primary text-sm font-bold text-left hover:underline"
+                    >
+                      Lire la procédure
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-[#e9eef1] dark:border-gray-800 flex flex-col"
+                >
+                  <div
+                    class="h-40 bg-gray-200 dark:bg-gray-800 flex items-center justify-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-5xl text-primary/40"
+                      >restaurant</span
+                    >
+                  </div>
+                  <div class="p-4 flex-1 flex flex-col gap-2">
+                    <h3 class="font-bold text-[#101519] dark:text-white">
+                      Restauration
+                    </h3>
+                    <p class="text-xs text-[#5b778b] dark:text-gray-400 flex-1">
+                      Cantine administrative : menus de la semaine et tarifs.
+                    </p>
+                    <button
+                      class="mt-2 text-primary text-sm font-bold text-left hover:underline"
+                    >
+                      Consulter les menus
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Section 5: Tools & Guides -->
+            <section>
+              <h2
+                class="text-primary dark:text-blue-400 text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">computer</span> 5.
+                Outils &amp; Guides
+              </h2>
+              <div class="p-4">
+                <div
+                  class="rounded-xl bg-[#285c81]/5 dark:bg-primary/10 border-2 border-dashed border-primary/30 p-8 flex flex-col items-center text-center gap-6"
+                >
+                  <div class="flex gap-4">
+                    <div
+                      class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-primary"
+                        >lan</span
+                      >
+                      <p class="text-xs font-bold mt-2">Intranet</p>
+                    </div>
+                    <div
+                      class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-primary"
+                        >mail</span
+                      >
+                      <p class="text-xs font-bold mt-2">Messagerie</p>
+                    </div>
+                    <div
+                      class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-primary"
+                        >shield</span
+                      >
+                      <p class="text-xs font-bold mt-2">Sécurité</p>
+                    </div>
+                  </div>
+                  <div class="max-w-md">
+                    <h3
+                      class="text-lg font-bold text-[#101519] dark:text-white mb-2"
+                    >
+                      Guide de l'Espace Numérique de Travail
+                    </h3>
+                    <p class="text-[#5b778b] dark:text-gray-400 text-sm mb-4">
+                      Découvrez comment configurer votre poste de travail,
+                      accéder à l'intranet et respecter la charte informatique.
+                    </p>
+                    <div class="flex justify-center gap-3">
+                      <button
+                        class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm"
+                      >
+                        Télécharger le guide complet
+                      </button>
+                      <button
+                        class="bg-white dark:bg-gray-800 text-[#101519] dark:text-white border border-[#e9eef1] dark:border-gray-700 px-6 py-2 rounded-lg font-bold text-sm"
+                      >
+                        Charte informatique
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Footer note -->
+            <footer
+              class="p-10 text-center flex flex-col gap-4 border-t border-[#e9eef1] dark:border-gray-800"
+            >
+              <p class="text-[#5b778b] dark:text-gray-400 text-sm italic">
+                Une question ? Contactez le service RH au 01 23 45 67 89 ou par
+                email à rh@collectivite.fr
+              </p>
+              <div
+                class="flex justify-center gap-6 text-xs font-medium text-[#5b778b] dark:text-gray-500 uppercase tracking-widest"
+              >
+                <a class="hover:text-primary" href="#">Mentions Légales</a>
+                <a class="hover:text-primary" href="#">Accessibilité</a>
+                <a class="hover:text-primary" href="#"
+                  >Protection des données</a
+                >
+              </div>
+            </footer>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bibliothèque de Documents Utiles - RH Local Gov</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              "serif-inst": ["Georgia", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .document-title {
+        font-family: "Georgia", serif; /* Simulating Gastramond look for institutional feel */
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#101519] dark:text-gray-100 antialiased min-h-screen"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-solid border-[#e9eef1] dark:border-gray-800 px-4 md:px-10 py-3"
+    >
+      <div
+        class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-primary">
+            <div class="size-8">
+              <svg
+                fill="none"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  clip-rule="evenodd"
+                  d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-xl font-bold tracking-tight">RH Local Gov</h2>
+          </div>
+          <nav class="hidden lg:flex items-center gap-6">
+            <a
+              class="text-sm font-semibold hover:text-primary transition-colors"
+              href="#"
+              >Accueil</a
+            >
+            <a
+              class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5"
+              href="#"
+              >Annuaire</a
+            >
+            <a
+              class="text-sm font-semibold hover:text-primary transition-colors"
+              href="#"
+              >Actualités</a
+            >
+            <a
+              class="text-sm font-semibold hover:text-primary transition-colors"
+              href="#"
+              >Mon Profil</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="bg-primary text-white text-sm font-bold h-10 px-6 rounded-lg hover:bg-opacity-90 transition-all"
+          >
+            Déconnexion
+          </button>
+          <div
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-gray-200"
+            data-alt="Portrait of an administrative officer"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9QPM6lDX-Fl57u4unsRJmq2ViEr5toLAXcPI2W2BIT-HEqOxi80I1CzaGBhZDqNfsomjo6XBFSi1J1L3LpHxyGcpgKaH-bln75fcldktOMSp1momsQAaZRS4R8rrCfu6gmK9sObowiHqMNHzinY1e1RSLDh93g423VqIYh8HDcGOM_r427cryYzgECKwwKS70qP857BKGmWuEbJ3-SQkGZHXD9N61-szslTkQTJoGmIMnaa3CTUfMcY2Qbnerzzzs62WPoPrmzBo');
+            "
+          ></div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1280px] mx-auto px-4 md:px-10 py-8">
+      <!-- Page Heading -->
+      <div class="flex flex-wrap justify-between items-end gap-6 mb-8">
+        <div class="max-w-2xl">
+          <h1
+            class="text-[#101519] dark:text-white text-4xl font-black leading-tight tracking-tight mb-3"
+          >
+            Bibliothèque de Documents Utiles
+          </h1>
+          <p class="text-[#5b778b] dark:text-gray-400 text-lg">
+            Accédez aux formulaires, notices et procédures de votre collectivité
+            territoriale. Tous les documents sont mis à jour en temps réel par
+            la DRH.
+          </p>
+        </div>
+      </div>
+      <!-- Search & Filter Bar -->
+      <div
+        class="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 mb-8"
+      >
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1">
+            <label class="relative flex items-stretch h-12">
+              <div
+                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#5b778b]"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input
+                class="w-full pl-12 pr-4 bg-[#e9eef1] dark:bg-gray-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-base"
+                placeholder="Rechercher un document (ex: Congés, CPF, RGPD...)"
+              />
+            </label>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0">
+            <button
+              class="whitespace-nowrap bg-primary/10 text-primary px-4 py-2 rounded-lg font-bold text-sm"
+            >
+              Tout voir
+            </button>
+            <button
+              class="whitespace-nowrap bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-4 py-2 rounded-lg font-bold text-sm hover:bg-gray-200"
+            >
+              Favoris
+            </button>
+            <button
+              class="whitespace-nowrap bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-4 py-2 rounded-lg font-bold text-sm hover:bg-gray-200"
+            >
+              Récents
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Structured Grid of Category Blocks -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-start"
+      >
+        <!-- Category 1: Déplacements -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2 class="text-xl font-bold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary"
+                >commute</span
+              >
+              Déplacements
+            </h2>
+          </div>
+          <div class="p-4 flex flex-col gap-4 flex-grow">
+            <!-- Doc Item -->
+            <div
+              class="group flex flex-col gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
+            >
+              <div class="flex justify-between items-start">
+                <h3
+                  class="document-title text-base font-semibold group-hover:text-primary leading-tight"
+                >
+                  Ordre de mission permanent
+                </h3>
+                <span
+                  class="bg-orange-100 text-orange-700 text-[10px] uppercase font-bold px-2 py-0.5 rounded"
+                  >Restreint</span
+                >
+              </div>
+              <p class="text-xs text-gray-500">
+                Valable pour les déplacements fréquents.
+              </p>
+              <button
+                class="mt-2 flex items-center justify-center gap-2 bg-primary text-white py-2 rounded text-sm font-bold w-full hover:bg-[#1e4a6a]"
+              >
+                <span class="material-symbols-outlined text-sm">download</span>
+                Télécharger
+              </button>
+            </div>
+            <!-- Doc Item -->
+            <div
+              class="group flex flex-col gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
+            >
+              <div class="flex justify-between items-start">
+                <h3
+                  class="document-title text-base font-semibold group-hover:text-primary leading-tight"
+                >
+                  État de frais de déplacement
+                </h3>
+                <span
+                  class="bg-green-100 text-green-700 text-[10px] uppercase font-bold px-2 py-0.5 rounded"
+                  >Public</span
+                >
+              </div>
+              <p class="text-xs text-gray-500">
+                Formulaire Excel pour remboursement.
+              </p>
+              <button
+                class="mt-2 flex items-center justify-center gap-2 bg-primary text-white py-2 rounded text-sm font-bold w-full hover:bg-[#1e4a6a]"
+              >
+                <span class="material-symbols-outlined text-sm">download</span>
+                Télécharger
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category 2: Temps de travail -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full lg:col-span-2"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2 class="text-xl font-bold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary"
+                >schedule</span
+              >
+              Temps de travail
+            </h2>
+          </div>
+          <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow">
+            <div
+              class="p-3 border rounded-lg hover:border-primary/30 transition-colors"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Astreintes Techniques
+              </h3>
+              <span class="text-[10px] font-bold text-gray-400 mb-2 block"
+                >REF: HR-TT-01</span
+              >
+              <button
+                class="w-full bg-primary/10 text-primary py-1.5 rounded font-bold text-sm hover:bg-primary hover:text-white transition-all"
+              >
+                Télécharger
+              </button>
+            </div>
+            <div
+              class="p-3 border rounded-lg hover:border-primary/30 transition-colors"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Astreintes Non-Techniques
+              </h3>
+              <span class="text-[10px] font-bold text-gray-400 mb-2 block"
+                >REF: HR-TT-02</span
+              >
+              <button
+                class="w-full bg-primary/10 text-primary py-1.5 rounded font-bold text-sm hover:bg-primary hover:text-white transition-all"
+              >
+                Télécharger
+              </button>
+            </div>
+            <div
+              class="p-3 border rounded-lg hover:border-primary/30 transition-colors"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Déclaration d'heures sup.
+              </h3>
+              <span class="text-[10px] font-bold text-gray-400 mb-2 block"
+                >REF: HR-TT-03</span
+              >
+              <button
+                class="w-full bg-primary/10 text-primary py-1.5 rounded font-bold text-sm hover:bg-primary hover:text-white transition-all"
+              >
+                Télécharger
+              </button>
+            </div>
+            <div
+              class="p-3 border rounded-lg hover:border-primary/30 transition-colors"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Préavis de grève
+              </h3>
+              <span class="text-[10px] font-bold text-gray-400 mb-2 block"
+                >REF: HR-SOC-01</span
+              >
+              <button
+                class="w-full bg-primary/10 text-primary py-1.5 rounded font-bold text-sm hover:bg-primary hover:text-white transition-all"
+              >
+                Télécharger
+              </button>
+            </div>
+            <div
+              class="p-3 border rounded-lg hover:border-primary/30 transition-colors md:col-span-2"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Demande de temps partiel
+              </h3>
+              <span class="text-[10px] font-bold text-gray-400 mb-2 block"
+                >Délai : 2 mois avant la date d'effet</span
+              >
+              <button
+                class="w-full bg-primary/10 text-primary py-1.5 rounded font-bold text-sm hover:bg-primary hover:text-white transition-all"
+              >
+                Télécharger
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category 3: Notices explicatives -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2 class="text-xl font-bold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary"
+                >help_outline</span
+              >
+              Notices
+            </h2>
+          </div>
+          <div class="p-4 flex flex-col gap-3">
+            <a
+              class="flex items-center justify-between p-3 bg-blue-50/50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100/50 transition-colors"
+              href="#"
+            >
+              <span class="document-title font-medium">Guide du quotidien</span>
+              <span class="material-symbols-outlined text-primary text-xl"
+                >menu_book</span
+              >
+            </a>
+            <a
+              class="flex items-center justify-between p-3 bg-blue-50/50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100/50 transition-colors"
+              href="#"
+            >
+              <span class="document-title font-medium"
+                >Notice Congés Annuels</span
+              >
+              <span class="material-symbols-outlined text-primary text-xl"
+                >description</span
+              >
+            </a>
+            <a
+              class="flex items-center justify-between p-3 bg-blue-50/50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100/50 transition-colors"
+              href="#"
+            >
+              <span class="document-title font-medium"
+                >Notice Ticket Restaurant</span
+              >
+              <span class="material-symbols-outlined text-primary text-xl"
+                >restaurant</span
+              >
+            </a>
+          </div>
+        </section>
+        <!-- Category 4: Formation -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2 class="text-xl font-bold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">school</span>
+              Formation
+            </h2>
+          </div>
+          <div class="p-4 flex flex-col gap-4">
+            <div
+              class="p-4 rounded-lg border-2 border-dashed border-gray-200 dark:border-gray-700"
+            >
+              <h3 class="document-title font-bold mb-3">Demande CPF</h3>
+              <button
+                class="w-full bg-primary text-white py-2 rounded font-bold hover:shadow-lg transition-all"
+              >
+                Accéder au formulaire
+              </button>
+            </div>
+            <div
+              class="p-3 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+            >
+              <h3 class="document-title font-semibold text-sm">
+                Absence pour formation
+              </h3>
+              <p
+                class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider"
+              >
+                Public
+              </p>
+              <button
+                class="text-primary font-bold text-xs flex items-center gap-1 mt-2"
+              >
+                <span class="material-symbols-outlined text-sm">download</span>
+                TÉLÉCHARGER PDF
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category 5: Prévention -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2 class="text-xl font-bold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary"
+                >health_and_safety</span
+              >
+              Prévention
+            </h2>
+          </div>
+          <div class="p-4 space-y-4">
+            <div
+              class="group relative p-3 border rounded-lg overflow-hidden transition-all hover:bg-red-50/10 hover:border-red-200"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Rapport d'enquête AT
+              </h3>
+              <p class="text-[10px] text-gray-500 mb-2">Accidents du Travail</p>
+              <button
+                class="w-full bg-primary text-white py-2 rounded text-sm font-bold flex items-center justify-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">download</span>
+                Télécharger
+              </button>
+            </div>
+            <div
+              class="group relative p-3 border rounded-lg overflow-hidden transition-all hover:bg-red-50/10 hover:border-red-200"
+            >
+              <h3 class="document-title font-semibold mb-1">
+                Enquête Maladie Pro.
+              </h3>
+              <p class="text-[10px] text-gray-500 mb-2">
+                Formulaire de déclaration
+              </p>
+              <button
+                class="w-full bg-primary text-white py-2 rounded text-sm font-bold flex items-center justify-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">download</span>
+                Télécharger
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category 6: Carrière -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2 class="text-xl font-bold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">work</span>
+              Carrière
+            </h2>
+          </div>
+          <div class="p-4">
+            <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg text-center">
+              <div
+                class="size-12 bg-white dark:bg-gray-700 rounded-full mx-auto mb-3 flex items-center justify-center shadow-sm"
+              >
+                <span class="material-symbols-outlined text-primary"
+                  >description</span
+                >
+              </div>
+              <h3 class="document-title font-bold mb-2">
+                Fiche de Poste Vierge
+              </h3>
+              <p class="text-xs text-gray-500 mb-4">
+                Modèle institutionnel obligatoire pour tout recrutement.
+              </p>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-lg font-bold hover:bg-[#1e4a6a]"
+              >
+                Télécharger DOCX
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category 7: RGPD -->
+        <section
+          class="bg-white dark:bg-gray-900 border-t-4 border-primary rounded-lg shadow-sm overflow-hidden flex flex-col h-full"
+        >
+          <div
+            class="p-5 bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800"
+          >
+            <h2
+              class="text-xl font-bold flex items-center gap-2 text-red-600 dark:text-red-400"
+            >
+              <span class="material-symbols-outlined">verified_user</span>
+              RGPD
+            </h2>
+          </div>
+          <div class="p-4 flex flex-col gap-4">
+            <div
+              class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border-l-4 border-red-500"
+            >
+              <h3
+                class="document-title font-bold text-sm mb-1 uppercase tracking-tight"
+              >
+                Note Interne Sécurité
+              </h3>
+              <span
+                class="inline-flex items-center gap-1 bg-red-100 text-red-700 text-[10px] font-black px-1.5 rounded mb-3"
+                >CONTRÔLÉ</span
+              >
+              <p class="text-[11px] leading-relaxed mb-4">
+                L'accès à ce document nécessite une autorisation de votre N+1 ou
+                du DPO.
+              </p>
+              <button
+                class="w-full bg-[#101519] text-white py-2 rounded text-sm font-bold flex items-center justify-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">lock</span>
+                Demander l'accès
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Footer / Accessibility Statement -->
+      <footer
+        class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60"
+      >
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span>© 2024 RH Local Gov</span>
+          <a class="underline" href="#">Politique de confidentialité</a>
+          <a class="underline" href="#">Accessibilité : Partielle</a>
+        </div>
+        <div class="flex gap-4">
+          <div class="bg-primary/20 p-2 rounded">
+            <span class="material-symbols-outlined text-primary"
+              >accessibility_new</span
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

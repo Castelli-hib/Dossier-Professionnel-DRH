@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Advanced Global Search - GovHR Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#073d5f",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101b22",
+              "accent-blue": "#073f61",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .search-highlight {
+        background-color: rgba(7, 61, 95, 0.4);
+        border-bottom: 2px solid #073d5f;
+        color: #ffffff;
+        padding: 0 2px;
+        border-radius: 2px;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #111c22;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #233a48;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-[#233a48]"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div class="bg-primary p-1.5 rounded-lg">
+            <svg
+              class="size-6 text-white"
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h1
+            class="text-lg font-bold tracking-tight text-slate-900 dark:text-white"
+          >
+            GovHR Portal
+          </h1>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#"
+            >Dashboard</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#"
+            >Personnel</a
+          >
+          <a
+            class="text-sm font-medium text-primary underline underline-offset-8"
+            href="#"
+            >Advanced Search</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#"
+            >Settings</a
+          >
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            class="p-2 rounded-lg bg-slate-100 dark:bg-[#233a48] text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors relative"
+          >
+            <span class="material-symbols-outlined text-[20px]"
+              >notifications</span
+            >
+            <span
+              class="absolute top-2 right-2.5 size-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"
+            ></span>
+          </button>
+          <div class="h-8 w-[1px] bg-slate-200 dark:bg-[#233a48] mx-1"></div>
+          <div class="flex items-center gap-3 pl-1">
+            <div class="text-right hidden sm:block">
+              <p class="text-xs font-bold">Dept. Admin</p>
+              <p class="text-[10px] text-slate-500 dark:text-slate-400">
+                J. Doe
+              </p>
+            </div>
+            <div
+              class="size-9 rounded-full bg-cover bg-center border-2 border-primary"
+              data-alt="User profile avatar of a department administrator"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpHwvCdqeqfR7hv6yaEC32-RpGRWUvARXrn9KRi-rfyk8iAdFICVJclN3du4kCvjtwI6NqzHcsfITwd3VSkEZQ5mntoyJsOGUpJo-sDA45xPefvr546F49aAN51kLrCLoP8jTQ9r3wKeJGGa2CGvjvgL2ZyxoQQ6inGjUXsbaF84JPuqsRgQZRO7ypZEdGyEwWffsUW95WW7TNM1mRdh1x_nKt7RHSuxk3gmKt5b5hPzVXcMZKlpvk4TLiY7olrT5LPcMjxfP54QY');
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1440px] mx-auto flex flex-col min-h-[calc(100-4rem)]">
+      <!-- Search Header Section -->
+      <section
+        class="w-full px-6 py-8 bg-slate-50 dark:bg-[#111c22]/50 border-b border-slate-200 dark:border-[#233a48]"
+      >
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="text-center space-y-2">
+            <h2 class="text-3xl font-bold tracking-tight">
+              Global HR Resource Search
+            </h2>
+            <p class="text-slate-500 dark:text-[#91b4ca]">
+              Search across thousands of policy documents, guides, and benefit
+              forms.
+            </p>
+          </div>
+          <div class="relative group">
+            <div
+              class="flex items-stretch bg-white dark:bg-[#233a48] rounded-xl shadow-xl shadow-primary/5 border border-slate-200 dark:border-transparent focus-within:border-primary transition-all overflow-hidden h-14"
+            >
+              <div
+                class="flex items-center pl-5 text-slate-400 dark:text-[#91b4ca]"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input
+                class="w-full bg-transparent border-none focus:ring-0 text-lg px-4 placeholder:text-slate-400 dark:placeholder:text-[#91b4ca]"
+                placeholder="Search health insurance, career paths, or recruitment guides..."
+                type="text"
+                value="Health Insurance Benefits"
+              />
+              <div class="flex items-center pr-2 gap-2">
+                <button
+                  class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors"
+                >
+                  <span class="material-symbols-outlined">cancel</span>
+                </button>
+                <div
+                  class="w-[1px] h-8 bg-slate-200 dark:bg-slate-700 mx-1"
+                ></div>
+                <button
+                  class="bg-primary text-white px-6 h-10 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity mr-1"
+                >
+                  SEARCH
+                </button>
+              </div>
+            </div>
+            <!-- Autocomplete suggestion indicator -->
+            <div
+              class="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-[#233a48] rounded-lg shadow-2xl border border-slate-200 dark:border-[#325367] z-40 hidden group-focus-within:block"
+            >
+              <div class="p-2">
+                <div
+                  class="px-3 py-2 hover:bg-slate-50 dark:hover:bg-primary/20 rounded cursor-pointer flex items-center gap-3"
+                >
+                  <span class="material-symbols-outlined text-sm text-slate-400"
+                    >history</span
+                  >
+                  <span class="text-sm">Health Insurance Enrollment 2024</span>
+                </div>
+                <div
+                  class="px-3 py-2 hover:bg-slate-50 dark:hover:bg-primary/20 rounded cursor-pointer flex items-center gap-3"
+                >
+                  <span class="material-symbols-outlined text-sm text-slate-400"
+                    >trending_up</span
+                  >
+                  <span class="text-sm"
+                    >Dental <span class="font-bold">Benefits</span> coverage
+                    table</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main Content Area -->
+      <div class="flex flex-1 px-6 py-8 gap-8">
+        <!-- Left Sidebar Filters -->
+        <aside class="w-72 flex-shrink-0 hidden lg:block">
+          <div class="sticky top-24 space-y-8">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary"
+                  >filter_list</span
+                >
+                Filters
+              </h3>
+              <button class="text-xs text-primary font-bold hover:underline">
+                Clear All
+              </button>
+            </div>
+            <!-- Filter Group: Role -->
+            <div class="space-y-3">
+              <h4
+                class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#91b4ca]"
+              >
+                User Role
+              </h4>
+              <div class="flex flex-col gap-1">
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    checked=""
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium">Administrator</span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >12</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium">Department Agent</span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >48</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    checked=""
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium">Public Access</span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >64</span
+                  >
+                </label>
+              </div>
+            </div>
+            <!-- Filter Group: Category -->
+            <div class="space-y-3">
+              <h4
+                class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#91b4ca]"
+              >
+                Category
+              </h4>
+              <div class="flex flex-col gap-1">
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium">Career Growth</span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >21</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    checked=""
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium">Health &amp; Wellness</span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >85</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium">Prevention</span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >18</span
+                  >
+                </label>
+              </div>
+            </div>
+            <!-- Filter Group: Document Type -->
+            <div class="space-y-3">
+              <h4
+                class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-[#91b4ca]"
+              >
+                Document Type
+              </h4>
+              <div class="flex flex-col gap-1">
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    checked=""
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[18px] text-red-500"
+                      >picture_as_pdf</span
+                    >
+                    PDF Document
+                  </span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >92</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[18px] text-blue-500"
+                      >assignment</span
+                    >
+                    Online Form
+                  </span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >14</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg cursor-pointer transition-colors group"
+                >
+                  <input
+                    class="size-4 rounded border-slate-300 dark:border-[#325367] bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark"
+                    type="checkbox"
+                  />
+                  <span class="text-sm font-medium flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[18px] text-amber-500"
+                      >menu_book</span
+                    >
+                    User Guide
+                  </span>
+                  <span
+                    class="ml-auto text-xs text-slate-400 group-hover:text-primary"
+                    >18</span
+                  >
+                </label>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- Results Panel -->
+        <div class="flex-1 space-y-6">
+          <!-- Results Status & Sort -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-[#233a48]"
+          >
+            <h3 class="text-xl font-bold">
+              124 results for
+              <span class="text-primary italic"
+                >"Health Insurance Benefits"</span
+              >
+            </h3>
+            <div class="flex items-center gap-3">
+              <span class="text-sm text-slate-400">Sort by:</span>
+              <select
+                class="bg-white dark:bg-[#233a48] border-slate-200 dark:border-[#325367] rounded-lg text-sm px-3 py-1.5 focus:ring-primary"
+              >
+                <option>Relevance</option>
+                <option>Newest First</option>
+                <option>Most Downloaded</option>
+              </select>
+            </div>
+          </div>
+          <!-- Result Cards -->
+          <div class="space-y-4">
+            <!-- Result Card 1 -->
+            <div
+              class="group bg-white dark:bg-[#111c22] border border-slate-200 dark:border-[#233a48] rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <h4
+                  class="text-xl font-semibold group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Comprehensive
+                  <span class="search-highlight">Health Insurance</span>
+                  Overview 2024
+                </h4>
+                <span
+                  class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500"
+                  >v2.4.1</span
+                >
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2"
+              >
+                This document outlines the available
+                <span class="search-highlight">health insurance benefits</span>
+                for all full-time government employees. It includes details on
+                medical, dental, and vision coverage tiers, as well as
+                enrollment deadlines for the current fiscal year.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <div
+                  class="flex items-center gap-1.5 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >public</span
+                  >
+                  Public
+                </div>
+                <div
+                  class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >health_and_safety</span
+                  >
+                  Health
+                </div>
+                <div
+                  class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >picture_as_pdf</span
+                  >
+                  PDF (2.4 MB)
+                </div>
+                <span class="text-[11px] text-slate-500 ml-auto"
+                  >Last updated: Oct 12, 2023</span
+                >
+              </div>
+            </div>
+            <!-- Result Card 2 -->
+            <div
+              class="group bg-white dark:bg-[#111c22] border border-slate-200 dark:border-[#233a48] rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <h4
+                  class="text-xl font-semibold group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Agent Guide: Processing
+                  <span class="search-highlight">Health Insurance</span> Claims
+                </h4>
+                <span
+                  class="text-xs bg-red-100 dark:bg-red-900/30 px-2 py-1 rounded text-red-600 dark:text-red-400 font-bold uppercase tracking-tighter"
+                  >INTERNAL ONLY</span
+                >
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2"
+              >
+                A step-by-step procedural manual for HR agents managing
+                <span class="search-highlight">benefits</span> claims. Covers
+                common rejection codes, documentation requirements for
+                specialized
+                <span class="search-highlight">health</span> services, and
+                escalating complex cases.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <div
+                  class="flex items-center gap-1.5 bg-amber-500/10 text-amber-600 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >support_agent</span
+                  >
+                  Agent
+                </div>
+                <div
+                  class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >health_and_safety</span
+                  >
+                  Health
+                </div>
+                <div
+                  class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >menu_book</span
+                  >
+                  Guide
+                </div>
+                <span class="text-[11px] text-slate-500 ml-auto"
+                  >Last updated: Jan 05, 2024</span
+                >
+              </div>
+            </div>
+            <!-- Result Card 3 -->
+            <div
+              class="group bg-white dark:bg-[#111c22] border border-slate-200 dark:border-[#233a48] rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <h4
+                  class="text-xl font-semibold group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  COBRA <span class="search-highlight">Benefits</span> Election
+                  Form
+                </h4>
+                <span
+                  class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500"
+                  >FORM-302</span
+                >
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2"
+              >
+                Official application for continuing
+                <span class="search-highlight">health insurance benefits</span>
+                following separation from employment. Requires supervisor
+                signature and HR verification.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <div
+                  class="flex items-center gap-1.5 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >public</span
+                  >
+                  Public
+                </div>
+                <div
+                  class="flex items-center gap-1.5 bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >assignment</span
+                  >
+                  Form
+                </div>
+                <span class="text-[11px] text-slate-500 ml-auto"
+                  >Last updated: Mar 18, 2024</span
+                >
+              </div>
+            </div>
+            <!-- Result Card 4 -->
+            <div
+              class="group bg-white dark:bg-[#111c22] border border-slate-200 dark:border-[#233a48] rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all"
+            >
+              <div class="flex justify-between items-start mb-3">
+                <h4
+                  class="text-xl font-semibold group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Workplace Injury &amp;
+                  <span class="search-highlight">Health</span> Prevention
+                  Protocol
+                </h4>
+                <span
+                  class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500"
+                  >v1.1</span
+                >
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2"
+              >
+                Preventative measures and safety training requirements to
+                maintain employee <span class="search-highlight">health</span>.
+                Links to worker's compensation
+                <span class="search-highlight">benefits</span> and medical
+                evaluation forms.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <div
+                  class="flex items-center gap-1.5 bg-indigo-500/10 text-indigo-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >security</span
+                  >
+                  Prevention
+                </div>
+                <div
+                  class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1 rounded-full text-xs font-bold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >picture_as_pdf</span
+                  >
+                  PDF (1.1 MB)
+                </div>
+                <span class="text-[11px] text-slate-500 ml-auto"
+                  >Last updated: Dec 20, 2023</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="flex items-center justify-center gap-2 pt-10">
+            <button
+              class="size-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-[#233a48] hover:bg-slate-50 dark:hover:bg-primary/20 transition-colors disabled:opacity-30"
+              disabled=""
+            >
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button
+              class="size-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold"
+            >
+              1
+            </button>
+            <button
+              class="size-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-[#233a48] hover:bg-slate-50 dark:hover:bg-primary/20 transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="size-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-[#233a48] hover:bg-slate-50 dark:hover:bg-primary/20 transition-colors"
+            >
+              3
+            </button>
+            <span class="px-2">...</span>
+            <button
+              class="size-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-[#233a48] hover:bg-slate-50 dark:hover:bg-primary/20 transition-colors"
+            >
+              12
+            </button>
+            <button
+              class="size-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-[#233a48] hover:bg-slate-50 dark:hover:bg-primary/20 transition-colors"
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer Content -->
+    <footer
+      class="mt-20 border-t border-slate-200 dark:border-[#233a48] bg-slate-50 dark:bg-[#111c22]"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="flex items-center gap-3 opacity-50">
+          <div class="bg-slate-400 p-1 rounded">
+            <svg
+              class="size-5 text-white"
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-sm font-semibold tracking-widest uppercase"
+            >Local Gov HR Systems</span
+          >
+        </div>
+        <div class="flex gap-10 text-xs text-slate-500">
+          <a class="hover:text-primary transition-colors" href="#"
+            >Privacy Policy</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Security Standards</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Accessibility Statement</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Support Portal</a
+          >
+        </div>
+        <p class="text-[10px] text-slate-400">
+          © 2024 Institutional HR Management. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CPF Mobilization Request Form</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen text-[#101519] dark:text-gray-100"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#d4dde3] dark:border-gray-700 bg-white dark:bg-gray-900 px-10 py-3 sticky top-0 z-50"
+    >
+      <div class="flex items-center gap-4 text-primary">
+        <div class="size-6">
+          <svg
+            fill="none"
+            viewbox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_6_535)">
+              <path
+                clip-rule="evenodd"
+                d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </g>
+            <defs>
+              <clippath id="clip0_6_535">
+                <rect fill="white" height="48" width="48"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </div>
+        <h2
+          class="text-[#101519] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+        >
+          Institutional HR Portal
+        </h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a
+            class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#"
+            >Dashboard</a
+          >
+          <a class="text-primary text-sm font-bold leading-normal" href="#"
+            >My Requests</a
+          >
+          <a
+            class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#"
+            >HR Policy</a
+          >
+          <a
+            class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#"
+            >FAQ</a
+          >
+        </div>
+        <div
+          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-gray-200 dark:border-gray-700"
+          data-alt="User profile placeholder"
+          style="
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlQirWkiiw5TDgHCfNVgSfitMFHyM6if_MnZyJW5ee2fAT1SeFu0DgRf0WBzq3AyN5oK5bIs6wlOHn4SifLF7saj6etaV720F5ayWTuQnBtGDQgcWrNNHtQb-aS71ZMPB4_6_WSF4G1kxIbSNNDccJmLottv3ld371NHIu9pM_V6tA1mwYktiY59ySa6F3LUcGUUhbQ53ygf5y8xzArui9ix9cPMVdvQqGZCuAsyfm_nwUMsgemQgrKX3-nOa0E0Mgw9_yI6KeZ64');
+          "
+        ></div>
+      </div>
+    </header>
+    <main class="flex flex-1 justify-center py-8">
+      <div
+        class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4"
+      >
+        <!-- Access Notice -->
+        <div class="mb-6 @container">
+          <div
+            class="flex flex-1 flex-col items-start justify-between gap-4 rounded-lg border border-[#d4dde3] dark:border-gray-700 bg-white dark:bg-gray-900 p-5 @[480px]:flex-row @[480px]:items-center"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400"
+              >
+                <span class="material-symbols-outlined">lock</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <p
+                  class="text-[#101519] dark:text-white text-base font-bold leading-tight"
+                >
+                  Restricted Access
+                </p>
+                <p
+                  class="text-[#5b778b] dark:text-gray-400 text-sm font-normal leading-normal"
+                >
+                  Institutional HR Portal - Authorized Personnel Only. Your IP
+                  is being logged.
+                </p>
+              </div>
+            </div>
+            <a
+              class="text-sm font-bold leading-normal tracking-[0.015em] flex items-center gap-2 text-primary hover:underline"
+              href="#"
+            >
+              Security Details
+              <span class="material-symbols-outlined !text-[20px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </div>
+        <!-- Page Title -->
+        <div class="flex flex-wrap justify-between gap-3 mb-4">
+          <div class="flex min-w-72 flex-col gap-2">
+            <p
+              class="text-[#10142d] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]"
+            >
+              CPF Mobilization Request Form
+            </p>
+            <p
+              class="text-[#5b778b] dark:text-gray-400 text-base font-normal leading-normal"
+            >
+              Submit your Personal Training Account request for institutional
+              approval.
+            </p>
+          </div>
+        </div>
+        <!-- Progress Bar -->
+        <div
+          class="flex flex-col gap-3 mb-8 bg-white dark:bg-gray-900 p-6 rounded-xl border border-[#d4dde3] dark:border-gray-700"
+        >
+          <div class="flex gap-6 justify-between items-end">
+            <div>
+              <p
+                class="text-primary text-xs font-bold uppercase tracking-wider mb-1"
+              >
+                Current Step
+              </p>
+              <p
+                class="text-[#101519] dark:text-white text-xl font-bold leading-normal"
+              >
+                1. Project Description
+              </p>
+            </div>
+            <p
+              class="text-[#101519] dark:text-white text-sm font-bold leading-normal bg-background-light dark:bg-gray-800 px-3 py-1 rounded"
+            >
+              Step 1 of 3
+            </p>
+          </div>
+          <div
+            class="rounded-full bg-[#d4dde3] dark:bg-gray-700 h-2.5 overflow-hidden"
+          >
+            <div
+              class="h-full rounded-full bg-primary transition-all duration-500"
+              style="width: 33.33%"
+            ></div>
+          </div>
+          <div class="flex justify-between items-center">
+            <p
+              class="text-[#5b778b] dark:text-gray-400 text-sm font-normal leading-normal"
+            >
+              Next: Funding Details
+            </p>
+            <div class="flex gap-2">
+              <span class="h-2 w-2 rounded-full bg-primary"></span>
+              <span
+                class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-600"
+              ></span>
+              <span
+                class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-600"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- Form Content -->
+        <div
+          class="space-y-8 bg-white dark:bg-gray-900 p-8 rounded-xl border border-[#d4dde3] dark:border-gray-700 shadow-sm"
+        >
+          <!-- Section 1: Project Description -->
+          <section>
+            <div
+              class="flex items-center gap-3 border-b border-gray-100 dark:border-gray-800 pb-4 mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg"
+                >description</span
+              >
+              <h2
+                class="text-[#10142d] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]"
+              >
+                1. Project Description
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-[#101519] dark:text-gray-200"
+                  >Training Title</label
+                >
+                <input
+                  class="rounded-lg border-[#d4dde3] dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-11 px-4"
+                  placeholder="e.g. Advanced Public Administration"
+                  type="text"
+                />
+                <p class="text-xs text-gray-500">
+                  As listed on the official training catalog.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-[#101519] dark:text-gray-200"
+                  >Training Organization</label
+                >
+                <input
+                  class="rounded-lg border-[#d4dde3] dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-11 px-4"
+                  placeholder="Name of the institution"
+                  type="text"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-[#101519] dark:text-gray-200"
+                  >Start Date</label
+                >
+                <div class="relative">
+                  <input
+                    class="w-full rounded-lg border-[#d4dde3] dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-11 px-4"
+                    type="date"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-[#101519] dark:text-gray-200"
+                  >End Date</label
+                >
+                <div class="relative">
+                  <input
+                    class="w-full rounded-lg border-[#d4dde3] dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary h-11 px-4"
+                    type="date"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 md:col-span-2">
+                <label
+                  class="text-sm font-bold text-[#101519] dark:text-gray-200"
+                  >Professional Objective</label
+                >
+                <textarea
+                  class="rounded-lg border-[#d4dde3] dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-1 focus:ring-primary px-4 py-2"
+                  placeholder="How does this training align with your current role or career progression?"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+          </section>
+          <!-- Section 2: Funding Details -->
+          <section class="opacity-50 pointer-events-none">
+            <div
+              class="flex items-center gap-3 border-b border-gray-100 dark:border-gray-800 pb-4 mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-gray-400 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg"
+                >payments</span
+              >
+              <h2
+                class="text-[#10142d] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]"
+              >
+                2. Funding Details
+              </h2>
+            </div>
+            <p class="text-sm text-gray-500 italic">
+              Complete step 1 to unlock funding details.
+            </p>
+          </section>
+          <!-- Section 3: Document Upload -->
+          <section class="opacity-50 pointer-events-none">
+            <div
+              class="flex items-center gap-3 border-b border-gray-100 dark:border-gray-800 pb-4 mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-gray-400 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg"
+                >upload_file</span
+              >
+              <h2
+                class="text-[#10142d] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]"
+              >
+                3. Documentation
+              </h2>
+            </div>
+          </section>
+          <!-- Action Buttons -->
+          <div
+            class="flex items-center justify-between pt-6 border-t border-gray-100 dark:border-gray-800 mt-10"
+          >
+            <button
+              class="flex items-center gap-2 px-6 py-2.5 rounded-lg font-bold text-[#101519] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              <span class="material-symbols-outlined">save</span>
+              Save Draft
+            </button>
+            <div class="flex gap-4">
+              <button
+                class="px-8 py-2.5 rounded-lg font-bold text-gray-400 cursor-not-allowed"
+              >
+                Back
+              </button>
+              <button
+                class="bg-primary hover:bg-[#1e4663] text-white px-10 py-2.5 rounded-lg font-bold shadow-md transition-all flex items-center gap-2"
+              >
+                Next Step
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Help -->
+        <footer class="mt-12 mb-20 text-center">
+          <div class="flex justify-center gap-8 mb-4">
+            <a class="text-sm text-primary font-medium hover:underline" href="#"
+              >HR Training Policy</a
+            >
+            <a class="text-sm text-primary font-medium hover:underline" href="#"
+              >Contact Support</a
+            >
+            <a class="text-sm text-primary font-medium hover:underline" href="#"
+              >Download Guide</a
+            >
+          </div>
+          <p class="text-xs text-[#5b778b] dark:text-gray-500">
+            © 2024 Institutional HR Portal. All rights reserved. Strictly for
+            internal use.
+          </p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>

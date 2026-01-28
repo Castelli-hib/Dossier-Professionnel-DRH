@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Recrutement &amp; Emploi | Ville de Gastramond</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "header-dark": "#10142d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-header-dark dark:text-gray-100 min-h-screen"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="border-b border-solid border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 md:px-10 lg:px-40 py-3 sticky top-0 z-50"
+    >
+      <div
+        class="flex items-center justify-between whitespace-nowrap max-w-[1200px] mx-auto"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4 text-header-dark dark:text-white">
+            <div class="size-6 text-primary">
+              <svg
+                fill="currentColor"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-xl font-black leading-tight tracking-tight">
+              GASTRAMOND
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Accueil</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Services</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Citoyenneté</a
+            >
+            <a
+              class="text-primary text-sm font-bold border-b-2 border-primary pb-1"
+              href="#"
+              >Recrutement</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden sm:flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg px-3 py-1.5"
+          >
+            <span class="material-symbols-outlined text-gray-400 text-xl"
+              >search</span
+            >
+            <input
+              class="bg-transparent border-none focus:ring-0 text-sm w-40"
+              placeholder="Rechercher..."
+              type="text"
+            />
+          </div>
+          <button
+            class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all"
+          >
+            <span>Espace Agent</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-20 py-8">
+      <!-- Breadcrumbs -->
+      <nav
+        class="flex items-center gap-2 mb-6 text-sm font-medium text-gray-500 dark:text-gray-400"
+      >
+        <a class="hover:text-primary" href="#">Accueil</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <span class="text-header-dark dark:text-gray-200"
+          >Recrutement &amp; Emploi</span
+        >
+      </nav>
+      <!-- PageHeading -->
+      <div class="mb-10 border-l-4 border-primary pl-6">
+        <h1
+          class="text-header-dark dark:text-white text-5xl font-black leading-tight tracking-tighter mb-2"
+        >
+          Recrutement &amp; Emploi
+        </h1>
+        <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
+          Rejoignez l'administration territoriale pour servir l'intérêt général
+          et participer au développement de la Ville de Gastramond.
+        </p>
+      </div>
+      <!-- Three Vertical Blocks Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Column 1: Job Offers -->
+        <section class="flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="material-symbols-outlined text-primary">work</span>
+            <h2 class="text-xl font-bold text-header-dark dark:text-white">
+              Offres d'Emploi
+            </h2>
+          </div>
+          <div class="space-y-4">
+            <div
+              class="group p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-md transition-all"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-1 rounded"
+                  >Permanent</span
+                >
+                <span class="text-xs text-gray-400">Il y a 2 jours</span>
+              </div>
+              <h3 class="font-bold text-header-dark dark:text-white mb-1">
+                Chargé(e) de Mission Urbanisme
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 line-clamp-2">
+                Pilotage des projets d'aménagement durable et gestion des
+                autorisations d'urbanisme.
+              </p>
+              <a
+                class="text-sm font-bold text-primary flex items-center gap-1 group-hover:underline"
+                href="#"
+              >
+                Voir le détail
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <div
+              class="group p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-md transition-all"
+            >
+              <div class="flex justify-between items-start mb-2">
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded"
+                  >Saisonnier</span
+                >
+                <span class="text-xs text-gray-400">Il y a 1 semaine</span>
+              </div>
+              <h3 class="font-bold text-header-dark dark:text-white mb-1">
+                Animateur(trice) Jeunesse
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 line-clamp-2">
+                Encadrement des activités périscolaires et centres de loisirs
+                pour les vacances d'été.
+              </p>
+              <a
+                class="text-sm font-bold text-primary flex items-center gap-1 group-hover:underline"
+                href="#"
+              >
+                Voir le détail
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="mt-4 p-6 rounded-xl bg-header-dark text-white">
+            <h4 class="font-bold mb-2">Portail National CGFPT</h4>
+            <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+              Retrouvez l'ensemble des postes ouverts dans la fonction publique
+              territoriale sur le portail officiel.
+            </p>
+            <button
+              class="w-full py-3 bg-primary rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-all"
+            >
+              Consulter le portail
+              <span class="material-symbols-outlined text-base"
+                >open_in_new</span
+              >
+            </button>
+          </div>
+        </section>
+        <!-- Column 2: Benefits & Support (Restricted Access) -->
+        <section class="flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="material-symbols-outlined text-primary"
+              >verified_user</span
+            >
+            <h2 class="text-xl font-bold text-header-dark dark:text-white">
+              Avantages &amp; Accompagnement
+            </h2>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800/50 rounded-xl p-1 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center z-10 bg-white/60 dark:bg-black/40 backdrop-blur-[2px]"
+            >
+              <span
+                class="material-symbols-outlined text-3xl text-header-dark dark:text-white mb-2"
+                >lock</span
+              >
+              <p
+                class="text-sm font-bold text-header-dark dark:text-white text-center px-6"
+              >
+                Connectez-vous pour consulter le détail des garanties
+              </p>
+              <button
+                class="mt-4 text-xs font-bold text-primary border border-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition-all"
+              >
+                Authentification
+              </button>
+            </div>
+            <div class="p-5 opacity-40 select-none">
+              <div class="mb-6">
+                <h4
+                  class="text-sm font-bold text-header-dark dark:text-white mb-3"
+                >
+                  Protection Sociale
+                </h4>
+                <div class="space-y-3">
+                  <div
+                    class="flex justify-between border-b border-gray-200 pb-2"
+                  >
+                    <span class="text-sm">Complémentaire Santé</span>
+                    <span class="text-sm font-bold"
+                      >Participation 25€/mois</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between border-b border-gray-200 pb-2"
+                  >
+                    <span class="text-sm"
+                      >Prévoyance (Maintien de salaire)</span
+                    >
+                    <span class="text-sm font-bold">Aide 15€/mois</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <h4
+                  class="text-sm font-bold text-header-dark dark:text-white mb-3"
+                >
+                  Qualité de Vie au Travail
+                </h4>
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2 text-sm">
+                    <span
+                      class="material-symbols-outlined text-base text-primary"
+                      >check_circle</span
+                    >
+                    Télétravail (jusqu'à 2j/sem)
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <span
+                      class="material-symbols-outlined text-base text-primary"
+                      >check_circle</span
+                    >
+                    Forfait Mobilités Durables
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <span
+                      class="material-symbols-outlined text-base text-primary"
+                      >check_circle</span
+                    >
+                    Chèques Déjeuner
+                  </li>
+                </ul>
+              </div>
+              <div class="p-4 bg-primary/5 rounded-lg border border-primary/20">
+                <p class="text-xs font-medium text-gray-500 italic">
+                  Ces montants sont indicatifs et dépendent du grade et de
+                  l'ancienneté de l'agent territorial.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+          >
+            <h3 class="font-bold text-header-dark dark:text-white mb-3">
+              Formation Continue
+            </h3>
+            <p class="text-sm text-gray-500 mb-4">
+              Accompagnement personnalisé pour vos concours et préparations
+              CNFPT.
+            </p>
+            <a
+              class="text-sm font-bold text-primary flex items-center gap-1"
+              href="#"
+              >En savoir plus
+              <span class="material-symbols-outlined text-sm"
+                >chevron_right</span
+              ></a
+            >
+          </div>
+        </section>
+        <!-- Column 3: Job Access Tools -->
+        <section class="flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="material-symbols-outlined text-primary"
+              >folder_open</span
+            >
+            <h2 class="text-xl font-bold text-header-dark dark:text-white">
+              Outils d'Accès
+            </h2>
+          </div>
+          <div class="space-y-3">
+            <p class="text-sm text-gray-500 mb-4">
+              Préparez votre candidature avec nos ressources prêtes à l'emploi
+              conçues pour le secteur public.
+            </p>
+            <!-- Download Card 1 -->
+            <div
+              class="flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 group"
+            >
+              <div
+                class="size-12 rounded-lg bg-red-50 text-red-600 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">picture_as_pdf</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-sm font-bold text-header-dark dark:text-white">
+                  Modèle de CV Territorial
+                </h4>
+                <p class="text-xs text-gray-400">PDF • 1.2 Mo</p>
+              </div>
+              <button
+                class="size-10 rounded-full flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined text-xl">download</span>
+              </button>
+            </div>
+            <!-- Download Card 2 -->
+            <div
+              class="flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 group"
+            >
+              <div
+                class="size-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">description</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-sm font-bold text-header-dark dark:text-white">
+                  Lettre de Motivation (Exemple)
+                </h4>
+                <p class="text-xs text-gray-400">DOCX • 450 Ko</p>
+              </div>
+              <button
+                class="size-10 rounded-full flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined text-xl">download</span>
+              </button>
+            </div>
+            <!-- Download Card 3 -->
+            <div
+              class="flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 group"
+            >
+              <div
+                class="size-12 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">quiz</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-sm font-bold text-header-dark dark:text-white">
+                  Guide Entretien d'Embauche
+                </h4>
+                <p class="text-xs text-gray-400">PDF • 2.8 Mo</p>
+              </div>
+              <button
+                class="size-10 rounded-full flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined text-xl">download</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="mt-4 p-6 rounded-xl border border-dashed border-gray-300 dark:border-gray-700 text-center"
+          >
+            <span
+              class="material-symbols-outlined text-3xl text-gray-300 dark:text-gray-600 mb-2"
+              >upload_file</span
+            >
+            <h4 class="font-bold text-header-dark dark:text-white mb-1">
+              Candidature Spontanée
+            </h4>
+            <p class="text-xs text-gray-500 mb-4">
+              Vous n'avez pas trouvé de poste correspondant ? Envoyez-nous votre
+              profil.
+            </p>
+            <button
+              class="w-full py-2 bg-primary/10 text-primary font-bold text-sm rounded-lg hover:bg-primary/20 transition-all"
+            >
+              Déposer mon CV
+            </button>
+          </div>
+        </section>
+      </div>
+      <!-- Section Grid / News Style Footer -->
+      <div class="mt-16 pt-10 border-t border-gray-200 dark:border-gray-800">
+        <h3 class="text-lg font-bold text-header-dark dark:text-white mb-6">
+          Informations Complémentaires
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div
+            class="p-4 rounded-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 flex gap-4"
+          >
+            <div class="text-primary">
+              <span class="material-symbols-outlined">event</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold">Calendrier des Concours</h4>
+              <p class="text-xs text-gray-500 mt-1">Sessions 2024-2025</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 flex gap-4"
+          >
+            <div class="text-primary">
+              <span class="material-symbols-outlined">group</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold">Index Égalité Professionnelle</h4>
+              <p class="text-xs text-gray-500 mt-1">Score de 89/100</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 flex gap-4"
+          >
+            <div class="text-primary">
+              <span class="material-symbols-outlined">play_disabled</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold">Emploi &amp; Handicap</h4>
+              <p class="text-xs text-gray-500 mt-1">
+                Engagements Ville Inclusive
+              </p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 flex gap-4"
+          >
+            <div class="text-primary">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold">Contact RH</h4>
+              <p class="text-xs text-gray-500 mt-1">Nous écrire directement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-header-dark text-gray-400 py-12 px-4 md:px-10 lg:px-40 mt-10"
+    >
+      <div
+        class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-2 text-white mb-6">
+            <div class="size-5">
+              <svg
+                fill="currentColor"
+                viewbox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-lg font-bold">Ville de Gastramond</h2>
+          </div>
+          <p class="text-sm leading-relaxed">
+            Administration territoriale au service de ses citoyens et de son
+            territoire.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Lien rapides</h3>
+          <ul class="text-sm space-y-2">
+            <li><a class="hover:text-white" href="#">Portail Citoyen</a></li>
+            <li><a class="hover:text-white" href="#">Actualités</a></li>
+            <li><a class="hover:text-white" href="#">Espace Presse</a></li>
+            <li><a class="hover:text-white" href="#">Marchés Publics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Support</h3>
+          <ul class="text-sm space-y-2">
+            <li><a class="hover:text-white" href="#">Aide en ligne</a></li>
+            <li>
+              <a class="hover:text-white" href="#">Accessibilité : Partielle</a>
+            </li>
+            <li><a class="hover:text-white" href="#">Mentions Légales</a></li>
+            <li>
+              <a class="hover:text-white" href="#">Données Personnelles</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Suivez-nous</h3>
+          <div class="flex gap-4">
+            <div
+              class="size-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary cursor-pointer transition-all"
+            >
+              <span class="material-symbols-outlined text-sm">share</span>
+            </div>
+            <div
+              class="size-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary cursor-pointer transition-all"
+            >
+              <span class="material-symbols-outlined text-sm"
+                >alternate_email</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-gray-800 text-xs text-center"
+      >
+        © 2024 Direction des Ressources Humaines - Ville de Gastramond. Tous
+        droits réservés.
+      </div>
+    </footer>
+  </body>
+</html>

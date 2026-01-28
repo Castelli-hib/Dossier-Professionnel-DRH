@@ -1,0 +1,733 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GovHR Portal - Institutional HR Excellence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#10142d",
+              secondary: "#022341",
+              accent: "#073f61",
+              "background-light": "#f6f6f8",
+              "background-dark": "#14151e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Fallback for the requested serif font style if not available via CDN */
+      h1,
+      h2,
+      .font-serif-heading {
+        font-family:
+          "Times New Roman", serif; /* Simulating Gastramond look for headers */
+        letter-spacing: -0.02em;
+      }
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#111218] transition-colors duration-200"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- TopNavBar -->
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-primary dark:text-white">
+              <div class="size-6 text-primary dark:text-blue-400">
+                <svg
+                  fill="none"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-primary dark:text-white text-xl font-bold leading-tight tracking-tight"
+              >
+                GovHR Portal
+              </h2>
+            </div>
+            <nav class="hidden lg:flex items-center gap-9">
+              <div class="group relative">
+                <a
+                  class="text-primary dark:text-gray-300 text-sm font-semibold leading-normal flex items-center gap-1 cursor-pointer"
+                  href="#"
+                >
+                  HR Management
+                  <span class="material-symbols-outlined text-xs"
+                    >expand_more</span
+                  >
+                </a>
+                <!-- Sub-menu Preview -->
+                <div
+                  class="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-background-dark shadow-xl rounded-lg border border-primary/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-4 grid gap-3"
+                >
+                  <div
+                    class="flex items-center gap-3 p-2 hover:bg-background-light dark:hover:bg-primary/20 rounded-lg"
+                  >
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded overflow-hidden"
+                    >
+                      <div
+                        class="w-full h-full bg-cover bg-center"
+                        data-alt="Payroll services illustration"
+                        style="
+                          background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc&quot;);
+                        "
+                      ></div>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-primary dark:text-white">
+                        Payroll &amp; Benefits
+                      </p>
+                      <p class="text-[10px] text-gray-500">
+                        Manage compensation
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-2 hover:bg-background-light dark:hover:bg-primary/20 rounded-lg"
+                  >
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded overflow-hidden"
+                    >
+                      <div
+                        class="w-full h-full bg-cover bg-center"
+                        data-alt="Staff training icon"
+                        style="
+                          background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC6WyQow_1vUnvAYQZxuSPGtAJIcGmSxxNDEYPrCVBYU-kyozhfeMHC9DBiPsES5tll4exL4hNebrt-xj0h8XPY3n7MAA4Ffw1ukmwAvujQIPil9VTu8Ars43n2Nh7oGlmwKbg3yC_fVSeCv6hFnh5dRbzh6KIh5Al8cjpNYVNXO60GkmLC3N7ImjOVB32nUhjKlUnsIZjCnvv4vWNzFpsWve0t_KBEdAzuNAK75sOYvZh3bn5UNfUNa3tTl1FM-WrbNWMdTPm8SWs&quot;);
+                        "
+                      ></div>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-primary dark:text-white">
+                        Staff Development
+                      </p>
+                      <p class="text-[10px] text-gray-500">
+                        Growth and training
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="text-primary dark:text-gray-300 text-sm font-semibold leading-normal"
+                href="#"
+                >Support Services</a
+              >
+              <a
+                class="text-primary dark:text-gray-300 text-sm font-semibold leading-normal"
+                href="#"
+                >Document Library</a
+              >
+              <a
+                class="text-primary dark:text-gray-300 text-sm font-semibold leading-normal"
+                href="#"
+                >Internal Career</a
+              >
+            </nav>
+          </div>
+          <div class="flex flex-1 justify-end gap-6 items-center">
+            <label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+              <div
+                class="flex w-full flex-1 items-stretch rounded-lg h-full border border-primary/10 bg-[#eaebf1] dark:bg-primary/20"
+              >
+                <div
+                  class="text-[#5d6389] flex items-center justify-center pl-4"
+                >
+                  <span class="material-symbols-outlined text-xl">search</span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 h-full placeholder:text-[#5d6389] px-4 pl-2 text-base font-normal leading-normal text-primary dark:text-white"
+                  placeholder="Search resources..."
+                />
+              </div>
+            </label>
+            <div class="flex items-center gap-3">
+              <button
+                class="hidden sm:flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-lg hover:bg-secondary transition-colors"
+              >
+                <span class="truncate">User Dashboard</span>
+              </button>
+              <div class="relative">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/10 border-2 border-white"
+                  data-alt="User profile picture"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBDx4IQN7Qzxr1W1I9s5m9COEKZZft0XA0br22gczGMQLq21GLwMz0DDSj83clyB1qWZZ2UbLvyYRQpsU08dWh5BV59z9aM5EjP_yAdrH1IKpW8TXAxkbY83VQQw3Jhkh1VHt4LklymEHyHUumBQAKEHMUj0raZpCjod-h8DwHrqa_yjt0dH2SYO7Y-bKljRdBet7oXD8mB5iehdxFFIysP8n3YboXppFsLAi-tHQYtUGAZ_UaVaDTlX5xHtTgZmsLhaNOsVa8s1nI&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white rounded-full"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="flex-1">
+          <!-- HeroSection -->
+          <div
+            class="px-4 md:px-10 lg:px-40 py-10 bg-white dark:bg-background-dark/50"
+          >
+            <div class="max-w-[1200px] mx-auto">
+              <div class="flex flex-col gap-10 lg:flex-row items-center">
+                <div class="flex-1 flex flex-col gap-8">
+                  <div class="flex flex-col gap-4">
+                    <span
+                      class="text-accent font-bold tracking-widest text-xs uppercase dark:text-blue-400"
+                      >Institutional Authority</span
+                    >
+                    <h1
+                      class="text-primary dark:text-white text-5xl md:text-6xl font-black leading-[1.1] tracking-tight"
+                    >
+                      Institutional HR <br /><span
+                        class="text-accent italic font-serif-heading"
+                        >Excellence</span
+                      >
+                    </h1>
+                    <p
+                      class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-lg"
+                    >
+                      Empowering local government employees through precise
+                      administrative management and comprehensive support
+                      services. Your central hub for careers and development.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-4">
+                    <button
+                      class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-6 bg-primary text-white text-base font-bold shadow-xl hover:translate-y-[-2px] transition-all"
+                    >
+                      <span class="material-symbols-outlined mr-2"
+                        >account_balance</span
+                      >
+                      <span class="truncate">HR Management</span>
+                    </button>
+                    <button
+                      class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-6 bg-accent/10 dark:bg-primary/40 text-primary dark:text-white text-base font-bold border border-primary/10 hover:bg-accent/20 transition-all"
+                    >
+                      <span class="material-symbols-outlined mr-2"
+                        >support_agent</span
+                      >
+                      <span class="truncate">Support Services</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex-1 w-full">
+                  <div
+                    class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-primary/20"
+                  >
+                    <div
+                      class="w-full h-full bg-center bg-no-repeat bg-cover"
+                      data-alt="Modern government office interior"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAyVA4YiOnI_Mqnhaex0kpeLsg4mJnWetAom_HvjQWXBoXLvypj6nTTkxnMNZyv5Cy-cNFZc9-1kzBxy8BaFS7a-81GHWHUjlBvtd64ucvFLuKEKETeVkdoaIR_oYaYwsJYqMQaRIoap_ZrZd7QGlR3RKn8VbJc3l6HO0jSKgh-rib_0r4QhMS0kUsEiRzz3SNf5HXAJ9P2I1iOB45H5cTLrbvMl6_7_I_RvUAgAHUueIMawIYxRIJELj8dALy0sHQf4TAEJ3L7xQQ&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"
+                    ></div>
+                    <div
+                      class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 dark:bg-primary/80 backdrop-blur-md rounded-xl"
+                    >
+                      <div class="flex justify-between items-center">
+                        <div>
+                          <p
+                            class="text-xs text-primary/60 dark:text-white/60 font-bold uppercase tracking-wider"
+                          >
+                            Upcoming Townhall
+                          </p>
+                          <p class="text-primary dark:text-white font-bold">
+                            Policy Briefing: Q4 2024
+                          </p>
+                        </div>
+                        <span
+                          class="material-symbols-outlined text-accent text-3xl"
+                          >event_upcoming</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SectionHeader: Updates -->
+          <div class="px-4 md:px-10 lg:px-40 pt-16">
+            <div
+              class="max-w-[1200px] mx-auto border-b border-primary/10 pb-4 flex justify-between items-end"
+            >
+              <div>
+                <h2
+                  class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-tight"
+                >
+                  Latest Updates &amp; Opportunities
+                </h2>
+                <p class="text-gray-500 mt-1">
+                  Stay informed about the latest institutional developments.
+                </p>
+              </div>
+              <a
+                class="text-accent dark:text-blue-400 font-bold text-sm flex items-center gap-1"
+                href="#"
+                >View all news
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                ></a
+              >
+            </div>
+          </div>
+          <!-- ImageGrid -->
+          <div class="px-4 md:px-10 lg:px-40 py-8">
+            <div
+              class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              <!-- News Card 1 -->
+              <div
+                class="group flex flex-col gap-4 bg-white dark:bg-primary/10 p-4 rounded-2xl shadow-sm border border-primary/5 hover:shadow-xl transition-all"
+              >
+                <div
+                  class="relative w-full aspect-video rounded-xl overflow-hidden"
+                >
+                  <div
+                    class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Official document with seal"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuABC-MTIxAnQG1zvx4hR390sjoDJFLN4r1OG4cXioeLevG5MVlFksERf1FBxkWreTNSYMliUNB2gy8rkOrPE-ykyxCM5wp-EqrH98oeEGrbNAJ8jZWAljYqHtaq10VGqPyUavhZagnx8lX1WejR0gXQ8MV_3KieJK3p7b2ND_3sSLTah8NTGC5yXtotBJvA7Oq1vEwkkO-iS6vocVPHSdOjpDoGhj5t-UocgvCU_5K-dYOoGch6C0nGu3EWJP0Cvgw07AGqfXTv9aU&quot;);
+                    "
+                  ></div>
+                  <div
+                    class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest"
+                  >
+                    Policy
+                  </div>
+                </div>
+                <div class="px-2">
+                  <p
+                    class="text-primary dark:text-white text-xl font-bold leading-tight group-hover:text-accent transition-colors italic font-serif-heading"
+                  >
+                    Policy Update: Q3 Adjustments
+                  </p>
+                  <p
+                    class="text-gray-500 dark:text-gray-400 text-sm mt-2 leading-relaxed"
+                  >
+                    Institutional changes regarding hybrid work frameworks
+                    effective starting next month.
+                  </p>
+                  <div
+                    class="mt-4 pt-4 border-t border-primary/5 flex items-center justify-between"
+                  >
+                    <span class="text-[10px] text-gray-400 font-bold uppercase"
+                      >Posted 2 days ago</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors"
+                      >arrow_forward_ios</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- News Card 2 -->
+              <div
+                class="group flex flex-col gap-4 bg-white dark:bg-primary/10 p-4 rounded-2xl shadow-sm border border-primary/5 hover:shadow-xl transition-all"
+              >
+                <div
+                  class="relative w-full aspect-video rounded-xl overflow-hidden"
+                >
+                  <div
+                    class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Administration building entrance"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBIGF0zbVWcoMG0obk8xmB0wGt9D-B_eM_IqhuvH7bobMcOaKf0LpcL6AXibx4WC6iOpGftTNYw65tgeWymqeU_N7lU_mx2bA29P07MYaxcy_rj2xnh-P3l1bKwwCtb_bfiGF48MkdLi-0P2OtXgiv5dmAtcdiRvMXesEL83gGqVgHuv9ryLNMr6_SmoNB81PCav7DhFVM1pjb6nmnOccx5JAEscilwbbXyJ3RdoWTUeoRZkU8Gx4GYzo7SZyCLWWskXbl3P4rKorw&quot;);
+                    "
+                  ></div>
+                  <div
+                    class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest"
+                  >
+                    Career
+                  </div>
+                </div>
+                <div class="px-2">
+                  <p
+                    class="text-primary dark:text-white text-xl font-bold leading-tight group-hover:text-accent transition-colors italic font-serif-heading"
+                  >
+                    Senior Clerk Opening
+                  </p>
+                  <p
+                    class="text-gray-500 dark:text-gray-400 text-sm mt-2 leading-relaxed"
+                  >
+                    Join the administrative team at the Central District branch.
+                    Open for internal applications.
+                  </p>
+                  <div
+                    class="mt-4 pt-4 border-t border-primary/5 flex items-center justify-between"
+                  >
+                    <span class="text-[10px] text-gray-400 font-bold uppercase"
+                      >Closes in 5 days</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors"
+                      >arrow_forward_ios</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- News Card 3 -->
+              <div
+                class="group flex flex-col gap-4 bg-white dark:bg-primary/10 p-4 rounded-2xl shadow-sm border border-primary/5 hover:shadow-xl transition-all"
+              >
+                <div
+                  class="relative w-full aspect-video rounded-xl overflow-hidden"
+                >
+                  <div
+                    class="w-full h-full bg-center bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Employee handbooks and guides"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA_OUOETdv8FM1Pq9IYQbDwOwRS-LYDLkrjm4krKaglDr89vbAKJWrbosZnpeFkeIGr6jf1HzDgMn_b54S4Uqw4xw9KGppc0JL6uQHFzQC-AJlpXa_ThQWEdG9Iq9gQWxn6yEFTVb6-qGoRu4bCU3mk4rOdVxjxxLfkHs-fgcsnROUECUr_dftZk-HQwZPNjoFcFKXJYF1nS3QntRhCsoRa5c94yNP5_SfA_XtTxRhhCYf_AIbuGQtawb8dEPZ_OxV1DWNrwt7MlNk&quot;);
+                    "
+                  ></div>
+                  <div
+                    class="absolute top-3 left-3 bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest"
+                  >
+                    Resources
+                  </div>
+                </div>
+                <div class="px-2">
+                  <p
+                    class="text-primary dark:text-white text-xl font-bold leading-tight group-hover:text-accent transition-colors italic font-serif-heading"
+                  >
+                    New Benefits Guide 2024
+                  </p>
+                  <p
+                    class="text-gray-500 dark:text-gray-400 text-sm mt-2 leading-relaxed"
+                  >
+                    A comprehensive guide covering all new health and dental
+                    plans for all government staff levels.
+                  </p>
+                  <div
+                    class="mt-4 pt-4 border-t border-primary/5 flex items-center justify-between"
+                  >
+                    <span class="text-[10px] text-gray-400 font-bold uppercase"
+                      >New PDF available</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors"
+                      >arrow_forward_ios</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Welcome Section -->
+          <div
+            class="px-4 md:px-10 lg:px-40 py-16 bg-primary dark:bg-secondary/40 text-white mt-10"
+          >
+            <div
+              class="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 items-center"
+            >
+              <div class="lg:w-1/3">
+                <h2
+                  class="text-4xl font-bold leading-tight mb-4 italic font-serif-heading"
+                >
+                  Welcome Our New Employees
+                </h2>
+                <p class="text-white/70 leading-relaxed mb-6">
+                  Fostering a sense of community within our institutional
+                  family. Say hello to the newest members of our departments.
+                </p>
+                <button
+                  class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-background-light transition-colors inline-flex items-center gap-2"
+                >
+                  Meet the Team
+                  <span class="material-symbols-outlined">groups</span>
+                </button>
+              </div>
+              <div class="lg:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <!-- New Hire 1 -->
+                <div class="flex flex-col items-center text-center gap-3">
+                  <div
+                    class="size-24 rounded-full border-4 border-white/20 overflow-hidden shadow-xl"
+                  >
+                    <div
+                      class="w-full h-full bg-cover bg-center"
+                      data-alt="Headshot of new male employee"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBfvgLIFyszwlfuBlT664DCNYcQrmW_rBJHX4qOnY7KNAP1b2E5Px-ybQLR8T8phGNKNUFuQ-mAajxgduhrt_gqs34SG692kMuTMyTeX2xGViKSUSIw5DEEV85bU2mh0PAbfkt1Ma20lFb_m3Y-ISdYuEVKf3NBHH6-lZzh_YFkgIgpUOyG46ej0XoQnOhsMK6MaudR0XRbDWTxEmxQBePVKSMcA_RdC-rgG4ygGpx91RiE1wdWy_BCOl5us-62oH0oNwMFBBIKk8U&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div>
+                    <p class="font-bold">David Chen</p>
+                    <p class="text-xs text-white/60">Urban Planning</p>
+                  </div>
+                </div>
+                <!-- New Hire 2 -->
+                <div class="flex flex-col items-center text-center gap-3">
+                  <div
+                    class="size-24 rounded-full border-4 border-white/20 overflow-hidden shadow-xl"
+                  >
+                    <div
+                      class="w-full h-full bg-cover bg-center"
+                      data-alt="Headshot of new female employee"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBZ2Dp5gcLZEQ24eJsUporVOUJTONxqiBHrcckr2mjJX9CvmAmhhFNcNo6lmppeR13GwxXOI_K_9NBK7k5yl52U6Y-OSY2wfqTtlr0nkK4_tveEJNvz5EAs9hFLzsQ6cONY6Re8BLc0LMbF7rURQkUMKrLNP9EPJEj8WgFsmOnXe0KUEr5t46glZEVGbrJtXVgR5eUCrpgOlHPTPhlarOmELxUhLd98dRkXZc5JHTbvMnc8ZRqyqZOj2sXd7SNf2oa2A5IzhCugk-I&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div>
+                    <p class="font-bold">Sarah Miller</p>
+                    <p class="text-xs text-white/60">Public Relations</p>
+                  </div>
+                </div>
+                <!-- New Hire 3 -->
+                <div class="flex flex-col items-center text-center gap-3">
+                  <div
+                    class="size-24 rounded-full border-4 border-white/20 overflow-hidden shadow-xl"
+                  >
+                    <div
+                      class="w-full h-full bg-cover bg-center"
+                      data-alt="Headshot of new male employee"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAt8eKToYiOG7PY0DfydWjPM73SogGgUOZdTq-AJeeuvNy5ubXcRp9A5YwhxKBioNIL8b9gXg44dwHfxN_A83KSJBrzhZ-b-XQF_tj92ZA3d19EwKjb8HynUDKDB398Xg9TfTAk7QA-W5Mh0jv3J5lDEdxoqTrRwncEV45CxXc9VMKzK8b8QQXuwp6_MVOfHGJOvmGjxk1NueKEBlh1AQ3RnH5SOKSlTiE2_QpnrKpbIDpgn_WnrzMDf9B_n3vw8JdvK0Fc6GxzoIc&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div>
+                    <p class="font-bold">James Wilson</p>
+                    <p class="text-xs text-white/60">Finance Dept.</p>
+                  </div>
+                </div>
+                <!-- New Hire 4 -->
+                <div class="flex flex-col items-center text-center gap-3">
+                  <div
+                    class="size-24 rounded-full border-4 border-white/20 overflow-hidden shadow-xl"
+                  >
+                    <div
+                      class="w-full h-full bg-cover bg-center"
+                      data-alt="Headshot of new female employee"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAKtRXn8okYBGPPS8_wkKxykcTE2eR8L5DPXJAxdgaPJNbb9SJvRkO33JzzTln8tL6OGkqrpYjFbbmusnYr4NIKqljT85gghRZkHDW1Z6hCYbhkrseD017Ru2oT9lhUx7zo9Uau-RCaMCKfaznhqR0fR6Hf2AuNVqQ0EWBfkv0pckHDGybDXErsRoky5wUhJTTbkr1DOddM5-ohP5cwEhzDfAkM1Apycf8TLecaCu0OVjfPYAIw97l3CyjYdVaMnu6k8dDAS8vcG9M&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div>
+                    <p class="font-bold">Elena Rodriguez</p>
+                    <p class="text-xs text-white/60">Social Services</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Document Access Footer Link -->
+          <div
+            class="px-4 md:px-10 lg:px-40 py-20 bg-background-light dark:bg-background-dark"
+          >
+            <div
+              class="max-w-[1200px] mx-auto bg-white dark:bg-primary/20 rounded-2xl p-8 shadow-sm border border-primary/5 flex flex-col md:flex-row justify-between items-center gap-6"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="size-16 bg-accent/10 dark:bg-primary/40 rounded-xl flex items-center justify-center text-accent dark:text-blue-400"
+                >
+                  <span class="material-symbols-outlined text-4xl"
+                    >folder_managed</span
+                  >
+                </div>
+                <div>
+                  <h3
+                    class="text-2xl font-bold text-primary dark:text-white italic font-serif-heading"
+                  >
+                    Document Quick-Access
+                  </h3>
+                  <p class="text-gray-500">
+                    Access role-based internal forms and institutional
+                    guidelines.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <button
+                  class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all"
+                >
+                  Go to Document Library
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Institutional Footer -->
+        <footer
+          class="bg-white dark:bg-background-dark border-t border-primary/10 py-12 px-4 md:px-10 lg:px-40"
+        >
+          <div
+            class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+          >
+            <div class="col-span-1 md:col-span-1">
+              <div
+                class="flex items-center gap-3 text-primary dark:text-white mb-6"
+              >
+                <div class="size-5">
+                  <svg
+                    fill="currentColor"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="font-bold text-lg">GovHR Portal</span>
+              </div>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                Official Human Resources portal for the Local Government
+                Authority. Dedicated to professional excellence and employee
+                support.
+              </p>
+            </div>
+            <div>
+              <h4
+                class="font-bold text-primary dark:text-white mb-6 text-sm uppercase tracking-widest"
+              >
+                Management
+              </h4>
+              <ul class="flex flex-col gap-4 text-sm text-gray-500">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Payroll &amp; Taxes</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Benefits Portal</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Time Tracking</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Staff Policies</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="font-bold text-primary dark:text-white mb-6 text-sm uppercase tracking-widest"
+              >
+                Staff Services
+              </h4>
+              <ul class="flex flex-col gap-4 text-sm text-gray-500">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Training Center</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Health &amp; Wellness</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Help Desk</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Employee Discounts</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="font-bold text-primary dark:text-white mb-6 text-sm uppercase tracking-widest"
+              >
+                Connect
+              </h4>
+              <ul class="flex flex-col gap-4 text-sm text-gray-500">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Institutional News</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Internal Careers</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Feedback Form</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >HR Contact List</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="max-w-[1200px] mx-auto border-t border-primary/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-xs text-gray-400">
+              © 2024 Local Government Authority. All rights reserved.
+            </p>
+            <div class="flex gap-8 text-xs text-gray-400">
+              <a class="hover:underline" href="#">Privacy Policy</a>
+              <a class="hover:underline" href="#">Accessibility Statement</a>
+              <a class="hover:underline" href="#">Terms of Service</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

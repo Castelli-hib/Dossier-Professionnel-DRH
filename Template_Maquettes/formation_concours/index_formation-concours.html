@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Training &amp; Exams Portal - RH Portail Local</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "header-dark": "#10142d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#101519] dark:text-gray-100 font-display transition-colors duration-200"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e9eef1] dark:border-gray-800 bg-white dark:bg-header-dark px-10 py-3 sticky top-0 z-50"
+    >
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-4 text-primary dark:text-white">
+          <div class="size-8 flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl"
+              >account_balance</span
+            >
+          </div>
+          <h2
+            class="text-header-dark dark:text-white text-lg font-extrabold leading-tight tracking-[-0.015em]"
+          >
+            RH Portail Local
+          </h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-9">
+          <a
+            class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary"
+            href="#"
+            >Accueil</a
+          >
+          <a
+            class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary"
+            href="#"
+            >Carrière</a
+          >
+          <a
+            class="text-primary dark:text-white text-sm font-bold border-b-2 border-primary leading-normal"
+            href="#"
+            >Formation</a
+          >
+          <a
+            class="text-[#101519] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary"
+            href="#"
+            >Social</a
+          >
+        </nav>
+      </div>
+      <div class="flex flex-1 justify-end gap-6 items-center">
+        <label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+          <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+            <div
+              class="text-[#5b778b] flex border-none bg-[#e9eef1] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0"
+            >
+              <span class="material-symbols-outlined">search</span>
+            </div>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#101519] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#e9eef1] dark:bg-gray-800 focus:border-none h-full placeholder:text-[#5b778b] px-4 rounded-l-none border-l-0 pl-2 text-sm"
+              placeholder="Rechercher..."
+              value=""
+            />
+          </div>
+        </label>
+        <button
+          class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all"
+        >
+          <span>Mon Compte</span>
+        </button>
+        <div
+          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-gray-200 dark:border-gray-700"
+          data-alt="User profile avatar"
+          style="
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBshVUg49xl-nSdhKay0YBRHcccKrqVmVR640fzIQCekSDtPvMRKby-1wG3PVW5QY-ytTdygzFTP0FHRqPMgwa0XvY0vIayodwP-JW0gHmO4fCriETt4I2wKoAchxhGJu1N7Aiah7GspKwDc04XlkDSMpOqUgGH-1jC__RWYAXWE-r1gdSRE7HlQkiw-X_H46kI1DCck5tDOpqi-9Pqq6obKg7mFSjqpitCZE9BsnCvVWCHrv4i7Spq4VYeBPJS2kusHmBTXCk8enU');
+          "
+        ></div>
+      </div>
+    </header>
+    <main class="max-w-[1100px] mx-auto px-6 py-8">
+      <!-- Breadcrumbs -->
+      <div class="flex flex-wrap gap-2 py-2 mb-4">
+        <a
+          class="text-[#5b778b] dark:text-gray-400 text-sm font-medium leading-normal hover:underline"
+          href="#"
+          >Accueil</a
+        >
+        <span
+          class="text-[#5b778b] dark:text-gray-400 text-sm font-medium leading-normal"
+          >/</span
+        >
+        <span
+          class="text-primary dark:text-white text-sm font-semibold leading-normal"
+          >Formation &amp; Concours</span
+        >
+      </div>
+      <!-- Page Heading -->
+      <div class="flex flex-col gap-3 mb-10">
+        <h1
+          class="text-header-dark dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]"
+        >
+          Formation &amp; Concours
+        </h1>
+        <p
+          class="text-[#5b778b] dark:text-gray-400 text-lg max-w-3xl leading-relaxed"
+        >
+          Retrouvez toutes les ressources pour votre développement
+          professionnel, la gestion de vos droits à la formation et la
+          préparation aux examens de la fonction publique territoriale.
+        </p>
+      </div>
+      <!-- Section 1: CNFPT -->
+      <section class="mb-12 border-l-4 border-primary pl-6 py-2">
+        <h2
+          class="text-header-dark dark:text-white text-2xl font-bold leading-tight tracking-tight mb-6 flex items-center gap-2"
+        >
+          <span class="material-symbols-outlined text-primary">school</span>
+          CNFPT - Centre National de la Fonction Publique Territoriale
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="flex flex-col gap-4 rounded-xl border border-[#d4dde3] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="text-primary bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined">menu_book</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-header-dark dark:text-white text-lg font-bold">
+                Catalogue des formations
+              </h3>
+              <p class="text-[#5b778b] dark:text-gray-400 text-sm mb-4">
+                Consultez l'offre complète de formation continue pour l'année en
+                cours.
+              </p>
+              <a
+                class="inline-flex items-center text-primary dark:text-blue-400 text-sm font-bold gap-1 hover:underline"
+                href="#"
+              >
+                Voir le catalogue
+                <span class="material-symbols-outlined text-xs"
+                  >open_in_new</span
+                >
+              </a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="flex flex-col gap-4 rounded-xl border border-[#d4dde3] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="text-primary bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined">calendar_month</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-header-dark dark:text-white text-lg font-bold">
+                Calendrier annuel
+              </h3>
+              <p class="text-[#5b778b] dark:text-gray-400 text-sm mb-4">
+                Dates des sessions 2024 et périodes d'inscription par filière.
+              </p>
+              <a
+                class="inline-flex items-center text-primary dark:text-blue-400 text-sm font-bold gap-1 hover:underline"
+                href="#"
+              >
+                Télécharger l'agenda
+                <span class="material-symbols-outlined text-xs">download</span>
+              </a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="flex flex-col gap-4 rounded-xl border border-[#d4dde3] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="text-primary bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined">workspace_premium</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-header-dark dark:text-white text-lg font-bold">
+                Préparation aux concours
+              </h3>
+              <p class="text-[#5b778b] dark:text-gray-400 text-sm mb-4">
+                Accédez aux ressources pédagogiques et tests de positionnement.
+              </p>
+              <a
+                class="inline-flex items-center text-primary dark:text-blue-400 text-sm font-bold gap-1 hover:underline"
+                href="#"
+              >
+                Espace pédagogique
+                <span class="material-symbols-outlined text-xs"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2: CPF -->
+      <section
+        class="mb-12 bg-white dark:bg-gray-800 rounded-xl border border-[#d4dde3] dark:border-gray-700 p-8"
+      >
+        <div class="max-w-4xl">
+          <h2
+            class="text-header-dark dark:text-white text-2xl font-bold leading-tight tracking-tight mb-4 flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-primary"
+              >account_balance_wallet</span
+            >
+            CPF (Compte Personnel de Formation)
+          </h2>
+          <div
+            class="space-y-4 text-[#101519] dark:text-gray-300 leading-relaxed"
+          >
+            <p>
+              Le Compte Personnel de Formation (CPF) permet à chaque agent
+              public de cumuler des droits à la formation professionnelle. Ces
+              droits sont exprimés en heures et peuvent être mobilisés pour
+              suivre des formations visant l'acquisition d'un diplôme, d'un
+              titre, d'un certificat de qualification professionnelle ou le
+              développement de compétences.
+            </p>
+            <div
+              class="bg-primary/5 border border-primary/20 rounded-lg p-5 my-6"
+            >
+              <div class="flex gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >gavel</span
+                >
+                <div>
+                  <h4 class="font-bold text-header-dark dark:text-white mb-1">
+                    Cadre réglementaire &amp; Délibérations
+                  </h4>
+                  <p class="text-sm text-[#5b778b] dark:text-gray-400">
+                    Conformément à la délibération du Conseil Municipal du 12
+                    Mars 2023, les modalités de prise en charge et de
+                    mobilisation du CPF ont été actualisées pour les agents de
+                    la collectivité.
+                  </p>
+                  <a
+                    class="inline-flex mt-3 text-primary font-bold text-sm gap-1 hover:underline"
+                    href="#"
+                  >
+                    Lire la délibération officielle (PDF)
+                    <span class="material-symbols-outlined text-xs"
+                      >picture_as_pdf</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 3: CPF Forms (Restricted) -->
+      <section class="mb-12">
+        <div class="flex items-center justify-between mb-6 px-2">
+          <h2
+            class="text-header-dark dark:text-white text-2xl font-bold leading-tight tracking-tight flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-primary"
+              >description</span
+            >
+            Formulaires CPF
+          </h2>
+          <span
+            class="bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
+          >
+            <span class="material-symbols-outlined text-sm">lock</span> Accès
+            Restreint (Intranet)
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 hover:border-primary/50 transition-colors"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-gray-400"
+                >article</span
+              >
+              <span class="text-sm font-medium dark:text-gray-200"
+                >Demande de mobilisation du CPF</span
+              >
+            </div>
+            <button
+              class="text-primary p-2 hover:bg-primary/10 rounded-full transition-colors"
+            >
+              <span class="material-symbols-outlined">download</span>
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 hover:border-primary/50 transition-colors"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-gray-400"
+                >assignment</span
+              >
+              <span class="text-sm font-medium dark:text-gray-200"
+                >Attestation d'inscription formation</span
+              >
+            </div>
+            <button
+              class="text-primary p-2 hover:bg-primary/10 rounded-full transition-colors"
+            >
+              <span class="material-symbols-outlined">download</span>
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 hover:border-primary/50 transition-colors"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-gray-400"
+                >payments</span
+              >
+              <span class="text-sm font-medium dark:text-gray-200"
+                >Demande de remboursement de frais</span
+              >
+            </div>
+            <button
+              class="text-primary p-2 hover:bg-primary/10 rounded-full transition-colors"
+            >
+              <span class="material-symbols-outlined">download</span>
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 hover:border-primary/50 transition-colors"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-gray-400"
+                >history_edu</span
+              >
+              <span class="text-sm font-medium dark:text-gray-200"
+                >Engagement de service (Formation longue)</span
+              >
+            </div>
+            <button
+              class="text-primary p-2 hover:bg-primary/10 rounded-full transition-colors"
+            >
+              <span class="material-symbols-outlined">download</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Section 4: Territorial Exams -->
+      <section class="mb-20">
+        <h2
+          class="text-header-dark dark:text-white text-2xl font-bold leading-tight tracking-tight mb-6 flex items-center gap-2"
+        >
+          <span class="material-symbols-outlined text-primary">groups_3</span>
+          Concours Territoriaux (CIG &amp; CDG)
+        </h2>
+        <div
+          class="bg-white dark:bg-gray-800 border border-[#d4dde3] dark:border-gray-700 rounded-xl overflow-hidden"
+        >
+          <div class="p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-3 dark:text-white">
+                Portails Nationaux de Gestion
+              </h3>
+              <p class="text-[#5b778b] dark:text-gray-400 mb-6 leading-relaxed">
+                Pour consulter les calendriers nationaux des concours, les dates
+                de retrait des dossiers et les résultats, veuillez vous diriger
+                vers les portails officiels des Centres Interdépartementaux de
+                Gestion (CIG).
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-all"
+                  href="#"
+                >
+                  Portail CIG Petite Couronne
+                  <span class="material-symbols-outlined text-sm"
+                    >open_in_new</span
+                  >
+                </a>
+                <a
+                  class="bg-white dark:bg-gray-700 border border-primary text-primary dark:text-blue-400 hover:bg-primary/5 px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-all"
+                  href="#"
+                >
+                  Portail CDG 77 / 91 / 95
+                  <span class="material-symbols-outlined text-sm"
+                    >open_in_new</span
+                  >
+                </a>
+              </div>
+            </div>
+            <div class="hidden lg:block w-48 shrink-0">
+              <div
+                class="w-40 h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-sm overflow-hidden"
+                data-alt="Institutional seal icon"
+              >
+                <span
+                  class="material-symbols-outlined text-7xl text-gray-300 dark:text-gray-500"
+                  >public</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-background-light dark:bg-gray-900 px-8 py-4 border-t border-[#d4dde3] dark:border-gray-700"
+          >
+            <p class="text-xs text-[#5b778b] dark:text-gray-500 italic">
+              * Note : L'inscription à un concours territorial relève de la
+              démarche individuelle de l'agent. Veillez à informer votre service
+              RH en cas de réussite.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-header-dark text-white py-12 px-10">
+      <div
+        class="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="material-symbols-outlined text-3xl"
+              >account_balance</span
+            >
+            <span class="text-xl font-bold">RH Portail Local</span>
+          </div>
+          <p class="text-gray-400 text-sm max-w-sm leading-relaxed">
+            Espace numérique dédié aux agents de la fonction publique
+            territoriale pour la gestion de leur carrière et de leur
+            développement professionnel.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="font-bold mb-6 text-sm uppercase tracking-widest text-primary"
+          >
+            Navigation
+          </h4>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li><a class="hover:text-white" href="#">Accueil</a></li>
+            <li><a class="hover:text-white" href="#">Annuaire Interne</a></li>
+            <li>
+              <a class="hover:text-white" href="#">Planning de Formation</a>
+            </li>
+            <li><a class="hover:text-white" href="#">Espace RH Direct</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold mb-6 text-sm uppercase tracking-widest text-primary"
+          >
+            Assistance
+          </h4>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li><a class="hover:text-white" href="#">FAQ Formation</a></li>
+            <li><a class="hover:text-white" href="#">Nous contacter</a></li>
+            <li><a class="hover:text-white" href="#">Aide au CPF</a></li>
+            <li><a class="hover:text-white" href="#">Mentions Légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-[1100px] mx-auto mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500"
+      >
+        © 2024 RH Portail Local. Tous droits réservés. Service des Ressources
+        Humaines.
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Working Hours &amp; Regulations Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+              "header-blue": "#10142d",
+              "secondary-blue": "#022341",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              content: ["Roboto", "sans-serif"],
+              heading: ["Georgia", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-heading {
+        font-family: "Georgia", serif;
+      } /* Proxy for Gastramond */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="bg-header-blue sticky top-0 z-50 border-b border-white/10 shadow-lg"
+    >
+      <div
+        class="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-white">
+            <div
+              class="size-8 bg-primary flex items-center justify-center rounded-lg"
+            >
+              <span class="material-symbols-outlined">balance</span>
+            </div>
+            <h2
+              class="text-white text-xl font-bold leading-tight tracking-tight font-display"
+            >
+              RH Portal
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors border-b-2 border-primary"
+              href="#"
+              >Regulations</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Training</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Directory</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="relative hidden sm:block">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/40 text-sm"
+              >search</span
+            >
+            <input
+              class="bg-white/10 border-none rounded-lg py-2 pl-10 pr-4 text-sm text-white focus:ring-2 focus:ring-primary w-64 placeholder:text-white/40"
+              placeholder="Search regulations..."
+              type="text"
+            />
+          </div>
+          <button
+            class="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-sm">logout</span>
+            Logout
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1000px] mx-auto px-6 py-8">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 mb-6 text-sm">
+        <a class="text-primary hover:underline font-medium" href="#"
+          >Human Resources</a
+        >
+        <span class="text-slate-400">/</span>
+        <a class="text-primary hover:underline font-medium" href="#"
+          >Governance</a
+        >
+        <span class="text-slate-400">/</span>
+        <span class="text-slate-600 dark:text-slate-300"
+          >Working Hours &amp; Regulations</span
+        >
+      </nav>
+      <!-- Page Heading -->
+      <div class="mb-12">
+        <h1
+          class="font-heading text-4xl md:text-5xl font-black text-header-blue dark:text-white mb-4"
+        >
+          Temps de travail &amp; Réglementation
+        </h1>
+        <p
+          class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed"
+        >
+          Institutional framework and management of working hours for local
+          government employees. Ensuring legal compliance and operational
+          efficiency.
+        </p>
+      </div>
+      <!-- Section 1: Working Hours -->
+      <section class="mb-12">
+        <div
+          class="flex items-center gap-3 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2"
+        >
+          <span class="material-symbols-outlined text-primary">schedule</span>
+          <h2
+            class="text-2xl font-bold font-display text-header-blue dark:text-white"
+          >
+            1. Working Hours (Temps de travail)
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            class="bg-white dark:bg-secondary-blue p-6 rounded-xl border border-slate-200 dark:border-white/5 shadow-sm"
+          >
+            <h3 class="text-lg font-bold mb-3 text-primary">
+              Summary of Rights &amp; Obligations
+            </h3>
+            <p
+              class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4"
+            >
+              Overview of the 35-hour work week, RTT accrual (Reduction of
+              Working Time), and mandatory rest periods under the current local
+              decree.
+            </p>
+            <div
+              class="flex items-center gap-2 text-xs font-medium text-slate-400"
+            >
+              <span class="material-symbols-outlined text-xs">history</span>
+              Last updated: January 2024
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-secondary-blue p-6 rounded-xl border border-slate-200 dark:border-white/5 shadow-sm"
+          >
+            <h3 class="text-lg font-bold mb-3 text-primary">Key Figures</h3>
+            <ul class="space-y-2">
+              <li
+                class="flex justify-between text-sm py-1 border-b border-slate-100 dark:border-white/5"
+              >
+                <span class="text-slate-500">Weekly Standard</span>
+                <span class="font-bold">35 Hours</span>
+              </li>
+              <li
+                class="flex justify-between text-sm py-1 border-b border-slate-100 dark:border-white/5"
+              >
+                <span class="text-slate-500">Max Daily Limit</span>
+                <span class="font-bold">10 Hours</span>
+              </li>
+              <li class="flex justify-between text-sm py-1">
+                <span class="text-slate-500">Night Shift Premium</span>
+                <span class="font-bold text-green-500">+15%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2: Current Legislation -->
+      <section class="mb-12">
+        <div
+          class="flex items-center gap-3 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2"
+        >
+          <span class="material-symbols-outlined text-primary">gavel</span>
+          <h2
+            class="text-2xl font-bold font-display text-header-blue dark:text-white"
+          >
+            2. Current Legislation
+          </h2>
+        </div>
+        <div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl">
+          <p class="font-bold mb-2">Regulatory Framework</p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Operations are governed by the
+            <span class="font-bold text-primary">Decree No. 2000-815</span> and
+            the
+            <span class="font-bold text-primary"
+              >General Code of Public Service</span
+            >. All internal regulations must align with the deliberative acts of
+            the Territorial Council.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-4">
+            <a
+              class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              href="#"
+            >
+              <span class="material-symbols-outlined">menu_book</span>
+              View Legal Code
+            </a>
+            <a
+              class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              href="#"
+            >
+              <span class="material-symbols-outlined">description</span>
+              2023 Local Decree
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Section 3: RH Contacts -->
+      <section class="mb-12">
+        <div
+          class="flex items-center gap-3 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2"
+        >
+          <span class="material-symbols-outlined text-primary">groups</span>
+          <h2
+            class="text-2xl font-bold font-display text-header-blue dark:text-white"
+          >
+            3. RH Contacts: Time Management
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Contact Card -->
+          <div
+            class="bg-white dark:bg-header-blue/40 p-4 rounded-xl border border-slate-200 dark:border-white/10 flex items-center gap-4"
+          >
+            <div
+              class="size-12 rounded-full bg-cover bg-center ring-2 ring-primary/20"
+              data-alt="Portrait of HR manager Sarah Martin"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAx0H4LTYPsZDl8XXPzZ9RfNKvi96zPWAOYB2mCgB-cYNLOVaYcuU9zQZCswfh_UVPeecluQsrOcjGaAD6y_RdMl0sav9uixrlSCazi6I6ziNxmhqP-PYLWLbZb2_QCAUN9ZMo2O_bT8dzHkRpSqpZCa2lL-2vdVAmvn-ixtixr1ipr7n5tEzi_Z4uzp2f1YLYyi70xxM86cYyyta9peD6teDH1akpg4AON5hOE7RlPZUDXVe7-qmBVeUxJbc4U7kwkvAFSDiTpBjA');
+              "
+            ></div>
+            <div>
+              <p class="font-bold text-sm">Sarah Martin</p>
+              <p class="text-xs text-slate-500 mb-2">Time Savings Expert</p>
+              <div class="flex gap-3">
+                <span
+                  class="material-symbols-outlined text-primary text-lg cursor-pointer hover:scale-110 transition-transform"
+                  >mail</span
+                >
+                <span
+                  class="material-symbols-outlined text-primary text-lg cursor-pointer hover:scale-110 transition-transform"
+                  >call</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Contact Card -->
+          <div
+            class="bg-white dark:bg-header-blue/40 p-4 rounded-xl border border-slate-200 dark:border-white/10 flex items-center gap-4"
+          >
+            <div
+              class="size-12 rounded-full bg-cover bg-center ring-2 ring-primary/20"
+              data-alt="Portrait of HR manager Jean Dupont"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDutHyXeaxGRdodTLs3tfTiJPOjPJ2DXxqewybkpCOH8o9kUdkOmUJJCwI1M7jpV1p1wUf-xrfMoBmK_LBfxYgLqKmF0nI2uvUWF4aN9r52rxOUUXZetFD46iYZsfFa1Ja3QFQiGO04U1NzEFt8cAJr3PHiDhFcuBIQjQQXIdUb6hV2ZW9rAzN2FiAAE6YmagU3rDGhcGTePNXMS3hY8a5KrAupGrKq3Qgsc1lksDkjsZwpxD_rDy49Ur1RYvjcVDJrMcz1yPWfF-E');
+              "
+            ></div>
+            <div>
+              <p class="font-bold text-sm">Jean Dupont</p>
+              <p class="text-xs text-slate-500 mb-2">Administrative Officer</p>
+              <div class="flex gap-3">
+                <span
+                  class="material-symbols-outlined text-primary text-lg cursor-pointer hover:scale-110 transition-transform"
+                  >mail</span
+                >
+                <span
+                  class="material-symbols-outlined text-primary text-lg cursor-pointer hover:scale-110 transition-transform"
+                  >call</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 4: CET (Time Savings Account) -->
+      <section class="mb-12">
+        <div
+          class="flex items-center gap-3 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2"
+        >
+          <span class="material-symbols-outlined text-primary">savings</span>
+          <h2
+            class="text-2xl font-bold font-display text-header-blue dark:text-white"
+          >
+            4. CET (Compte Épargne Temps)
+          </h2>
+        </div>
+        <div class="bg-secondary-blue text-white rounded-xl overflow-hidden">
+          <div class="p-8 grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold mb-4">
+                Framework &amp; Deliberations
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Employees may save unused leave or RTT days into a dedicated
+                account. These days can be taken as future leave, converted into
+                RAFP pension points, or paid out as a lump sum subject to
+                thresholds.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary"
+                    >check_circle</span
+                  >
+                  <span class="text-sm">Maximum storage: 60 days</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary"
+                    >check_circle</span
+                  >
+                  <span class="text-sm">Monetization starts above 15 days</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white/5 rounded-lg p-6 flex flex-col justify-center border border-white/10"
+            >
+              <p
+                class="text-xs uppercase tracking-wider text-slate-400 mb-4 font-bold"
+              >
+                Important Dates
+              </p>
+              <p class="text-sm font-medium mb-1">CET Deposit Window</p>
+              <p class="text-2xl font-black text-primary">Nov 1 — Dec 15</p>
+              <p class="text-xs text-slate-400 mt-4 italic">
+                Annual campaign for current year surplus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 5: Practical Documents (Restricted Access) -->
+      <section class="mb-12">
+        <div
+          class="bg-slate-100 dark:bg-slate-900/50 p-8 rounded-2xl border-2 border-dashed border-slate-200 dark:border-slate-800"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8"
+          >
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="material-symbols-outlined text-amber-500"
+                  >lock</span
+                >
+                <h2
+                  class="text-2xl font-bold font-display text-header-blue dark:text-white uppercase tracking-tight text-sm"
+                >
+                  Practical Documents
+                </h2>
+              </div>
+              <p class="text-slate-500 text-sm">
+                Restricted access forms for internal administrative procedures.
+              </p>
+            </div>
+            <div
+              class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20"
+            >
+              INTRANET ONLY
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <button
+              class="bg-primary hover:bg-primary/90 text-white p-4 rounded-lg flex items-center justify-between transition-all group"
+            >
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined">download</span>
+                <div class="text-left">
+                  <p class="text-sm font-bold leading-tight">
+                    CET Opening Form
+                  </p>
+                  <p class="text-[10px] text-white/70 uppercase">
+                    PDF • 1.2 MB
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
+                >chevron_right</span
+              >
+            </button>
+            <button
+              class="bg-primary hover:bg-primary/90 text-white p-4 rounded-lg flex items-center justify-between transition-all group"
+            >
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined">download</span>
+                <div class="text-left">
+                  <p class="text-sm font-bold leading-tight">
+                    Overtime Declaration
+                  </p>
+                  <p class="text-[10px] text-white/70 uppercase">
+                    XLSX • 450 KB
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
+                >chevron_right</span
+              >
+            </button>
+            <button
+              class="bg-primary hover:bg-primary/90 text-white p-4 rounded-lg flex items-center justify-between transition-all group"
+            >
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined">download</span>
+                <div class="text-left">
+                  <p class="text-sm font-bold leading-tight">
+                    Partial Time Request
+                  </p>
+                  <p class="text-[10px] text-white/70 uppercase">
+                    PDF • 890 KB
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
+                >chevron_right</span
+              >
+            </button>
+            <button
+              class="bg-primary hover:bg-primary/90 text-white p-4 rounded-lg flex items-center justify-between transition-all group"
+            >
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined">download</span>
+                <div class="text-left">
+                  <p class="text-sm font-bold leading-tight">
+                    Annual Leave Schedule
+                  </p>
+                  <p class="text-[10px] text-white/70 uppercase">
+                    PDF • 2.1 MB
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
+                >chevron_right</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-header-blue border-t border-white/10 mt-12">
+      <div
+        class="max-w-[1200px] mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="flex items-center gap-2 text-white/60">
+          <span class="material-symbols-outlined text-sm">policy</span>
+          <span class="text-sm"
+            >© 2024 Portal RH - Local Government Services</span
+          >
+        </div>
+        <div class="flex gap-6">
+          <a
+            class="text-xs text-white/40 hover:text-white transition-colors"
+            href="#"
+            >Legal Mentions</a
+          >
+          <a
+            class="text-xs text-white/40 hover:text-white transition-colors"
+            href="#"
+            >Accessibility Policy</a
+          >
+          <a
+            class="text-xs text-white/40 hover:text-white transition-colors"
+            href="#"
+            >GDPR</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

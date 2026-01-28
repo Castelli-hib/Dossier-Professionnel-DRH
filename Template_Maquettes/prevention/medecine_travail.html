@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Occupational Medicine &amp; Health Resources</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Roboto:wght@300;400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#10142d",
+              emergency: "#073f61",
+              "background-light": "#f6f6f8",
+              "background-dark": "#14151e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              body: ["Roboto", "sans-serif"],
+              heading: ["serif"] /* Fallback for Gastramond style */,
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom font emulation for Gastramond-like feel if not available */
+      .font-gastramond {
+        font-family: "Times New Roman", serif;
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-white"
+  >
+    <!-- Header / TopNavBar -->
+    <div class="w-full bg-primary border-b border-[#2b2e40]">
+      <div
+        class="max-w-[1200px] mx-auto px-4 lg:px-10 py-3 flex items-center justify-between whitespace-nowrap"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-6 flex items-center justify-center">
+              <span class="material-symbols-outlined text-white"
+                >account_balance</span
+              >
+            </div>
+            <h2
+              class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Local Government HR
+            </h2>
+          </div>
+          <div class="hidden md:flex items-center gap-9">
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Benefits</a
+            >
+            <a
+              class="text-white text-sm font-bold border-b-2 border-white pb-1"
+              href="#"
+              >Health</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Safety</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Workplace</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Training</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+          <label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden"
+            >
+              <div
+                class="text-[#9ea2bd] flex border-none bg-[#2b2e40] items-center justify-center pl-4 rounded-l-lg border-r-0"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >search</span
+                >
+              </div>
+              <input
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#2b2e40] focus:border-none h-full placeholder:text-[#9ea2bd] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal"
+                placeholder="Search resources..."
+                value=""
+              />
+            </div>
+          </label>
+          <div
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-white/10"
+            data-alt="Official portrait of an HR administrator"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzLk4AViiD8GokXCHGr3orwhzx8PindTFpEq87_F6XbmAxtvT9zBg2h3iJAPfuM8X0IjOJ8DvJipa5s9fpvWos7VPnNmbsAt9QmWCSj4M48aEOFD-wiIbDyojK-MgbzAKrgqae1PBL9zwuaSD66-isxfUpl0NW0fdV1oG95MxK3Tjqttu3juJj032lgiJ4rzG3Z8ujyOLvYz9a31haL1JvuLRblKy2d97XoYvETfU0MFH2w-BE9ZsbL6D1hhXxVU0O6w3AUjHIj2k');
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    <main class="max-w-[1200px] mx-auto px-4 lg:px-10 py-10">
+      <!-- PageHeading -->
+      <div class="flex flex-col gap-4 mb-8">
+        <h1
+          class="font-gastramond text-5xl md:text-6xl font-black leading-tight tracking-tight text-white"
+        >
+          Occupational Medicine
+        </h1>
+        <p class="font-body text-[#9ea2bd] text-lg max-w-3xl leading-relaxed">
+          Dedicated health services and clinical resources for local government
+          staff. Our mission is to ensure your physical and psychological
+          well-being through specialized monitoring, official guidelines, and
+          partner medical networks.
+        </p>
+      </div>
+      <!-- ActionPanel (Emergency Contacts) -->
+      <div class="mb-10">
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 rounded-xl bg-emergency p-8 border border-white/10 shadow-xl"
+        >
+          <div class="flex items-center gap-5">
+            <div class="bg-white/10 p-4 rounded-full">
+              <span class="material-symbols-outlined text-white text-3xl"
+                >emergency</span
+              >
+            </div>
+            <div class="flex flex-col gap-1">
+              <p class="text-white text-xl font-bold leading-tight">
+                Emergency Contacts &amp; Immediate Support
+              </p>
+              <p
+                class="text-white/80 text-base font-normal leading-normal max-w-xl"
+              >
+                In case of immediate workplace accidents or urgent psychological
+                distress, dial <span class="font-bold text-white">15</span> or
+                our dedicated internal support line at
+                <span class="font-bold text-white underline"
+                  >01 23 45 67 89</span
+                >.
+              </p>
+            </div>
+          </div>
+          <button
+            class="w-full md:w-auto flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-emergency text-base font-bold transition-all hover:bg-white/90"
+          >
+            <span class="material-symbols-outlined mr-2">phone_in_talk</span>
+            <span class="truncate">Call Support Now</span>
+          </button>
+        </div>
+      </div>
+      <!-- Two Main Columns -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Column 1: Partner Clinics -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="material-symbols-outlined text-white"
+              >local_hospital</span
+            >
+            <h2 class="text-white text-2xl font-bold leading-tight">
+              Health Centers &amp; Partner Clinics
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 gap-4">
+            <!-- Clinic Card 1 -->
+            <div
+              class="flex flex-col md:flex-row gap-4 rounded-xl border border-[#3e425b] bg-[#1f212e] p-6 hover:border-white/30 transition-all"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h3 class="text-white text-lg font-bold">
+                  Centre de Santé Central
+                </h3>
+                <div class="flex items-center gap-2 text-[#9ea2bd]">
+                  <span class="material-symbols-outlined text-sm"
+                    >location_on</span
+                  >
+                  <p class="text-sm">123 Rue de la République, City Center</p>
+                </div>
+                <div class="flex items-center gap-2 text-[#9ea2bd]">
+                  <span class="material-symbols-outlined text-sm"
+                    >schedule</span
+                  >
+                  <p class="text-sm">Mon - Fri: 08:30 - 18:00</p>
+                </div>
+              </div>
+              <div class="flex flex-row md:flex-col gap-2 justify-end">
+                <button
+                  class="flex-1 md:flex-none h-10 px-4 rounded-lg bg-primary border border-white/20 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-base">call</span>
+                  01 10 20 30 40
+                </button>
+                <button
+                  class="flex-1 md:flex-none h-10 px-4 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-base">map</span>
+                  Map
+                </button>
+              </div>
+            </div>
+            <!-- Clinic Card 2 -->
+            <div
+              class="flex flex-col md:flex-row gap-4 rounded-xl border border-[#3e425b] bg-[#1f212e] p-6 hover:border-white/30 transition-all"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h3 class="text-white text-lg font-bold">
+                  Clinique du Travail Nord
+                </h3>
+                <div class="flex items-center gap-2 text-[#9ea2bd]">
+                  <span class="material-symbols-outlined text-sm"
+                    >location_on</span
+                  >
+                  <p class="text-sm">45 Avenue des Champs, District North</p>
+                </div>
+                <div class="flex items-center gap-2 text-[#9ea2bd]">
+                  <span class="material-symbols-outlined text-sm"
+                    >schedule</span
+                  >
+                  <p class="text-sm">Mon - Sat: 09:00 - 17:00</p>
+                </div>
+              </div>
+              <div class="flex flex-row md:flex-col gap-2 justify-end">
+                <button
+                  class="flex-1 md:flex-none h-10 px-4 rounded-lg bg-primary border border-white/20 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-base">call</span>
+                  01 40 50 60 70
+                </button>
+                <button
+                  class="flex-1 md:flex-none h-10 px-4 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-base">map</span>
+                  Map
+                </button>
+              </div>
+            </div>
+            <!-- Clinic Card 3 -->
+            <div
+              class="flex flex-col md:flex-row gap-4 rounded-xl border border-[#3e425b] bg-[#1f212e] p-6 hover:border-white/30 transition-all"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h3 class="text-white text-lg font-bold">
+                  Pôle Médical Municipal
+                </h3>
+                <div class="flex items-center gap-2 text-[#9ea2bd]">
+                  <span class="material-symbols-outlined text-sm"
+                    >location_on</span
+                  >
+                  <p class="text-sm">12 Place de la Mairie, Town Hall Annex</p>
+                </div>
+                <div class="flex items-center gap-2 text-[#9ea2bd]">
+                  <span class="material-symbols-outlined text-sm"
+                    >schedule</span
+                  >
+                  <p class="text-sm">Mon - Fri: 08:00 - 19:00</p>
+                </div>
+              </div>
+              <div class="flex flex-row md:flex-col gap-2 justify-end">
+                <button
+                  class="flex-1 md:flex-none h-10 px-4 rounded-lg bg-primary border border-white/20 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-base">call</span>
+                  01 99 88 77 66
+                </button>
+                <button
+                  class="flex-1 md:flex-none h-10 px-4 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-base">map</span>
+                  Map
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Column 2: Resources & External Links -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="material-symbols-outlined text-white"
+              >open_in_new</span
+            >
+            <h2 class="text-white text-2xl font-bold leading-tight">
+              Resources &amp; External Links
+            </h2>
+          </div>
+          <div class="flex flex-col gap-4">
+            <!-- Resource Card 1 -->
+            <a
+              class="group flex items-center justify-between p-5 rounded-xl bg-primary/40 border border-[#3e425b] hover:bg-primary/60 transition-all"
+              href="#"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-[#073f61] flex items-center justify-center overflow-hidden"
+                >
+                  <span class="material-symbols-outlined text-white"
+                    >description</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">National Health Guide</h4>
+                  <p class="text-[#9ea2bd] text-xs">
+                    Official documentation for public staff
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined text-[#9ea2bd] group-hover:text-white transition-colors"
+                >chevron_right</span
+              >
+            </a>
+            <!-- Resource Card 2 -->
+            <a
+              class="group flex items-center justify-between p-5 rounded-xl bg-primary/40 border border-[#3e425b] hover:bg-primary/60 transition-all"
+              href="#"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-[#15161e] border border-white/10 flex items-center justify-center overflow-hidden"
+                >
+                  <span class="material-symbols-outlined text-white"
+                    >gavel</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">
+                    Labor Laws &amp; Regulations
+                  </h4>
+                  <p class="text-[#9ea2bd] text-xs">
+                    Ministry of Labor legal portal
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined text-[#9ea2bd] group-hover:text-white transition-colors"
+                >chevron_right</span
+              >
+            </a>
+            <!-- Resource Card 3 -->
+            <a
+              class="group flex items-center justify-between p-5 rounded-xl bg-primary/40 border border-[#3e425b] hover:bg-primary/60 transition-all"
+              href="#"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-white/10 flex items-center justify-center overflow-hidden"
+                >
+                  <span class="material-symbols-outlined text-white"
+                    >health_and_safety</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">
+                    Ameli Pro / Health Insurance
+                  </h4>
+                  <p class="text-[#9ea2bd] text-xs">
+                    Health insurance for government workers
+                  </p>
+                </div>
+              </div>
+              <span
+                class="material-symbols-outlined text-[#9ea2bd] group-hover:text-white transition-colors"
+                >chevron_right</span
+              >
+            </a>
+            <!-- Info Box -->
+            <div
+              class="mt-4 p-5 rounded-xl bg-[#2b2e40]/30 border border-dashed border-[#3e425b]"
+            >
+              <p class="text-sm text-[#9ea2bd] italic">
+                Can't find what you're looking for? Contact the Internal HR
+                Health Department directly at extension 404.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Area -->
+      <footer class="mt-20 border-t border-[#2b2e40] pt-10 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-3 text-white mb-6">
+              <span class="material-symbols-outlined">location_city</span>
+              <h3 class="font-bold">City Administration</h3>
+            </div>
+            <p class="text-sm text-[#9ea2bd]">
+              Official Human Resources Portal for municipal employees and
+              partners.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">Quick Links</h4>
+            <ul class="text-sm text-[#9ea2bd] flex flex-col gap-3">
+              <li><a class="hover:text-white" href="#">Workplace Portal</a></li>
+              <li><a class="hover:text-white" href="#">HR Policy Manual</a></li>
+              <li><a class="hover:text-white" href="#">Legal Mentions</a></li>
+              <li><a class="hover:text-white" href="#">Staff Directory</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">Support</h4>
+            <ul class="text-sm text-[#9ea2bd] flex flex-col gap-3">
+              <li><a class="hover:text-white" href="#">Help Center</a></li>
+              <li>
+                <a class="hover:text-white" href="#">Technical Support</a>
+              </li>
+              <li><a class="hover:text-white" href="#">Report an Issue</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">Official Channels</h4>
+            <div class="flex gap-4">
+              <div
+                class="size-8 rounded-full bg-[#2b2e40] flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer"
+              >
+                <span class="material-symbols-outlined text-sm">language</span>
+              </div>
+              <div
+                class="size-8 rounded-full bg-[#2b2e40] flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer"
+              >
+                <span class="material-symbols-outlined text-sm">mail</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center text-xs text-[#9ea2bd]">
+          © 2024 Local Government Health &amp; Safety Department. All rights
+          reserved.
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

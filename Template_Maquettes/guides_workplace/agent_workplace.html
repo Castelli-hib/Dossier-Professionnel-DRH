@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Agent Workplace &amp; Guides</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3d075f",
+              "background-light": "#f7f6f8",
+              "background-dark": "#1b1022",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <!-- Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3">
+            <div
+              class="size-8 bg-primary rounded-lg flex items-center justify-center text-white"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >account_balance</span
+              >
+            </div>
+            <h1 class="text-lg font-bold tracking-tight">Agent Workplace</h1>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Dashboard</a
+            >
+            <a class="text-sm font-medium text-primary" href="#">Resources</a>
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Directory</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="relative hidden sm:block">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]"
+              >search</span
+            >
+            <input
+              class="h-9 w-64 bg-slate-200 dark:bg-white/5 border-none rounded-lg pl-10 text-sm focus:ring-2 focus:ring-primary"
+              placeholder="Global search..."
+              type="text"
+            />
+          </div>
+          <button
+            class="p-2 hover:bg-slate-200 dark:hover:bg-white/10 rounded-lg transition-colors"
+          >
+            <span class="material-symbols-outlined text-[24px]"
+              >notifications</span
+            >
+          </button>
+          <div
+            class="size-9 rounded-full bg-primary/20 border border-primary/30 overflow-hidden"
+            data-alt="User profile avatar placeholder"
+          >
+            <div
+              class="w-full h-full bg-gradient-to-br from-primary to-indigo-900"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-6 py-10">
+      <!-- Page Heading -->
+      <div class="mb-10">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6"
+        >
+          <div class="max-w-2xl">
+            <h2 class="text-4xl font-extrabold tracking-tight mb-3">
+              Workplace &amp; Guides
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">
+              Access official institutional documentation, technical manuals,
+              and administrative procedures for city employees.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-500">
+            <span class="material-symbols-outlined text-[18px]">update</span>
+            <span>Last updated: Oct 24, 2024</span>
+          </div>
+        </div>
+      </div>
+      <!-- Document Search Bar -->
+      <div class="mb-12">
+        <div class="relative w-full max-w-3xl">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[24px]"
+            >filter_list</span
+          >
+          <input
+            class="w-full h-14 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl pl-14 pr-4 text-base focus:ring-2 focus:ring-primary shadow-sm"
+            placeholder="Search for guides, documents, or procedures..."
+            type="text"
+          />
+        </div>
+      </div>
+      <!-- Content Grid -->
+      <div class="space-y-8">
+        <!-- Category Block: Business Guides -->
+        <section
+          class="bg-white dark:bg-white/[0.03] rounded-xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-sm"
+        >
+          <div
+            class="p-6 border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02]"
+          >
+            <div class="flex items-center gap-3 mb-1">
+              <span class="material-symbols-outlined text-primary text-[28px]"
+                >corporate_fare</span
+              >
+              <h3 class="text-xl font-bold tracking-tight">Business Guides</h3>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+              HR policies, career advancement, and institutional professional
+              standards.
+            </p>
+          </div>
+          <div class="divide-y divide-slate-100 dark:divide-white/5">
+            <!-- Document Row -->
+            <div
+              class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">picture_as_pdf</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors"
+                  >
+                    Career Advancement Policy 2024
+                  </h4>
+                  <p
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"
+                  >
+                    PDF (2.4 MB) • Updated 2 weeks ago
+                  </p>
+                </div>
+              </div>
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >download</span
+                >
+                <span class="hidden sm:inline">Download</span>
+              </button>
+            </div>
+            <!-- Document Row -->
+            <div
+              class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">picture_as_pdf</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors"
+                  >
+                    Employee Code of Conduct
+                  </h4>
+                  <p
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"
+                  >
+                    PDF (1.1 MB) • Updated 1 month ago
+                  </p>
+                </div>
+              </div>
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >download</span
+                >
+                <span class="hidden sm:inline">Download</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category Block: Technical Guides -->
+        <section
+          class="bg-white dark:bg-white/[0.03] rounded-xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-sm"
+        >
+          <div
+            class="p-6 border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02]"
+          >
+            <div class="flex items-center gap-3 mb-1">
+              <span class="material-symbols-outlined text-primary text-[28px]"
+                >terminal</span
+              >
+              <h3 class="text-xl font-bold tracking-tight">Technical Guides</h3>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+              IT infrastructure, software manuals, and digital security
+              protocols.
+            </p>
+          </div>
+          <div class="divide-y divide-slate-100 dark:divide-white/5">
+            <div
+              class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">picture_as_pdf</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors"
+                  >
+                    VPN &amp; Remote Work Setup
+                  </h4>
+                  <p
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"
+                  >
+                    PDF (3.8 MB) • Updated 3 days ago
+                  </p>
+                </div>
+              </div>
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >download</span
+                >
+                <span class="hidden sm:inline">Download</span>
+              </button>
+            </div>
+            <div
+              class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">picture_as_pdf</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors"
+                  >
+                    Internal Messaging (CivicChat) Manual
+                  </h4>
+                  <p
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"
+                  >
+                    PDF (5.2 MB) • Updated 2 months ago
+                  </p>
+                </div>
+              </div>
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >download</span
+                >
+                <span class="hidden sm:inline">Download</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Category Block: Internal Procedures -->
+        <section
+          class="bg-white dark:bg-white/[0.03] rounded-xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-sm"
+        >
+          <div
+            class="p-6 border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02]"
+          >
+            <div class="flex items-center gap-3 mb-1">
+              <span class="material-symbols-outlined text-primary text-[28px]"
+                >description</span
+              >
+              <h3 class="text-xl font-bold tracking-tight">
+                Internal Procedures
+              </h3>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+              Administrative workflows, request forms, and operational
+              checklists.
+            </p>
+          </div>
+          <div class="divide-y divide-slate-100 dark:divide-white/5">
+            <div
+              class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">picture_as_pdf</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors"
+                  >
+                    Expense Reimbursement Workflow
+                  </h4>
+                  <p
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"
+                  >
+                    PDF (840 KB) • Updated 1 week ago
+                  </p>
+                </div>
+              </div>
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >download</span
+                >
+                <span class="hidden sm:inline">Download</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="mt-20 border-t border-slate-200 dark:border-white/10 bg-white dark:bg-background-dark py-12"
+    >
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="size-7 bg-primary rounded flex items-center justify-center text-white"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >account_balance</span
+                >
+              </div>
+              <span class="text-base font-bold tracking-tight"
+                >Agent Workplace</span
+              >
+            </div>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
+            >
+              Official institutional portal for local government employees.
+              Providing tools and resources for public service excellence.
+            </p>
+          </div>
+          <div>
+            <h5
+              class="font-bold text-sm uppercase tracking-wider mb-6 text-slate-400"
+            >
+              Quick Links
+            </h5>
+            <ul class="space-y-4">
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >City Hall Home</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Employee Portal</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >HR Dashboard</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Payroll Access</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="font-bold text-sm uppercase tracking-wider mb-6 text-slate-400"
+            >
+              Support
+            </h5>
+            <ul class="space-y-4">
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >IT Help Desk</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Report an Issue</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Safety Protocols</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="font-bold text-sm uppercase tracking-wider mb-6 text-slate-400"
+            >
+              Legal
+            </h5>
+            <ul class="space-y-4">
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Terms of Use</a
+                >
+              </li>
+              <li>
+                <a class="text-sm hover:text-primary transition-colors" href="#"
+                  >Accessibility</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-slate-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <p class="text-xs text-slate-500">
+            © 2024 Municipal Government Office. All rights reserved.
+          </p>
+          <div class="flex items-center gap-6">
+            <a
+              class="text-slate-400 hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >language</span
+              >
+            </a>
+            <a
+              class="text-slate-400 hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[20px]">share</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

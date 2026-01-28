@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CCP - Joint Consultative Commissions Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#284d81",
+              institutional: "#10142d",
+              "accent-blue": "#275b80",
+              "background-light": "#f6f7f8",
+              "background-dark": "#14181e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              "serif-heading": ["Georgia", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .serif-title {
+        font-family: "Georgia", serif; /* Gastramond substitute */
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 transition-colors duration-200"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-[#e9edf1] dark:border-gray-800 px-4 lg:px-20 py-3"
+    >
+      <div
+        class="max-w-[1200px] mx-auto flex items-center justify-between whitespace-nowrap"
+      >
+        <div class="flex items-center gap-8">
+          <div
+            class="flex items-center gap-4 text-institutional dark:text-white"
+          >
+            <div
+              class="size-8 bg-primary rounded-lg flex items-center justify-center text-white"
+            >
+              <span class="material-symbols-outlined">account_balance</span>
+            </div>
+            <h2
+              class="text-xl font-bold leading-tight tracking-[-0.015em] serif-title"
+            >
+              CCP Portal
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-9">
+            <a
+              class="text-institutional dark:text-gray-300 text-sm font-medium hover:text-accent-blue transition-colors"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-institutional dark:text-gray-300 text-sm font-medium hover:text-accent-blue transition-colors"
+              href="#"
+              >CAP</a
+            >
+            <a
+              class="text-accent-blue dark:text-blue-400 text-sm font-bold border-b-2 border-accent-blue"
+              href="#"
+              >CCP</a
+            >
+            <a
+              class="text-institutional dark:text-gray-300 text-sm font-medium hover:text-accent-blue transition-colors"
+              href="#"
+              >Resources</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#e9edf1] dark:bg-gray-800"
+            >
+              <div
+                class="text-[#5b6f8b] flex items-center justify-center pl-4 rounded-l-lg"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >search</span
+                >
+              </div>
+              <input
+                class="w-full flex-1 border-none bg-transparent text-[#101419] dark:text-gray-200 focus:ring-0 px-4 pl-2 text-sm placeholder:text-[#5b6f8b]"
+                placeholder="Search resources..."
+                value=""
+              />
+            </div>
+          </label>
+          <button
+            class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-4 lg:px-20 py-10">
+      <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full lg:w-64 shrink-0">
+          <div class="sticky top-24 flex flex-col gap-6">
+            <div class="flex flex-col">
+              <h1
+                class="text-institutional dark:text-white text-base font-bold serif-title"
+              >
+                CCP Menu
+              </h1>
+              <p class="text-[#5b6f8b] text-xs font-normal">
+                Local Government HR
+              </p>
+            </div>
+            <nav class="flex flex-col gap-1">
+              <a
+                class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary"
+                href="#roles"
+              >
+                <span class="material-symbols-outlined text-[20px]">info</span>
+                <span class="text-sm font-medium">Role &amp; Missions</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2 text-institutional dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                href="#members"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >groups</span
+                >
+                <span class="text-sm font-medium">Member List</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2 text-institutional dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                href="#schedule"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >event_note</span
+                >
+                <span class="text-sm font-medium">Schedule &amp; Minutes</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2 text-institutional dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                href="#guides"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >menu_book</span
+                >
+                <span class="text-sm font-medium">Specific Guides</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+        <!-- Main Content Area -->
+        <div class="flex-1 space-y-12">
+          <!-- Page Heading -->
+          <section>
+            <div class="flex flex-wrap justify-between items-start gap-4">
+              <div class="max-w-2xl">
+                <h1
+                  class="text-institutional dark:text-white text-4xl font-black leading-tight tracking-tight serif-title mb-4"
+                >
+                  Commissions Consultatives Paritaires (CCP)
+                </h1>
+                <p class="text-[#5b6f8b] text-base font-normal leading-relaxed">
+                  Dedicated administrative space for contract employees. Access
+                  your representatives, session minutes, and professional
+                  evolution resources.
+                </p>
+              </div>
+              <button
+                class="flex items-center gap-2 px-5 py-2.5 bg-[#e9edf1] dark:bg-gray-800 text-institutional dark:text-white rounded-lg text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >download</span
+                >
+                Download Charter
+              </button>
+            </div>
+          </section>
+          <!-- Section: Role & Missions -->
+          <section id="roles">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="h-8 w-1.5 bg-primary rounded-full"></div>
+              <h2
+                class="text-institutional dark:text-white text-2xl font-bold serif-title"
+              >
+                Role &amp; Missions
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div
+                class="flex flex-col gap-4 rounded-xl border border-[#d4dae3] dark:border-gray-800 bg-white dark:bg-gray-900/50 p-6 shadow-sm"
+              >
+                <div class="text-primary">
+                  <span class="material-symbols-outlined text-3xl"
+                    >contract_edit</span
+                  >
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3
+                    class="text-institutional dark:text-white text-lg font-bold"
+                  >
+                    Contract Management
+                  </h3>
+                  <p class="text-[#5b6f8b] text-sm leading-relaxed">
+                    Mandatory consultation for individual decisions regarding
+                    recruitment, contract terms, and renewals for non-permanent
+                    staff.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 rounded-xl border border-[#d4dae3] dark:border-gray-800 bg-white dark:bg-gray-900/50 p-6 shadow-sm"
+              >
+                <div class="text-primary">
+                  <span class="material-symbols-outlined text-3xl">gavel</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3
+                    class="text-institutional dark:text-white text-lg font-bold"
+                  >
+                    Renewal &amp; Discipline
+                  </h3>
+                  <p class="text-[#5b6f8b] text-sm leading-relaxed">
+                    Reviewing individual cases concerning non-renewal of
+                    contracts or disciplinary measures for contract personnel.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 rounded-xl border border-[#d4dae3] dark:border-gray-800 bg-white dark:bg-gray-900/50 p-6 shadow-sm"
+              >
+                <div class="text-primary">
+                  <span class="material-symbols-outlined text-3xl"
+                    >trending_up</span
+                  >
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3
+                    class="text-institutional dark:text-white text-lg font-bold"
+                  >
+                    Professional Evolution
+                  </h3>
+                  <p class="text-[#5b6f8b] text-sm leading-relaxed">
+                    Guiding contract workers through career transitions,
+                    internal mobility, and specific professional rights.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Member List -->
+          <section id="members">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="h-8 w-1.5 bg-primary rounded-full"></div>
+              <h2
+                class="text-institutional dark:text-white text-2xl font-bold serif-title"
+              >
+                Elected Representatives
+              </h2>
+            </div>
+            <div
+              class="overflow-hidden rounded-xl border border-[#d4dae3] dark:border-gray-800 bg-white dark:bg-gray-900"
+            >
+              <table class="w-full text-left border-collapse">
+                <thead
+                  class="bg-[#f8fafc] dark:bg-gray-800/50 border-b border-[#d4dae3] dark:border-gray-800"
+                >
+                  <tr>
+                    <th
+                      class="px-6 py-4 text-xs font-bold text-institutional dark:text-gray-300 uppercase tracking-wider"
+                    >
+                      Representative Name
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xs font-bold text-institutional dark:text-gray-300 uppercase tracking-wider"
+                    >
+                      College
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xs font-bold text-institutional dark:text-gray-300 uppercase tracking-wider"
+                    >
+                      Department
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xs font-bold text-institutional dark:text-gray-300 uppercase tracking-wider text-right"
+                    >
+                      Contact
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[#d4dae3] dark:divide-gray-800">
+                  <tr
+                    class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs"
+                        >
+                          JD
+                        </div>
+                        <span
+                          class="text-sm font-semibold text-institutional dark:text-white"
+                          >Jean Dupont</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#5b6f8b]">
+                      Contractual B
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#5b6f8b]">
+                      Urban Planning
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="text-accent-blue hover:text-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >mail</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs"
+                        >
+                          ML
+                        </div>
+                        <span
+                          class="text-sm font-semibold text-institutional dark:text-white"
+                          >Marie Lambert</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#5b6f8b]">
+                      Contractual A
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#5b6f8b]">
+                      Human Resources
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="text-accent-blue hover:text-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >mail</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors"
+                  >
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs"
+                        >
+                          RB
+                        </div>
+                        <span
+                          class="text-sm font-semibold text-institutional dark:text-white"
+                          >Robert Bernard</span
+                        >
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#5b6f8b]">
+                      Contractual C
+                    </td>
+                    <td class="px-6 py-4 text-sm text-[#5b6f8b]">
+                      Social Services
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <button
+                        class="text-accent-blue hover:text-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >mail</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- Section: Schedule & Minutes -->
+          <section id="schedule">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="h-8 w-1.5 bg-primary rounded-full"></div>
+              <h2
+                class="text-institutional dark:text-white text-2xl font-bold serif-title"
+              >
+                Schedule &amp; Minutes
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Upcoming Sessions -->
+              <div class="space-y-4">
+                <h3
+                  class="text-sm font-bold text-[#5b6f8b] uppercase tracking-widest"
+                >
+                  Upcoming Sessions
+                </h3>
+                <div class="space-y-3">
+                  <div
+                    class="flex items-center justify-between p-4 bg-primary/5 dark:bg-primary/10 rounded-xl border-l-4 border-primary"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 size-14 rounded-lg shadow-sm border border-primary/20"
+                      >
+                        <span class="text-xs font-bold text-primary">OCT</span>
+                        <span
+                          class="text-lg font-black text-institutional dark:text-white"
+                          >12</span
+                        >
+                      </div>
+                      <div>
+                        <h4
+                          class="text-sm font-bold text-institutional dark:text-white leading-tight"
+                        >
+                          Plenary Session CCP
+                        </h4>
+                        <p class="text-xs text-[#5b6f8b]">
+                          9:00 AM • Main Hall Room 4
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      class="px-2.5 py-1 bg-primary text-white text-[10px] font-bold rounded uppercase"
+                      >New</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center gap-4 p-4 bg-white dark:bg-gray-900/50 rounded-xl border border-[#d4dae3] dark:border-gray-800"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 size-14 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700"
+                    >
+                      <span class="text-xs font-bold text-[#5b6f8b]">NOV</span>
+                      <span
+                        class="text-lg font-black text-institutional dark:text-white"
+                        >24</span
+                      >
+                    </div>
+                    <div>
+                      <h4
+                        class="text-sm font-bold text-institutional dark:text-white leading-tight"
+                      >
+                        Thematic Review
+                      </h4>
+                      <p class="text-xs text-[#5b6f8b]">
+                        2:30 PM • Virtual Meeting
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Archive Reports -->
+              <div class="space-y-4">
+                <h3
+                  class="text-sm font-bold text-[#5b6f8b] uppercase tracking-widest"
+                >
+                  Recent Minutes
+                </h3>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center justify-between p-3 bg-white dark:bg-gray-900/50 rounded-lg border border-[#d4dae3] dark:border-gray-800 hover:border-accent-blue transition-colors cursor-pointer group"
+                  >
+                    <div class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-red-500"
+                        >picture_as_pdf</span
+                      >
+                      <span
+                        class="text-sm font-medium text-institutional dark:text-gray-200"
+                        >CCP Report - June 2024</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[#5b6f8b] group-hover:text-accent-blue"
+                      >download</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-between p-3 bg-white dark:bg-gray-900/50 rounded-lg border border-[#d4dae3] dark:border-gray-800 hover:border-accent-blue transition-colors cursor-pointer group"
+                  >
+                    <div class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-red-500"
+                        >picture_as_pdf</span
+                      >
+                      <span
+                        class="text-sm font-medium text-institutional dark:text-gray-200"
+                        >CCP Report - March 2024</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[#5b6f8b] group-hover:text-accent-blue"
+                      >download</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-between p-3 bg-white dark:bg-gray-900/50 rounded-lg border border-[#d4dae3] dark:border-gray-800 hover:border-accent-blue transition-colors cursor-pointer group"
+                  >
+                    <div class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-red-500"
+                        >picture_as_pdf</span
+                      >
+                      <span
+                        class="text-sm font-medium text-institutional dark:text-gray-200"
+                        >Session Minutes - Dec 2023</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[#5b6f8b] group-hover:text-accent-blue"
+                      >download</span
+                    >
+                  </div>
+                </div>
+                <a
+                  class="text-xs font-bold text-accent-blue hover:underline flex items-center gap-1"
+                  href="#"
+                >
+                  View full archive
+                  <span class="material-symbols-outlined text-[14px]"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Specific Guides -->
+          <section id="guides">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="h-8 w-1.5 bg-primary rounded-full"></div>
+              <h2
+                class="text-institutional dark:text-white text-2xl font-bold serif-title"
+              >
+                Specific Guides for Contract Workers
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                class="group relative overflow-hidden bg-white dark:bg-gray-900 rounded-xl border border-[#d4dae3] dark:border-gray-800 p-1 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
+              >
+                <div
+                  class="aspect-video w-full overflow-hidden rounded-lg bg-gray-100 mb-4 relative"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent-blue/40 flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined text-white text-5xl"
+                      >balance</span
+                    >
+                  </div>
+                </div>
+                <div class="px-4 pb-4">
+                  <h4 class="text-institutional dark:text-white font-bold mb-2">
+                    Fundamental Rights
+                  </h4>
+                  <p class="text-xs text-[#5b6f8b] mb-4">
+                    Complete overview of legal protections and workplace rights
+                    for non-permanent staff.
+                  </p>
+                  <button
+                    class="w-full py-2 bg-[#e9edf1] dark:bg-gray-800 text-institutional dark:text-white text-xs font-bold rounded hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Download Guide
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group relative overflow-hidden bg-white dark:bg-gray-900 rounded-xl border border-[#d4dae3] dark:border-gray-800 p-1 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
+              >
+                <div
+                  class="aspect-video w-full overflow-hidden rounded-lg bg-gray-100 mb-4 relative"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-green-500/30 to-blue-500/30 flex items-center justify-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-5xl"
+                      >stairs</span
+                    >
+                  </div>
+                </div>
+                <div class="px-4 pb-4">
+                  <h4 class="text-institutional dark:text-white font-bold mb-2">
+                    Career Evolution
+                  </h4>
+                  <p class="text-xs text-[#5b6f8b] mb-4">
+                    From short-term contracts to permanent status: understanding
+                    your career path options.
+                  </p>
+                  <button
+                    class="w-full py-2 bg-[#e9edf1] dark:bg-gray-800 text-institutional dark:text-white text-xs font-bold rounded hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Download Guide
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group relative overflow-hidden bg-white dark:bg-gray-900 rounded-xl border border-[#d4dae3] dark:border-gray-800 p-1 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
+              >
+                <div
+                  class="aspect-video w-full overflow-hidden rounded-lg bg-gray-100 mb-4 relative"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-red-500/30 flex items-center justify-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-5xl"
+                      >health_and_safety</span
+                    >
+                  </div>
+                </div>
+                <div class="px-4 pb-4">
+                  <h4 class="text-institutional dark:text-white font-bold mb-2">
+                    Health &amp; Security
+                  </h4>
+                  <p class="text-xs text-[#5b6f8b] mb-4">
+                    Social security benefits, mutual funds, and workplace safety
+                    protocols for contractuals.
+                  </p>
+                  <button
+                    class="w-full py-2 bg-[#e9edf1] dark:bg-gray-800 text-institutional dark:text-white text-xs font-bold rounded hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Download Guide
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-institutional text-gray-400 py-12 px-4 lg:px-20 mt-20 border-t border-gray-800"
+    >
+      <div
+        class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10"
+      >
+        <div>
+          <div class="flex items-center gap-3 text-white mb-6">
+            <span class="material-symbols-outlined">account_balance</span>
+            <h2 class="text-lg font-bold serif-title">CCP Portal</h2>
+          </div>
+          <p class="text-sm leading-relaxed">
+            Local Government Human Resources Division. Ensuring administrative
+            fairness for all contract personnel since 2010.
+          </p>
+        </div>
+        <div>
+          <h3
+            class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+          >
+            Quick Links
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a class="hover:text-white transition-colors" href="#"
+                >Administrative Codes</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors" href="#"
+                >Accessibility Statement</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors" href="#"
+                >Contact HR Support</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3
+            class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+          >
+            Newsletter
+          </h3>
+          <p class="text-sm mb-4">
+            Stay updated with the latest CCP sessions and reports.
+          </p>
+          <div class="flex gap-2">
+            <input
+              class="flex-1 bg-gray-800 border-none rounded-lg text-sm px-4 py-2 focus:ring-1 focus:ring-primary"
+              placeholder="Email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-gray-800 text-center text-xs"
+      >
+        © 2024 CCP Administrative Portal - Local Government Service. All rights
+        reserved.
+      </div>
+    </footer>
+  </body>
+</html>

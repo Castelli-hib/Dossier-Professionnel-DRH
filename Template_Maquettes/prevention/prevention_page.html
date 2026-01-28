@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Prevention Page - Institutional HR</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Gastramond alternative (Serif) for titles as requested -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#10142d", // Specific requested shade
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+              "serif-title": ["Crimson Pro", "serif"], // Using Crimson Pro as a Gastramond stand-in
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-serif-title {
+        font-family: "Crimson Pro", serif;
+      }
+      .bg-institutional-dark {
+        background-color: #10142d;
+      }
+      .border-institutional {
+        border-color: #275b80;
+      }
+      .text-institutional-accent {
+        color: #275b80;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200"
+  >
+    <!-- Top Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div class="bg-primary p-1.5 rounded-lg">
+            <span class="material-symbols-outlined text-white text-2xl"
+              >account_balance</span
+            >
+          </div>
+          <h1 class="text-lg font-bold tracking-tight dark:text-white">
+            HR Portal
+            <span class="font-light text-slate-400">| Local Government</span>
+          </h1>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#"
+            >Dashboard</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#"
+            >Employees</a
+          >
+          <a
+            class="text-sm font-medium text-primary border-b-2 border-primary py-5"
+            href="#"
+            >Prevention</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#"
+            >Benefits</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors"
+          >
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+          <div
+            class="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-white overflow-hidden"
+          >
+            <img
+              alt="User profile avatar"
+              class="w-full h-full object-cover"
+              data-alt="User profile portrait placeholder"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3iqFNFYfLCaUkDm_3ltsr864MAG6QVxDNr1QMEF0ieeBPv8258vt-J0I6R9VihIhuiivioCrVgZAo_aOBzpzt34_YGNspHs6pEVi4OmbctifkkrAn18Cu02C3sT604JUfIyGsrEtavyGNOdtfmxYlmqxqfIaSmDqHZiynqY3pONxxHR1ktFKr7OTM-A2qoTGukVBJiEXGKBAJj1xJOfVvlH-L01SOuxvTJIsexelsqAautTOC3xnTJ_iQm7eutFYolqhvjxwqWuI"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="max-w-[1440px] mx-auto flex flex-col md:flex-row min-h-[calc(100-4rem)]"
+    >
+      <!-- Sidebar Navigation -->
+      <aside
+        class="w-full md:w-72 border-r border-white/5 p-6 space-y-8 flex-shrink-0"
+      >
+        <div>
+          <h3
+            class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4"
+          >
+            Prevention Portal
+          </h3>
+          <nav class="space-y-1">
+            <a
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-semibold"
+              href="#postings"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >fact_check</span
+              >
+              <span class="text-sm">Mandatory Postings</span>
+            </a>
+            <a
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors"
+              href="#legal"
+            >
+              <span class="material-symbols-outlined text-[20px]">gavel</span>
+              <span class="text-sm">Legal Information</span>
+            </a>
+            <a
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors"
+              href="#unit"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >groups_3</span
+              >
+              <span class="text-sm">Prevention Unit</span>
+            </a>
+            <a
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors"
+              href="#documents"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >folder_open</span
+              >
+              <span class="text-sm">Useful Documents</span>
+            </a>
+          </nav>
+        </div>
+        <div class="pt-8 border-t border-white/5">
+          <h3
+            class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4"
+          >
+            Quick Links
+          </h3>
+          <ul class="space-y-3 px-3">
+            <li>
+              <a
+                class="text-sm text-slate-400 hover:text-white flex items-center justify-between"
+                href="#"
+                >Internal Wiki
+                <span class="material-symbols-outlined text-sm"
+                  >open_in_new</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                class="text-sm text-slate-400 hover:text-white flex items-center justify-between"
+                href="#"
+                >Incident Report
+                <span class="material-symbols-outlined text-sm"
+                  >open_in_new</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Content Area -->
+      <section class="flex-1 p-6 md:p-12 overflow-y-auto">
+        <!-- Hero Heading -->
+        <div class="mb-12">
+          <h2
+            class="font-serif-title text-4xl md:text-5xl font-bold dark:text-white mb-4"
+          >
+            Prevention &amp; Compliance
+          </h2>
+          <p
+            class="text-slate-500 dark:text-slate-400 text-lg max-w-2xl leading-relaxed"
+          >
+            Institutional mandatory postings, regulatory resources, and direct
+            access to the municipal prevention framework.
+          </p>
+        </div>
+        <!-- Mandatory Postings (Image Grid style variant) -->
+        <div class="mb-16" id="postings">
+          <div
+            class="flex items-center justify-between mb-6 border-b border-white/5 pb-4"
+          >
+            <h3 class="text-xl font-bold dark:text-white">
+              Mandatory Postings
+            </h3>
+            <button class="text-sm text-primary font-semibold hover:underline">
+              View archive
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-slate-200 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden border border-white/5 group-hover:border-primary/50 transition-all"
+              >
+                <div
+                  class="w-full h-full bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center"
+                  data-alt="Visual representation of labor law poster 2024"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-primary/40"
+                    >description</span
+                  >
+                </div>
+              </div>
+              <h4
+                class="font-bold text-white group-hover:text-primary transition-colors"
+              >
+                2024 Labor Law Compliance
+              </h4>
+              <p class="text-sm text-slate-400 mt-1">
+                Institutional requirement • Updated Jan 12
+              </p>
+            </div>
+            <div class="group cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-slate-200 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden border border-white/5 group-hover:border-primary/50 transition-all"
+              >
+                <div
+                  class="w-full h-full bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center"
+                  data-alt="Health and safety regulation notice image"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-primary/40"
+                    >health_and_safety</span
+                  >
+                </div>
+              </div>
+              <h4
+                class="font-bold text-white group-hover:text-primary transition-colors"
+              >
+                Safety Certification - Unit A
+              </h4>
+              <p class="text-sm text-slate-400 mt-1">
+                Regulatory posting • Valid until Dec 2024
+              </p>
+            </div>
+            <div class="group cursor-pointer">
+              <div
+                class="w-full aspect-[16/10] bg-slate-200 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden border border-white/5 group-hover:border-primary/50 transition-all"
+              >
+                <div
+                  class="w-full h-full bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center"
+                  data-alt="Non-discrimination policy poster thumbnail"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-primary/40"
+                    >policy</span
+                  >
+                </div>
+              </div>
+              <h4
+                class="font-bold text-white group-hover:text-primary transition-colors"
+              >
+                Equal Opportunity Policy
+              </h4>
+              <p class="text-sm text-slate-400 mt-1">
+                Federal requirement • Permanent display
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Prevention Unit Organization (High contrast list) -->
+        <div class="mb-16" id="unit">
+          <div
+            class="flex items-center justify-between mb-8 border-b border-white/5 pb-4"
+          >
+            <h3 class="text-xl font-bold dark:text-white">
+              Prevention Unit Structure
+            </h3>
+            <span
+              class="text-xs bg-white/10 px-2 py-1 rounded text-slate-400 uppercase tracking-tighter"
+              >Current Staffing</span
+            >
+          </div>
+          <div class="space-y-4">
+            <!-- Unit Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/[0.08] rounded-lg border border-white/5 transition-colors"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >person</span
+                  >
+                </div>
+                <div>
+                  <p class="font-bold text-white">Sarah Jenkins</p>
+                  <p class="text-sm text-slate-400">Chief Prevention Officer</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="hidden md:block text-right">
+                  <p class="text-xs uppercase text-slate-500 font-bold">
+                    Extension
+                  </p>
+                  <p class="text-sm font-mono text-primary">#4402</p>
+                </div>
+                <button
+                  class="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded text-sm font-bold flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  Contact
+                </button>
+              </div>
+            </div>
+            <!-- Unit Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/[0.08] rounded-lg border border-white/5 transition-colors"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >shield_person</span
+                  >
+                </div>
+                <div>
+                  <p class="font-bold text-white">Marcus Thorne</p>
+                  <p class="text-sm text-slate-400">
+                    Workplace Safety Inspector
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="hidden md:block text-right">
+                  <p class="text-xs uppercase text-slate-500 font-bold">
+                    Extension
+                  </p>
+                  <p class="text-sm font-mono text-primary">#4415</p>
+                </div>
+                <button
+                  class="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded text-sm font-bold flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  Contact
+                </button>
+              </div>
+            </div>
+            <!-- Unit Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/[0.08] rounded-lg border border-white/5 transition-colors"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >clinical_notes</span
+                  >
+                </div>
+                <div>
+                  <p class="font-bold text-white">Elena Rodriguez</p>
+                  <p class="text-sm text-slate-400">
+                    Compliance &amp; Documentation
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="hidden md:block text-right">
+                  <p class="text-xs uppercase text-slate-500 font-bold">
+                    Extension
+                  </p>
+                  <p class="text-sm font-mono text-primary">#4409</p>
+                </div>
+                <button
+                  class="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded text-sm font-bold flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  Contact
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Useful Documents Library -->
+        <div class="mb-16" id="documents">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 border-b border-white/5 pb-4"
+          >
+            <div>
+              <h3 class="text-xl font-bold dark:text-white">
+                Useful Documents
+              </h3>
+              <p class="text-sm text-slate-400 mt-1">
+                Resource library for compliance and guidelines.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <div class="relative">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-lg"
+                  >search</span
+                >
+                <input
+                  class="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2 text-sm w-full sm:w-64 focus:outline-none focus:border-primary"
+                  placeholder="Search resources..."
+                  type="text"
+                />
+              </div>
+              <div
+                class="flex p-1 bg-white/5 rounded-lg border border-white/10"
+              >
+                <button
+                  class="px-4 py-1.5 text-xs font-bold bg-primary rounded-md text-white"
+                >
+                  All
+                </button>
+                <button
+                  class="px-4 py-1.5 text-xs font-bold text-slate-400 hover:text-white"
+                >
+                  Public
+                </button>
+                <button
+                  class="px-4 py-1.5 text-xs font-bold text-slate-400 hover:text-white flex items-center gap-1"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >lock</span
+                  >
+                  Restricted
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="space-y-px rounded-xl overflow-hidden border border-white/10"
+          >
+            <!-- Doc Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/[0.02] hover:bg-white/5 transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="text-red-500 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >picture_as_pdf</span
+                  >
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-white">
+                    Emergency Evacuation Procedure.pdf
+                  </p>
+                  <div class="flex items-center gap-3 mt-0.5">
+                    <span class="text-[10px] uppercase font-bold text-slate-500"
+                      >Public Access</span
+                    >
+                    <span class="text-[10px] text-slate-600">•</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold"
+                      >2.4 MB</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button
+                class="p-2 text-slate-400 hover:text-white hover:bg-primary/20 rounded transition-all"
+              >
+                <span class="material-symbols-outlined">download</span>
+              </button>
+            </div>
+            <!-- Doc Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/[0.02] hover:bg-white/5 transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="text-blue-500 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >description</span
+                  >
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-white">
+                    Staff Confidentiality Agreement Template.docx
+                  </p>
+                  <div class="flex items-center gap-3 mt-0.5">
+                    <span
+                      class="text-[10px] uppercase font-bold text-amber-500/80"
+                      >Restricted</span
+                    >
+                    <span class="text-[10px] text-slate-600">•</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold"
+                      >145 KB</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button
+                class="p-2 text-slate-400 hover:text-white hover:bg-primary/20 rounded transition-all"
+              >
+                <span class="material-symbols-outlined">download</span>
+              </button>
+            </div>
+            <!-- Doc Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/[0.02] hover:bg-white/5 transition-colors group"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="text-red-500 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >picture_as_pdf</span
+                  >
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-white">
+                    2024 Prevention Strategy Roadmap.pdf
+                  </p>
+                  <div class="flex items-center gap-3 mt-0.5">
+                    <span class="text-[10px] uppercase font-bold text-slate-500"
+                      >Public Access</span
+                    >
+                    <span class="text-[10px] text-slate-600">•</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold"
+                      >5.1 MB</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button
+                class="p-2 text-slate-400 hover:text-white hover:bg-primary/20 rounded transition-all"
+              >
+                <span class="material-symbols-outlined">download</span>
+              </button>
+            </div>
+            <!-- Doc Row -->
+            <div
+              class="flex items-center justify-between p-4 bg-white/[0.02] hover:bg-white/5 transition-colors group border-b border-transparent"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="text-emerald-500 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >table_chart</span
+                  >
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-white">
+                    Risk Assessment Matrix.xlsx
+                  </p>
+                  <div class="flex items-center gap-3 mt-0.5">
+                    <span
+                      class="text-[10px] uppercase font-bold text-amber-500/80"
+                      >Restricted</span
+                    >
+                    <span class="text-[10px] text-slate-600">•</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold"
+                      >88 KB</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button
+                class="p-2 text-slate-400 hover:text-white hover:bg-primary/20 rounded transition-all"
+              >
+                <span class="material-symbols-outlined">download</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Compliance Note -->
+        <footer
+          class="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p
+            class="text-xs text-slate-500 uppercase tracking-widest font-medium"
+          >
+            Last Audit: October 2023 • Compliance Version 4.2.0
+          </p>
+          <div class="flex gap-6">
+            <a
+              class="text-xs text-slate-500 hover:text-white transition-colors"
+              href="#"
+              >Legal Terms</a
+            >
+            <a
+              class="text-xs text-slate-500 hover:text-white transition-colors"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-xs text-slate-500 hover:text-white transition-colors"
+              href="#"
+              >Accessibility Statement</a
+            >
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

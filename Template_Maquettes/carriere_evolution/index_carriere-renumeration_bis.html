@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Career Management &amp; Development Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "header-dark": "#10142d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-white min-h-screen flex flex-col font-display"
+  >
+    <!-- Header / TopNavBar -->
+    <header
+      class="bg-[#10142d] border-b border-[#2a3741] px-4 md:px-20 lg:px-40 py-3"
+    >
+      <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3">
+            <div class="bg-primary p-1.5 rounded-lg">
+              <span class="material-symbols-outlined text-white text-2xl"
+                >account_balance</span
+              >
+            </div>
+            <h1
+              class="text-white text-lg font-bold leading-tight tracking-tight"
+            >
+              Gov Career Portal
+            </h1>
+          </div>
+          <nav class="hidden lg:flex items-center gap-6">
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Dashboard</a
+            >
+            <a
+              class="text-white text-sm font-bold border-b-2 border-primary pb-1"
+              href="#"
+              >Career Path</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Documents</a
+            >
+            <a
+              class="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              href="#"
+              >Help</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <div
+            class="hidden md:flex items-center bg-[#2a3741] rounded-lg px-3 py-1.5 w-64 border border-transparent focus-within:border-primary"
+          >
+            <span class="material-symbols-outlined text-[#9cb0bf] text-xl"
+              >search</span
+            >
+            <input
+              class="bg-transparent border-none focus:ring-0 text-white placeholder:text-[#9cb0bf] text-sm w-full"
+              placeholder="Search resources..."
+              type="text"
+            />
+          </div>
+          <div class="flex gap-3">
+            <button
+              class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#2a3741] text-white hover:bg-[#364653] transition-colors"
+            >
+              <span class="material-symbols-outlined text-xl"
+                >notifications</span
+              >
+            </button>
+            <button
+              class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#2a3741] text-white hover:bg-[#364653] transition-colors"
+            >
+              <span class="material-symbols-outlined text-xl">settings</span>
+            </button>
+          </div>
+          <div
+            class="h-10 w-10 rounded-full bg-primary/40 border-2 border-primary/20 bg-cover bg-center"
+            data-alt="User profile avatar circle"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBk4oK3S5-pRAtHFT1CVhq2eXqY1kWdeAULEKdZnteb8_iVtV71cZcfSVfbkXAM9B7-MRqA8iZbLYseTmDFxY1YnlXHzfKpKcH6ITcPOfo-DaQlPBTlm9Z6qFGEzYhBiB8ShjWlJSRQmSWkurcFu2_FcZPUIKY-Jec4ZG4KrTKLVVZwpwYuPWKHAh6cZieT3nFI4SwdfFolG59C4MGvZnH3llAnXtm6Ie6xtirucAtU1BPsKqbTWRIg5P0jYZTwlRI0UhVMfqmmVE0');
+            "
+          ></div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="flex-1 max-w-[1200px] mx-auto w-full px-4 md:px-20 lg:px-40 py-8"
+    >
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 mb-6">
+        <a
+          class="text-[#9cb0bf] hover:text-white text-sm font-medium flex items-center gap-1"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-sm">home</span> Home
+        </a>
+        <span class="text-[#9cb0bf] text-sm">/</span>
+        <span class="text-white text-sm font-medium"
+          >Career Management &amp; Development</span
+        >
+      </nav>
+      <!-- Headline -->
+      <div class="mb-10">
+        <h2 class="text-white text-4xl font-extrabold tracking-tight mb-2">
+          Career Management &amp; Evolution
+        </h2>
+        <p class="text-[#9cb0bf] text-lg max-w-2xl">
+          Plan your professional growth, explore internal opportunities, and
+          track your skills development within the administration.
+        </p>
+      </div>
+      <!-- Thematic Structured Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Block 1: Professional Interviews -->
+        <div
+          class="bg-[#1a2228] border border-[#2a3741] rounded-xl overflow-hidden flex flex-col hover:border-primary/50 transition-colors group"
+        >
+          <div
+            class="h-48 bg-cover bg-center"
+            data-alt="Two professionals in a formal office discussion"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8gHwsQ_uWGKBN92hO-VL8lfBEZ5038a2ECLEuMEYjh30zY4e99VpErjmhnkeu9MFVAGV-vZzCSsgWDUICcpOSINSfOdhAnB7-0HAi0Vw4g2f0LlJMg2oVtW-pzDhArsy2J_Lr3ok3749rOiGR5yRFr9iKI9Dlf16uOcG-C0imdNCJZcqUUAf8_82p2Izj-C8o5eAyXnXFq7xrW3LtF3ix-eVRMXS4axMXahrSpgGm30Nu-ixK8hHTLhfnF2h2hCDpE54r258EtKY');
+            "
+          ></div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >event_available</span
+              >
+              <h3 class="text-white text-2xl font-bold">
+                Professional Interviews
+              </h3>
+            </div>
+            <p class="text-[#9cb0bf] text-base leading-relaxed mb-6 flex-1">
+              Schedule your mandatory annual review and access our comprehensive
+              preparation guides. Ensure you're ready to discuss your
+              performance and goals.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <button
+                class="bg-primary hover:bg-primary/80 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >calendar_month</span
+                >
+                Schedule Now
+              </button>
+              <button
+                class="bg-[#2a3741] hover:bg-[#364653] text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">download</span>
+                Prep Guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Block 2: Internal Mobility -->
+        <div
+          class="bg-[#1a2228] border border-[#2a3741] rounded-xl overflow-hidden flex flex-col hover:border-primary/50 transition-colors group"
+        >
+          <div
+            class="h-48 bg-cover bg-center"
+            data-alt="Business handshake symbolizing career transition"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTAQe7AwQiXIDqR5wSN-6Z2s8OSTVYSjZwrg35D8eFO8dQnafIextp88EnExAN776sDsppY1jE7baLHAiaseyYnyMiACLIfAwjqtxx6e98OcjtvF1r9f1I-KbymS_Ps40pxVNPJ00u1QqEkQKRiV8k9Af6WYbCqosy4D9lrHFQRdnZmgAbMUCVKnWA0nMj6oTtAhaHOnijtnHQ4FdgqZ6HiBQwjhCPDQ5mU40741btJ8T0wGR6-vzoVWbTqUb-SX_tF4HiXiCMnAI');
+            "
+          ></div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >move_up</span
+              >
+              <h3 class="text-white text-2xl font-bold">Internal Mobility</h3>
+            </div>
+            <p class="text-[#9cb0bf] text-base leading-relaxed mb-6 flex-1">
+              Explore internal job openings across departments and understand
+              the standard mobility procedures for transitioning within the
+              administration.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <button
+                class="bg-primary hover:bg-primary/80 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">work</span>
+                Explore Job Board
+              </button>
+              <button
+                class="bg-[#2a3741] hover:bg-[#364653] text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >description</span
+                >
+                Procedures
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Block 3: Training & Skills -->
+        <div
+          class="bg-[#1a2228] border border-[#2a3741] rounded-xl overflow-hidden flex flex-col hover:border-primary/50 transition-colors group"
+        >
+          <div
+            class="h-48 bg-cover bg-center"
+            data-alt="Person writing notes during an educational training session"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCd-e9S_BhWde_R4mvld7HjLJxvr9jsvwK8C3Y75Rxnl8p2em9QCMneSTYfIK6JrdipCCo3YQ0MVJxr7oPXpuu9jlfJGT-hhG15A2nc_-_lhfdNjBYAJFIRwUdb2PQ6K9heiKMMaIWjlWpGtbj1eIyI2mqJt_QaJaiDeOlrEozR9pOimHJ9mQAdrGUUz75IGWV88t6EyoPB2vs_1lKcV9E8StTn_zK9fabZDN6gn3DUyvKfYs_gBY3zhD15Hnu_DgIYcI4vbdWX1jI');
+            "
+          ></div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >school</span
+              >
+              <h3 class="text-white text-2xl font-bold">
+                Training &amp; Skills
+              </h3>
+            </div>
+            <div
+              class="bg-[#141a1e] rounded-lg p-4 mb-6 border border-[#2a3741]"
+            >
+              <div class="flex justify-between items-center mb-2">
+                <span
+                  class="text-xs font-semibold text-[#9cb0bf] uppercase tracking-wider"
+                  >Training Balance</span
+                >
+                <span class="text-primary font-bold">34 Hours</span>
+              </div>
+              <div class="w-full bg-[#2a3741] rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full w-[65%]"></div>
+              </div>
+            </div>
+            <p class="text-[#9cb0bf] text-base leading-relaxed mb-6 flex-1">
+              Access the current training catalog and monitor your Personal
+              Account (CPF) credits. Build the skills needed for your future
+              role.
+            </p>
+            <div class="flex flex-wrap gap-3 mt-auto">
+              <button
+                class="bg-primary hover:bg-primary/80 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">menu_book</span>
+                Consult Catalog
+              </button>
+              <button
+                class="bg-[#2a3741] hover:bg-[#364653] text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >account_circle</span
+                >
+                Training Account
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Block 4: Promotions & Advancement -->
+        <div
+          class="bg-[#1a2228] border border-[#2a3741] rounded-xl overflow-hidden flex flex-col hover:border-primary/50 transition-colors group"
+        >
+          <div
+            class="h-48 bg-cover bg-center"
+            data-alt="Staircase concept representing career ladder progression"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf540KcIHlV4pRySOq1YbNAsrbEV4DC7ZNfbfH4q-jEufBPFQbnJgV6luwuBFqJ4p_KsfakBjw-7JEw3qZpuVWYY3qbTV0lzWQxsGV04rkfShnTO_unGLSect5PFNTh4OqfGgAdsAwrQVvpGd8t1X6efuncdVSRKS8u1MEqNDXtUlVP5MxsPTdlonptEoUD6VX8b1Kw_7C7FD6a05VUwmwfJo6Bl32YAL3OY7bA3L1QRNG8R1Y8Pn2gIFWExacW7CeENNIe1Z0VXE');
+            "
+          ></div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >trending_up</span
+              >
+              <h3 class="text-white text-2xl font-bold">
+                Promotions &amp; Advancement
+              </h3>
+            </div>
+            <div class="mb-6">
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-[#9cb0bf]">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Check criteria for automatic grade advancement</span>
+                </li>
+                <li class="flex items-start gap-2 text-sm text-[#9cb0bf]">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >info</span
+                  >
+                  <span>Next internal exam: Oct 15, 2024</span>
+                </li>
+              </ul>
+            </div>
+            <p class="text-[#9cb0bf] text-base leading-relaxed mb-6 flex-1">
+              Stay informed about grade advancement criteria, professional
+              exams, and internal promotion dates to advance your career tier.
+            </p>
+            <div class="flex flex-wrap gap-3 mt-auto">
+              <button
+                class="bg-primary hover:bg-primary/80 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">verified</span>
+                Check Eligibility
+              </button>
+              <button
+                class="bg-[#2a3741] hover:bg-[#364653] text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >edit_calendar</span
+                >
+                Exam Dates
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Secondary Section: Latest News & Updates -->
+      <div class="bg-[#1a2228] rounded-xl border border-[#2a3741] p-8">
+        <h3 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">campaign</span>
+          Latest Announcements
+        </h3>
+        <div class="space-y-6">
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#2a3741] pb-6"
+          >
+            <div>
+              <span
+                class="text-primary text-xs font-bold uppercase tracking-widest mb-1 block"
+                >New Policy</span
+              >
+              <h4
+                class="text-white font-semibold text-lg hover:text-primary transition-colors cursor-pointer"
+              >
+                Updated Mobility Framework for Q4 2024
+              </h4>
+              <p class="text-[#9cb0bf] text-sm mt-1">
+                New guidelines for inter-departmental transfers effective next
+                month.
+              </p>
+            </div>
+            <span class="text-[#9cb0bf] text-sm whitespace-nowrap"
+              >Aug 24, 2024</span
+            >
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#2a3741] last:border-0 pb-6 last:pb-0"
+          >
+            <div>
+              <span
+                class="text-primary text-xs font-bold uppercase tracking-widest mb-1 block"
+                >Exam Results</span
+              >
+              <h4
+                class="text-white font-semibold text-lg hover:text-primary transition-colors cursor-pointer"
+              >
+                Grade B Promotional Exam Results
+              </h4>
+              <p class="text-[#9cb0bf] text-sm mt-1">
+                Official results for the June session are now available in your
+                personal area.
+              </p>
+            </div>
+            <span class="text-[#9cb0bf] text-sm whitespace-nowrap"
+              >Aug 18, 2024</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-[#10142d] border-t border-[#2a3741] mt-12 py-12 px-4 md:px-20 lg:px-40"
+    >
+      <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="bg-primary/20 p-1 rounded-md">
+              <span class="material-symbols-outlined text-primary text-xl"
+                >account_balance</span
+              >
+            </div>
+            <span class="text-white font-bold">Gov Career Portal</span>
+          </div>
+          <p class="text-[#9cb0bf] text-xs leading-relaxed">
+            Institutional Human Resources portal dedicated to local government
+            employees. Committed to professional growth and excellence.
+          </p>
+        </div>
+        <div>
+          <h5 class="text-white font-bold text-sm mb-4">Resources</h5>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Career Guides</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >HR Forms</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Regulations</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-bold text-sm mb-4">Support</h5>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Contact HR Team</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-bold text-sm mb-4">Legal</h5>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Accessibility Statement</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#9cb0bf] hover:text-primary text-sm transition-colors"
+                href="#"
+                >Legal Mentions</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#2a3741] flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-[#9cb0bf] text-xs">
+          © 2024 Local Government Administration. All rights reserved.
+        </p>
+        <div class="flex gap-4">
+          <span
+            class="material-symbols-outlined text-[#9cb0bf] cursor-pointer hover:text-white transition-colors"
+            >language</span
+          >
+          <span
+            class="material-symbols-outlined text-[#9cb0bf] cursor-pointer hover:text-white transition-colors"
+            >share</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

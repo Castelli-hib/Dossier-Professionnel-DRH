@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="graph-89" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:ev="http://www.w3.org/2001/xml-events" viewBox="0 0 1455.28 841.89">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3 {
+        stroke: #ccc;
+      }
+
+      .st0, .st1, .st2, .st3, .st4 {
+        stroke-miterlimit: 1.87;
+      }
+
+      .st0, .st3 {
+        fill: #1f2020;
+      }
+
+      .st0, .st4 {
+        stroke-width: .47px;
+      }
+
+      .st5, .st1, .st2 {
+        fill: none;
+      }
+
+      .st1, .st2, .st3 {
+        stroke-width: .94px;
+      }
+
+      .st2 {
+        stroke-dasharray: .94 .94;
+      }
+
+      .st6, .st7, .st8 {
+        isolation: isolate;
+      }
+
+      .st9, .st4, .st7 {
+        fill: #d3d3d3;
+      }
+
+      .st4 {
+        stroke: #d3d3d3;
+      }
+
+      .st7 {
+        font-family: TrebuchetMS, 'Trebuchet MS';
+        font-size: 7.48px;
+      }
+
+      .st8 {
+        font-family: HelveticaNeue-Roman, 'Helvetica Neue';
+        font-size: 5.61px;
+      }
+    </style>
+  </defs>
+  <path class="st5" d=""/>
+  <g id="viewport-20260115144012746">
+    <g>
+      <rect class="st0" x="1313.41" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(1337.02 653.03)"><tspan x="0" y="0">Hasher</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="1219.89" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(1250.55 653.03)"><tspan x="0" y="0">DB</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="1093.64" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(1120.55 653.03)"><tspan x="0" y="0">Repo</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="956.63" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(968.53 653.03)"><tspan x="0" y="0">Authenticator</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="831.78" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(853.37 653.03)"><tspan x="0" y="0">Firewall</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="708.8" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(730.5 653.03)"><tspan x="0" y="0">Browser</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="615.28" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(645.94 653.03)"><tspan x="0" y="0">DB</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="521.76" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(545.37 653.03)"><tspan x="0" y="0">Hasher</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="428.24" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(455.16 653.03)"><tspan x="0" y="0">Repo</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="334.72" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(346.62 653.03)"><tspan x="0" y="0">Authenticator</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="241.2" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(262.79 653.03)"><tspan x="0" y="0">Firewall</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st0" x="147.68" y="637.83" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+      <g class="st6">
+        <text class="st7" transform="translate(169.38 653.03)"><tspan x="0" y="0">Browser</tspan></text>
+      </g>
+    </g>
+    <g>
+      <line id="actor922" class="st1" x1="1348.48" y1="186.13" x2="1348.48" y2="637.83"/>
+      <g id="root-922">
+        <rect class="st0" x="1313.41" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(1337.02 170.93)"><tspan x="0" y="0">Hasher</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor921" class="st1" x1="1254.96" y1="186.13" x2="1254.96" y2="637.83"/>
+      <g id="root-921">
+        <rect class="st0" x="1219.89" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(1250.55 170.93)"><tspan x="0" y="0">DB</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor920" class="st1" x1="1128.71" y1="186.13" x2="1128.71" y2="637.83"/>
+      <g id="root-920">
+        <rect class="st0" x="1093.64" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(1120.55 170.93)"><tspan x="0" y="0">Repo</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor919" class="st1" x1="991.7" y1="186.13" x2="991.7" y2="637.83"/>
+      <g id="root-919">
+        <rect class="st0" x="956.63" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(968.53 170.93)"><tspan x="0" y="0">Authenticator</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor918" class="st1" x1="866.85" y1="186.13" x2="866.85" y2="637.83"/>
+      <g id="root-918">
+        <rect class="st0" x="831.78" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(853.37 170.93)"><tspan x="0" y="0">Firewall</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor917" class="st1" x1="743.87" y1="186.13" x2="743.87" y2="637.83"/>
+      <g id="root-917">
+        <rect class="st0" x="708.8" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(730.5 170.93)"><tspan x="0" y="0">Browser</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor916" class="st1" x1="650.35" y1="186.13" x2="650.35" y2="637.83"/>
+      <g id="root-916">
+        <rect class="st0" x="615.28" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(645.94 170.93)"><tspan x="0" y="0">DB</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor915" class="st1" x1="556.83" y1="186.13" x2="556.83" y2="637.83"/>
+      <g id="root-915">
+        <rect class="st0" x="521.76" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(545.37 170.93)"><tspan x="0" y="0">Hasher</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor914" class="st1" x1="463.31" y1="186.13" x2="463.31" y2="637.83"/>
+      <g id="root-914">
+        <rect class="st0" x="428.24" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(455.16 170.93)"><tspan x="0" y="0">Repo</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor913" class="st1" x1="369.79" y1="186.13" x2="369.79" y2="637.83"/>
+      <g id="root-913">
+        <rect class="st0" x="334.72" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(346.62 170.93)"><tspan x="0" y="0">Authenticator</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor912" class="st1" x1="276.27" y1="186.13" x2="276.27" y2="637.83"/>
+      <g id="root-912">
+        <rect class="st0" x="241.2" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(262.79 170.93)"><tspan x="0" y="0">Firewall</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line id="actor911" class="st1" x1="182.75" y1="186.13" x2="182.75" y2="637.83"/>
+      <g id="root-911">
+        <rect class="st0" x="147.68" y="155.74" width="70.14" height="30.39" rx="1.4" ry="1.4"/>
+        <g class="st6">
+          <text class="st7" transform="translate(169.38 170.93)"><tspan x="0" y="0">Browser</tspan></text>
+        </g>
+      </g>
+    </g>
+    <line id="actor910" class="st1" x1="89.23" y1="193.14" x2="89.23" y2="637.83"/>
+    <g>
+      <line class="st2" x1="84.09" y1="406.84" x2="1353.63" y2="406.84"/>
+      <line class="st2" x1="1353.63" y1="406.84" x2="1353.63" y2="628.48"/>
+      <line class="st2" x1="84.09" y1="628.48" x2="1353.63" y2="628.48"/>
+      <line class="st2" x1="84.09" y1="406.84" x2="84.09" y2="628.48"/>
+      <line class="st2" x1="84.09" y1="520" x2="1353.63" y2="520"/>
+      <polygon class="st0" points="84.09 406.84 107.47 406.84 107.47 412.92 103.54 416.19 84.09 416.19 84.09 406.84"/>
+      <text class="st7" transform="translate(91.23 412.92)"><tspan x="0" y="0">alt</tspan></text>
+      <g class="st6">
+        <text class="st7" transform="translate(695.85 415.25)"><tspan x="0" y="0">[Identifiants valides]</tspan></text>
+      </g>
+      <text class="st7" transform="translate(681.05 528.41)"><tspan x="0" y="0">[Identifiants invalides]</tspan></text>
+    </g>
+    <g>
+      <line id="actor-man-torso910" class="st1" x1="89.23" y1="167.43" x2="89.23" y2="176.78"/>
+      <line id="actor-man-arms910" class="st1" x1="80.82" y1="171.17" x2="97.65" y2="171.17"/>
+      <line class="st1" x1="80.82" y1="183.79" x2="89.23" y2="176.78"/>
+      <line class="st1" x1="89.23" y1="176.78" x2="96.71" y2="183.79"/>
+      <circle class="st3" cx="89.23" cy="160.41" r="7.01"/>
+      <g class="st6">
+        <text class="st7" transform="translate(79.58 187.3)"><tspan x="0" y="0">Agent</tspan></text>
+      </g>
+    </g>
+    <text class="st7" transform="translate(361.47 200.63)"><tspan x="0" y="0">Saisie identifiant + mot de passe</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M737.84,206.24l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M742,208.57" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="89.7" cy="208.57" r="5.61"/>
+    <path class="st9" d="M89.7,208.57" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(88.14 210.45)"><tspan x="0" y="0">1</tspan></text>
+    <text class="st7" transform="translate(784.96 223.07)"><tspan x="0" y="0">POST /login</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M860.82,228.68l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M864.98,231.02" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="744.34" cy="231.02" r="5.61"/>
+    <path class="st9" d="M744.34,231.02" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(742.78 232.89)"><tspan x="0" y="0">2</tspan></text>
+    <text class="st7" transform="translate(898.98 245.52)"><tspan x="0" y="0">supports(request)</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M985.67,251.13l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M989.83,253.46" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="867.32" cy="253.46" r="5.61"/>
+    <path class="st9" d="M867.32,253.46" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(865.76 255.34)"><tspan x="0" y="0">3</tspan></text>
+    <text class="st7" transform="translate(967.91 267.96)"><tspan x="0" y="0">authenticate()</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M988.01,282.92l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M721.51,416.02" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="992.17" cy="275.91" r="5.61"/>
+    <path class="st9" d="M992.17,275.91" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(990.61 277.78)"><tspan x="0" y="0">4</tspan></text>
+    <text class="st7" transform="translate(1013.22 304.43)"><tspan x="0" y="0">loadUserByIdentifier(email)</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M1122.68,310.04l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M1126.84,312.38" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="992.17" cy="312.38" r="5.61"/>
+    <path class="st9" d="M992.17,312.38" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(990.61 314.25)"><tspan x="0" y="0">5</tspan></text>
+    <text class="st7" transform="translate(1147.79 326.88)"><tspan x="0" y="0">SELECT user WHERE email</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M1248.93,332.49l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M1253.09,334.83" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="1129.18" cy="334.83" r="5.61"/>
+    <path class="st9" d="M1129.18,334.83" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(1127.62 336.7)"><tspan x="0" y="0">6</tspan></text>
+    <text class="st7" transform="translate(1160.39 349.32)"><tspan x="0" y="0">Donnees utilisateur</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M1126.42,354.93l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M1130.58,357.27" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="1254.49" cy="357.27" r="5.61"/>
+    <path class="st9" d="M1254.49,357.27" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(1252.93 359.14)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st7" transform="translate(1053.47 371.77)"><tspan x="0" y="0">User</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M989.41,377.38l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M993.57,379.72" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="1128.24" cy="379.72" r="5.61"/>
+    <path class="st9" d="M1128.24,379.72" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(1126.68 381.59)"><tspan x="0" y="0">8</tspan></text>
+    <text class="st7" transform="translate(1112.19 394.21)"><tspan x="0" y="0">verify(hashedPassword, password)</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M1342.45,399.82l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M1346.61,402.16" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="992.17" cy="402.16" r="5.61"/>
+    <path class="st9" d="M992.17,402.16" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(990.61 404.03)"><tspan x="0" y="0">9</tspan></text>
+    <text class="st7" transform="translate(1166.12 437.7)"><tspan x="0" y="0">OK</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M989.41,443.31l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M993.57,445.65" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="1348.01" cy="445.65" r="5.61"/>
+    <path class="st9" d="M1348.01,445.65" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(1344.89 447.52)"><tspan x="0" y="0">10</tspan></text>
+    <text class="st7" transform="translate(906.87 460.14)"><tspan x="0" y="0">Passport valid</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M864.56,465.76l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M868.72,468.09" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="991.23" cy="468.09" r="5.61"/>
+    <path class="st9" d="M991.23,468.09" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(988.11 469.96)"><tspan x="0" y="0">11</tspan></text>
+    <text class="st7" transform="translate(765.83 482.59)"><tspan x="0" y="0">Session creee + redirect</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M741.58,488.2l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M745.74,490.54" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="866.38" cy="490.54" r="5.61"/>
+    <path class="st9" d="M866.38,490.54" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(863.27 492.41)"><tspan x="0" y="0">12</tspan></text>
+    <text class="st7" transform="translate(377.94 505.03)"><tspan x="0" y="0">Acces espace personnel</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M86.94,510.65l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M91.1,512.98" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="743.41" cy="512.98" r="5.61"/>
+    <path class="st9" d="M743.41,512.98" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(740.29 514.85)"><tspan x="0" y="0">13</tspan></text>
+    <text class="st7" transform="translate(1166.12 548.52)"><tspan x="0" y="0">KO</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M989.41,554.13l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M993.57,556.47" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="1348.01" cy="556.47" r="5.61"/>
+    <path class="st9" d="M1348.01,556.47" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(1344.89 558.34)"><tspan x="0" y="0">14</tspan></text>
+    <text class="st7" transform="translate(888.69 570.97)"><tspan x="0" y="0">AuthenticationException</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M864.56,576.58l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M868.72,578.91" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="991.23" cy="578.91" r="5.61"/>
+    <path class="st9" d="M991.23,578.91" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(988.11 580.79)"><tspan x="0" y="0">15</tspan></text>
+    <text class="st7" transform="translate(777.39 593.41)"><tspan x="0" y="0">Message d’erreur</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M741.58,599.02l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M745.74,601.36" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="866.38" cy="601.36" r="5.61"/>
+    <path class="st9" d="M866.38,601.36" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(863.27 603.23)"><tspan x="0" y="0">16</tspan></text>
+    <text class="st7" transform="translate(396.42 615.86)"><tspan x="0" y="0">Acces refuse</tspan></text>
+    <path class="st5" d=""/>
+    <path class="st4" d="M86.94,621.47l5.14,2.34-4.68,2.34-.47-4.68Z"/>
+    <path class="st4" d="M91.1,623.8" marker-end="url(#arrowhead)"/>
+    <path class="st5" d=""/>
+    <circle class="st9" cx="743.41" cy="623.8" r="5.61"/>
+    <path class="st9" d="M743.41,623.8" marker-start="url(#sequencenumber)"/>
+    <text class="st8" transform="translate(740.29 625.67)"><tspan x="0" y="0">17</tspan></text>
+    <g>
+      <line id="actor-man-torso922" class="st1" x1="89.23" y1="649.52" x2="89.23" y2="658.87"/>
+      <line id="actor-man-arms922" class="st1" x1="80.82" y1="653.26" x2="97.65" y2="653.26"/>
+      <line class="st1" x1="80.82" y1="665.89" x2="89.23" y2="658.87"/>
+      <line class="st1" x1="89.23" y1="658.87" x2="96.71" y2="665.89"/>
+      <circle class="st3" cx="89.23" cy="642.51" r="7.01"/>
+      <g class="st6">
+        <text class="st7" transform="translate(79.58 669.4)"><tspan x="0" y="0">Agent</tspan></text>
+      </g>
+    </g>
+  </g>
+  <path class="st5" d=""/>
+</svg>

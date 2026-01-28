@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>New Agent Onboarding Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#285c81",
+              "background-light": "#f6f7f8",
+              "background-dark": "#141a1e",
+              "institutional-blue": "#10142d",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              "serif-title": ["Georgia", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom scrollbar for better dark mode aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #141a1e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2a3741;
+        border-radius: 4px;
+      }
+      .checkbox-custom:checked {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDCJV5SloDfgwz7qI9A3tp8YbRTKEfM--9z_hZNdhJPwSab8w94sIHW0ycFcIrtFoJ3wPhHVMXZeNXjpU1xj3FVtXw-m-37Kutx4vfZBPU8NFQUE2ogqA69-78s5ZRfudYtEOANuUfrOSHJP-If7ImeTsefDJPQGDgwhcp4gMaMAYWYw6ntIBrOIZVVT9XSiyPFFQbjINfkIXPjyR2LeMSblwhzFDQXnbRjUWqFIyFCai3HmfIP1LQbNyrpvWo3xGkx3rSCCygJURg);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-white transition-colors duration-300"
+  >
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+      <!-- Top Navigation -->
+      <header
+        class="sticky top-0 z-50 flex items-center justify-between border-b border-[#2a3741] bg-institutional-blue px-6 py-4 md:px-20 lg:px-40"
+      >
+        <div class="flex items-center gap-4 text-white">
+          <div class="size-8 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-3xl"
+              >account_balance</span
+            >
+          </div>
+          <h2 class="text-lg font-bold leading-tight tracking-tight">
+            Agent Portal
+          </h2>
+        </div>
+        <div class="hidden flex-1 justify-end gap-8 md:flex">
+          <nav class="flex items-center gap-9">
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Dashboard</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Policies</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Training</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Resources</a
+            >
+          </nav>
+          <div class="flex gap-3">
+            <button
+              class="flex size-10 items-center justify-center rounded-lg bg-[#2a3741] text-white hover:bg-primary transition-all"
+            >
+              <span class="material-symbols-outlined text-xl"
+                >notifications</span
+              >
+            </button>
+            <button
+              class="flex size-10 items-center justify-center rounded-lg bg-[#2a3741] text-white hover:bg-primary transition-all"
+            >
+              <span class="material-symbols-outlined text-xl"
+                >help_outline</span
+              >
+            </button>
+            <div
+              class="h-10 w-10 overflow-hidden rounded-full border-2 border-primary"
+            >
+              <img
+                alt="User profile photo"
+                class="h-full w-full object-cover"
+                data-alt="Professional portrait of a male employee"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnsqcl_Dtmzmf3GXBLBBsU0W0I-uGXDBkfrHnz1NotAEE6jhLKIQPmsqeLJ9T9JD3yDjo1VGJbiXcPgYNW57sl8igcASC3dQeR9-pTryo_TeTSv2DvU0dY1EICpP4w5wXVjWbxA1Om3ifsBBxh5xYBoCAZ10RgneGtB7SVGYIW8g_0P_ds5CaTUuDUjMF-4FcNPwhMY093gNG3I_wBf57N6yYG3XhMvix_-a_g7In24Yd0PUwCtxrG_XdHCf4HwAkae8G2UsqJKHU"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="mx-auto w-full max-w-[1200px] flex-1 p-6 md:p-10 lg:px-20">
+        <!-- Welcome Heading -->
+        <div
+          class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+        >
+          <div class="max-w-2xl">
+            <h1
+              class="font-serif-title text-4xl md:text-5xl font-black tracking-tight text-white mb-3"
+            >
+              Welcome to the Team
+            </h1>
+            <p class="text-lg text-[#9cb0bf] leading-relaxed">
+              Your journey as a new agent starts here. We've organized your
+              integration into manageable steps to ensure a smooth transition.
+            </p>
+          </div>
+          <button
+            class="flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-bold text-white shadow-lg hover:bg-primary/80 transition-all"
+          >
+            <span class="material-symbols-outlined">download</span>
+            Download Welcome Pack
+          </button>
+        </div>
+        <!-- Onboarding Progress -->
+        <div
+          class="mb-12 rounded-xl border border-[#2a3741] bg-institutional-blue p-6"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary"
+                >analytics</span
+              >
+              <p class="text-base font-semibold text-white">
+                Your Onboarding Progress
+              </p>
+            </div>
+            <p class="text-sm font-medium text-primary">35% Complete</p>
+          </div>
+          <div class="h-3 w-full rounded-full bg-[#3c4f5d]">
+            <div class="h-3 rounded-full bg-primary" style="width: 35%"></div>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-sm">
+            <p class="text-[#9cb0bf]">
+              Next: Activate Employee ID &amp; Digital Signature
+            </p>
+            <p class="text-[#9cb0bf]">Estimated completion: 14 days</p>
+          </div>
+        </div>
+        <!-- Roadmap Sections -->
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <!-- Block 1: Before You Arrive -->
+          <div
+            class="flex flex-col gap-6 rounded-xl bg-[#1c242b] p-6 border-t-4 border-primary shadow-sm"
+          >
+            <div class="flex items-center gap-3 border-b border-[#2a3741] pb-4">
+              <span class="material-symbols-outlined text-primary"
+                >preliminary</span
+              >
+              <h2 class="text-xl font-bold">Before You Arrive</h2>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  checked=""
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Submit administrative documents</span
+                >
+              </label>
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Request IT equipment (Laptop/Phone)</span
+                >
+              </label>
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Review Digital Welcome Booklet</span
+                >
+              </label>
+            </div>
+            <a
+              class="mt-auto flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-base">menu_book</span>
+              Access Booklet
+            </a>
+          </div>
+          <!-- Block 2: Your First Day -->
+          <div
+            class="flex flex-col gap-6 rounded-xl bg-[#1c242b] p-6 border-t-4 border-primary shadow-sm"
+          >
+            <div class="flex items-center gap-3 border-b border-[#2a3741] pb-4">
+              <span class="material-symbols-outlined text-primary"
+                >event_available</span
+              >
+              <h2 class="text-xl font-bold">Your First Day</h2>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Meet your Department Head (9:00 AM)</span
+                >
+              </label>
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Activate Employee ID &amp; Badge</span
+                >
+              </label>
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Security Briefing &amp; Access Setup</span
+                >
+              </label>
+            </div>
+            <div class="mt-auto rounded bg-[#2a3741]/50 p-3">
+              <p
+                class="text-xs uppercase tracking-wider text-primary font-bold mb-1"
+              >
+                Office Location
+              </p>
+              <p class="text-sm">Main City Hall, 4th Floor, Suite 402</p>
+              <a
+                class="text-xs text-[#9cb0bf] hover:text-white underline mt-1 block"
+                href="#"
+                >View Map Location</a
+              >
+            </div>
+          </div>
+          <!-- Block 3: Your First Month -->
+          <div
+            class="flex flex-col gap-6 rounded-xl bg-[#1c242b] p-6 border-t-4 border-primary shadow-sm"
+          >
+            <div class="flex items-center gap-3 border-b border-[#2a3741] pb-4">
+              <span class="material-symbols-outlined text-primary"
+                >calendar_month</span
+              >
+              <h2 class="text-xl font-bold">Your First Month</h2>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Complete Ethics Training</span
+                >
+              </label>
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >Initial Performance Goal Setting</span
+                >
+              </label>
+              <label class="flex items-start gap-x-3 py-2 cursor-pointer group">
+                <input
+                  class="checkbox-custom h-5 w-5 mt-0.5 rounded border-[#3c4f5d] border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+                  type="checkbox"
+                />
+                <span
+                  class="text-white text-base group-hover:text-primary transition-colors"
+                  >30-Day Check-in Meeting</span
+                >
+              </label>
+            </div>
+            <button
+              class="mt-auto w-full rounded border border-[#3c4f5d] py-2 text-sm font-semibold hover:bg-[#2a3741] transition-all"
+            >
+              Schedule Integration Meeting
+            </button>
+          </div>
+        </div>
+        <!-- HR Referents Section -->
+        <div class="mt-16 border-t border-[#2a3741] pt-10">
+          <h3 class="text-2xl font-bold text-white mb-8">Who to Contact</h3>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Referent 1 -->
+            <div
+              class="flex flex-col items-center rounded-xl bg-institutional-blue p-6 text-center border border-[#2a3741] hover:border-primary/50 transition-colors"
+            >
+              <div
+                class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-[#2a3741]"
+              >
+                <img
+                  alt="Sarah Jenkins, HR Director"
+                  class="h-full w-full object-cover"
+                  data-alt="Close up of smiling woman in formal attire"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcGmad3_b0MwI3IPy2izvK-eH3IVKs-NczFB-5XoLlaCvD__dqlGdKiQgGvNeUCJeM3tivwjoOap1Lh2fBTQPkdQ-hyd6lhsOqd_-UWPpneZDGRUq_lkereuYrEJqkQQdmfUmsaCrfXPC6lytBE9Isze0hq_Ub5GXvjadhP8IuULfAnGvS9yt0x7QdnlGQeqS0DXZb6u481BIDfEafM3pqxgi-465y96UuX2cVJroOsh43u1BhQjIWUYziCYnsup9QgN_twpZDRLA"
+                />
+              </div>
+              <h4 class="text-lg font-bold">Sarah Jenkins</h4>
+              <p class="text-sm text-[#9cb0bf] mb-4">Onboarding Specialist</p>
+              <div class="flex gap-2">
+                <button
+                  class="size-8 flex items-center justify-center rounded bg-[#2a3741] hover:bg-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-base">mail</span>
+                </button>
+                <button
+                  class="size-8 flex items-center justify-center rounded bg-[#2a3741] hover:bg-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-base">call</span>
+                </button>
+              </div>
+            </div>
+            <!-- Referent 2 -->
+            <div
+              class="flex flex-col items-center rounded-xl bg-institutional-blue p-6 text-center border border-[#2a3741] hover:border-primary/50 transition-colors"
+            >
+              <div
+                class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-[#2a3741]"
+              >
+                <img
+                  alt="Marcus Miller, IT Operations"
+                  class="h-full w-full object-cover"
+                  data-alt="Professional man with glasses smiling"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE-SwYKenLA5SA1b6AWC_jKZyXeLOtfcvNf1cVCGMh_WvuDV2hYSEyiYbGnw67mrnBBSOEitb4sEs1khHTdbZmC5N_acsJsEslTZ5kuk8keYD-m4vqHTYVA60VFsg5FXWsh756CMhzNiFAr1uCEwq0Sge52RhXQob3LjwST_PazvQxpmlD5TjGHlT5746aNdxjo0gm8nZA8ti23mO2k3Oxxs_GBGehHm9bwO4f7Oe-fdXbxKkCtZ0YWKXmHvgdK32B4Y9F_j-D5wI"
+                />
+              </div>
+              <h4 class="text-lg font-bold">Marcus Miller</h4>
+              <p class="text-sm text-[#9cb0bf] mb-4">IT Support Lead</p>
+              <div class="flex gap-2">
+                <button
+                  class="size-8 flex items-center justify-center rounded bg-[#2a3741] hover:bg-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-base">mail</span>
+                </button>
+                <button
+                  class="size-8 flex items-center justify-center rounded bg-[#2a3741] hover:bg-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-base">chat</span>
+                </button>
+              </div>
+            </div>
+            <!-- Referent 3 -->
+            <div
+              class="flex flex-col items-center rounded-xl bg-institutional-blue p-6 text-center border border-[#2a3741] hover:border-primary/50 transition-colors"
+            >
+              <div
+                class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-[#2a3741]"
+              >
+                <img
+                  alt="Elena Rodriguez, Payroll"
+                  class="h-full w-full object-cover"
+                  data-alt="Friendly woman in office setting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNZRKCfqeK65KGMviyXPGUkLGAGpYXLTx-eV5Mx8xGhAL8cUh3a-lkN-UOs02B_FIS8Tt7hHuSX6GWvWEP5EVYbWDKiiAom_MkjAv1E2Ws88WvBIZUgrg2TPEVt52TCBKvyXCfdxpyi4C8pP5nS9OUqRtxkFQq2QQs4ecpLObop5iUFrZivlzc0UTnQb8h4Xljxq7sgER-cF8_Vtl_KSNf_sDXBcXbLaJLjrG0uzAhOObQXinr5yyWFu9NibkjIMCmBIKOQcAIaPQ"
+                />
+              </div>
+              <h4 class="text-lg font-bold">Elena Rodriguez</h4>
+              <p class="text-sm text-[#9cb0bf] mb-4">Payroll &amp; Benefits</p>
+              <div class="flex gap-2">
+                <button
+                  class="size-8 flex items-center justify-center rounded bg-[#2a3741] hover:bg-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-base">mail</span>
+                </button>
+                <button
+                  class="size-8 flex items-center justify-center rounded bg-[#2a3741] hover:bg-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-base">call</span>
+                </button>
+              </div>
+            </div>
+            <!-- Referent 4 -->
+            <div
+              class="flex flex-col items-center justify-center rounded-xl bg-[#2a3741]/20 p-6 text-center border-2 border-dashed border-[#3c4f5d] group cursor-pointer hover:bg-[#2a3741]/30 transition-all"
+            >
+              <span
+                class="material-symbols-outlined text-4xl text-[#3c4f5d] group-hover:text-primary transition-colors"
+                >support_agent</span
+              >
+              <h4 class="mt-4 text-base font-bold">Need Help?</h4>
+              <p class="text-xs text-[#9cb0bf]">
+                Visit the general support help desk
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="mt-20 border-t border-[#2a3741] bg-institutional-blue py-10 px-6 md:px-20 lg:px-40"
+      >
+        <div
+          class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 md:flex-row"
+        >
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary"
+              >account_balance</span
+            >
+            <span class="text-sm font-bold opacity-80"
+              >Local Government Human Resources © 2024</span
+            >
+          </div>
+          <div class="flex gap-6 text-sm text-[#9cb0bf]">
+            <a class="hover:text-white transition-colors" href="#"
+              >Privacy Policy</a
+            >
+            <a class="hover:text-white transition-colors" href="#"
+              >Terms of Service</a
+            >
+            <a class="hover:text-white transition-colors" href="#"
+              >Accessibility</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
