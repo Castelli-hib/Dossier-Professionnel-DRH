@@ -35,6 +35,92 @@ git config --global core.autocrlf true
 **Vérification**
 git config --global core.autocrlf
 
+**Lier avec git distant**
+PS C:\ENV\DRH> git remote add origin https://github.com/Castelli-hib/Dossier-Professionnel-DRH.git
+PS C:\ENV\DRH> git remote -v
+origin  https://github.com/Castelli-hib/Dossier-Professionnel-DRH.git (fetch)
+origin  https://github.com/Castelli-hib/Dossier-Professionnel-DRH.git (push)
+
+PS C:\ENV\DRH> git push -u origin main
+
+# Token Git = Créer un token sur GitHub Manuellement
+**Étape 1 — Ouvrir les Settings**
+- Cliquer sur ta photo de profil en haut à droite
+- Sélectionner Settings
+**Étape 2 — Developer settings**
+Sur la colonne de gauche, tout en bas :
+- Developer settings
+**tape 3 — Choisir le type de token**
+- Personal access tokens → Fine‑grained tokens
+**cliquer sur :**
+Fine‑grained tokens
+Nouveau type de token plus sécurisé que GitHub recommande d’utiliser.
+**Étape 4 — Générer un token**
+- Cliquer Generate new token
+- Donner un nom (ex : Git push DRH)
+- Choisir une expiration (par ex. 30 jours ou plus)
+**Dans les autorisations :**
+S'assurer que les accès au repository sont autorisés (Write / Push)
+**Génèrer le token**
+Copier 
+Utiliser ce token à la place du mot de passe quand git push le demandera.
+**Utilisation pour git push**
+Quand Git demande :
+
+Username:
+Password:
+- Username → mon identifiant GitHub (Castelli‑hib)
+- Password → le token généré (pas mon mot de passe normal)
+Copier le token. Visible une fois !
+
+
+## Option GitHub CLI (gh auth login)
+**Avantages**
+GitHub CLI  guide pas à pas pour générer le token et l’utiliser automatiquement
+Configurer Git automatiquement pour ne  jamais avoir à entrer le token à la main
+Compatible HTTPS ou SSH
+Plus sûr et pro sur plusieurs dépôts
+Permet ensuite d’utiliser d’autres commandes GitHub comme création de repo, PR, etc. depuis le terminal
+
+**Windows (PowerShell)**
+winget install --id GitHub.cli
+Fermer le powershell ou redémarrer VScode
+
+**Vérifier ensuite**
+gh --version
+gh version 2.85.0 (2026-01-14)
+https://github.com/cli/cli/releases/tag/v2.85.0
+
+**Se connecter à GitHub avec la CLI**
+Dans le terminal à la racine du projet :
+gh auth login
+
+Suivre les instructions : (Faire entrée pour Y)
+Account → GitHub.com
+Protocol → HTTPS (pour l’instant)
+Authentication → Login with web browser (recommandé pour éviter les tokens manuels)
+La CLI ouvre le navigateur → valider l’accès GitHub →  configure le token automatiquement
+
+Après ça, Git connaît ton username + token et l’utilisera automatiquement pour git push et git pull.
+! First copy your one-time code: 1E3D-28E0
+
+**Vérifier que GitHub CLI est bien connecté**
+gh auth status
+
+Logged in to github.com as Castelli-hib
+Git operations: https
+
+**Lier le dépôt local au dépôt GitHub (si pas déjà fait)**
+git remote add origin https://github.com/Castelli-hib/Dossier-Professionnel-DRH.git
+
+**Vérifier**
+git remote -v
+
+**Pousser le projet complet**
+git push -u origin main
+
+-u crée le lien entre la branche locale main et la branche distante main.
+Après ça, juste faire 'git push' à chaque modification.
 
 
 ##  Suivi des fichiers
