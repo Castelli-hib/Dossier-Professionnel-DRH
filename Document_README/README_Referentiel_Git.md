@@ -16,7 +16,7 @@ Référentiel Git – Commandes essentielles
 - L’email doit correspondre à celui de GitHub pour lier les commits
 ---
 
-Renommer
+**Renommer**
 git branch -m master main
 
 **MySite (Projet Javascript)**
@@ -122,6 +122,12 @@ git push -u origin main
 -u crée le lien entre la branche locale main et la branche distante main.
 Après ça, juste faire 'git push' à chaque modification.
 
+
+## Suppression sur Git
+git rm chemin du fichier
+git commit -m "chore: remove unused nom du fichier"
+git push origin main
+git checkout .
 
 ##  Suivi des fichiers
 
