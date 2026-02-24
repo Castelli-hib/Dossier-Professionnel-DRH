@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portail RH - Administration Territoriale</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Shrikhand&family=Squada+One&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+               "primary": "#10142d",
+                        "primary-dark": "#080a18",
+                        "primary-medium": "#1c244b",
+                        "primary-light": "#2a356e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#10142d",
+                        "ocean": "#10142d"
+            },
+            fontFamily: {
+              sans: ["Roboto", "sans-serif"],
+              "serif-heading": ["Georgia", "serif"],
+              "squada-one": ["Squada One", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        h1,
+        h2,
+        .font-gastramond {
+          font-family: "Times New Roman", serif;
+          letter-spacing: -0.01em;
+        }
+      }
+      .nav-submenu {
+        @apply absolute top-full left-0 mt-0 w-[480px] bg-white border border-gray-100 shadow-2xl rounded-b-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6;
+      }
+      .mega-menu-gradient {
+        background: linear-gradient(135deg, #022341 0%, #073f61 100%);
+      }
+    </style>
+  </head>
+
+  <!-- BODY-->
+  <body class="bg-background-light text-primary font-sans antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+
+      <!--HEADER-->
+      <header class="flex items-center justify-between border-b border-primary/5 bg-white px-10 py-4 sticky top-0 z-50">
+        <div class="flex items-center gap-12">
+          <div class="flex items-center gap-3">
+            <div class="size-10 text-ocean">
+              <!-- <img src="assets/images/logo_Nabar.png" alt="Logo DRH" /> -->
+              <svg
+                fill="currentColor"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"></path>
+              </svg>
+            </div>
+
+            <h1 class="text-primary text-2xl font-bold tracking-tight font-gastramond">
+              <a href="../index.html">Portail DRH</a>
+            </h1> 
+          </div>
+
+          <!--MENU DEROULANT-->
+          <nav class="hidden lg:flex items-center gap-8">
+            <div class="group relative py-2">
+              <button class="text-primary/80 hover:text-primary text-sm font-semibold flex items-center gap-1">
+                <a href="#">Pôles RH</a> 
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </button>
+              <div class="nav-submenu grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Gestion RH
+                  </p>
+
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Administration
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Suivi des parcours & promotions
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_OUOETdv8FM1Pq9IYQbDwOwRS-LYDLkrjm4krKaglDr89vbAKJWrbosZnpeFkeIGr6jf1HzDgMn_b54S4Uqw4xw9KGppc0JL6uQHFzQC-AJlpXa_ThQWEdG9Iq9gQWxn6yEFTVb6-qGoRu4bCU3mk4rOdVxjxxLfkHs-fgcsnROUECUr_dftZk-HQwZPNjoFcFKXJYF1nS3QntRhCsoRa5c94yNP5_SfA_XtTxRhhCYf_AIbuGQtawb8dEPZ_OxV1DWNrwt7MlNk);"></div>
+
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Paie & Rémunération
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bulletins & indemnités
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Accompagnement
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Recrutement
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Santé & Prévention
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAyVA4YiOnI_Mqnhaex0kpeLsg4mJnWetAom_HvjQWXBoXLvypj6nTTkxnMNZyv5Cy-cNFZc9-1kzBxy8BaFS7a-81GHWHUjlBvtd64ucvFLuKEKETeVkdoaIR_oYaYwsJYqMQaRIoap_ZrZd7QGlR3RKn8VbJc3l6HO0jSKgh-rib_0r4QhMS0kUsEiRzz3SNf5HXAJ9P2I1iOB45H5cTLrbvMl6_7_I_RvUAgAHUueIMawIYxRIJELj8dALy0sHQf4TAEJ3L7xQQ);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Formation
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Développement des compétences
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Fin Pole RH-->
+
+
+            <!--Menu Documents Utiles-->
+            <div class="group relative py-2">
+              <button class="text-primary/80 hover:text-primary text-sm font-semibold flex items-center gap-1">
+                Documents Utiles
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </button>
+              <div class="nav-submenu grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Mobilité
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Carrières
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Suivi des parcours & promotions
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_OUOETdv8FM1Pq9IYQbDwOwRS-LYDLkrjm4krKaglDr89vbAKJWrbosZnpeFkeIGr6jf1HzDgMn_b54S4Uqw4xw9KGppc0JL6uQHFzQC-AJlpXa_ThQWEdG9Iq9gQWxn6yEFTVb6-qGoRu4bCU3mk4rOdVxjxxLfkHs-fgcsnROUECUr_dftZk-HQwZPNjoFcFKXJYF1nS3QntRhCsoRa5c94yNP5_SfA_XtTxRhhCYf_AIbuGQtawb8dEPZ_OxV1DWNrwt7MlNk);"></div>
+                    
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Paie & Rémunération
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bulletins & indemnités
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Accompagnement
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Santé & Prévention
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bien-être au travail
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAyVA4YiOnI_Mqnhaex0kpeLsg4mJnWetAom_HvjQWXBoXLvypj6nTTkxnMNZyv5Cy-cNFZc9-1kzBxy8BaFS7a-81GHWHUjlBvtd64ucvFLuKEKETeVkdoaIR_oYaYwsJYqMQaRIoap_ZrZd7QGlR3RKn8VbJc3l6HO0jSKgh-rib_0r4QhMS0kUsEiRzz3SNf5HXAJ9P2I1iOB45H5cTLrbvMl6_7_I_RvUAgAHUueIMawIYxRIJELj8dALy0sHQf4TAEJ3L7xQQ);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Formation
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Développement des compétences
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fin Documents utiles -->
+
+            <!--Menu PREVENTION-->
+            <div class="group relative py-2">
+              <button class="text-primary/80 hover:text-primary text-sm font-semibold flex items-center gap-1">
+                Prévention
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </button>
+
+              <div class="nav-submenu grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Mobilité
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Carrières
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Suivi des parcours & promotions
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_OUOETdv8FM1Pq9IYQbDwOwRS-LYDLkrjm4krKaglDr89vbAKJWrbosZnpeFkeIGr6jf1HzDgMn_b54S4Uqw4xw9KGppc0JL6uQHFzQC-AJlpXa_ThQWEdG9Iq9gQWxn6yEFTVb6-qGoRu4bCU3mk4rOdVxjxxLfkHs-fgcsnROUECUr_dftZk-HQwZPNjoFcFKXJYF1nS3QntRhCsoRa5c94yNP5_SfA_XtTxRhhCYf_AIbuGQtawb8dEPZ_OxV1DWNrwt7MlNk);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Paie & Rémunération
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bulletins & indemnités
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Accompagnement
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Santé & Prévention
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bien-être au travail
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAyVA4YiOnI_Mqnhaex0kpeLsg4mJnWetAom_HvjQWXBoXLvypj6nTTkxnMNZyv5Cy-cNFZc9-1kzBxy8BaFS7a-81GHWHUjlBvtd64ucvFLuKEKETeVkdoaIR_oYaYwsJYqMQaRIoap_ZrZd7QGlR3RKn8VbJc3l6HO0jSKgh-rib_0r4QhMS0kUsEiRzz3SNf5HXAJ9P2I1iOB45H5cTLrbvMl6_7_I_RvUAgAHUueIMawIYxRIJELj8dALy0sHQf4TAEJ3L7xQQ);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Formation
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Développement des compétences
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FIN PREVENTION-->
+
+            <!--TEMPS DE TRAVAIL-->
+            <div class="group relative py-2">
+              <button class="text-primary/80 hover:text-primary text-sm font-semibold flex items-center gap-1">
+                Temps de travail
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </button>
+
+              <div class="nav-submenu grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Mobilité
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Carrières
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Suivi des parcours & promotions
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_OUOETdv8FM1Pq9IYQbDwOwRS-LYDLkrjm4krKaglDr89vbAKJWrbosZnpeFkeIGr6jf1HzDgMn_b54S4Uqw4xw9KGppc0JL6uQHFzQC-AJlpXa_ThQWEdG9Iq9gQWxn6yEFTVb6-qGoRu4bCU3mk4rOdVxjxxLfkHs-fgcsnROUECUr_dftZk-HQwZPNjoFcFKXJYF1nS3QntRhCsoRa5c94yNP5_SfA_XtTxRhhCYf_AIbuGQtawb8dEPZ_OxV1DWNrwt7MlNk);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Paie & Rémunération
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bulletins & indemnités
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Accompagnement
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Santé & Prévention
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bien-être au travail
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAyVA4YiOnI_Mqnhaex0kpeLsg4mJnWetAom_HvjQWXBoXLvypj6nTTkxnMNZyv5Cy-cNFZc9-1kzBxy8BaFS7a-81GHWHUjlBvtd64ucvFLuKEKETeVkdoaIR_oYaYwsJYqMQaRIoap_ZrZd7QGlR3RKn8VbJc3l6HO0jSKgh-rib_0r4QhMS0kUsEiRzz3SNf5HXAJ9P2I1iOB45H5cTLrbvMl6_7_I_RvUAgAHUueIMawIYxRIJELj8dALy0sHQf4TAEJ3L7xQQ);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Formation
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Développement des compétences
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FIN TEMPS DE TRAVAIL-->
+            <!-- <a
+              class="text-primary/80 hover:text-primary text-sm font-semibold"
+              href="#">Temps de travail</a> -->
+            <!--FORMATION & CONCOURS-->
+            <div class="group relative py-2">
+              <button class="text-primary/80 hover:text-primary text-sm font-semibold flex items-center gap-1">
+                Formation & concours
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </button>
+
+              <div class="nav-submenu grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Mobilité
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Carrières
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Suivi des parcours & promotions
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_OUOETdv8FM1Pq9IYQbDwOwRS-LYDLkrjm4krKaglDr89vbAKJWrbosZnpeFkeIGr6jf1HzDgMn_b54S4Uqw4xw9KGppc0JL6uQHFzQC-AJlpXa_ThQWEdG9Iq9gQWxn6yEFTVb6-qGoRu4bCU3mk4rOdVxjxxLfkHs-fgcsnROUECUr_dftZk-HQwZPNjoFcFKXJYF1nS3QntRhCsoRa5c94yNP5_SfA_XtTxRhhCYf_AIbuGQtawb8dEPZ_OxV1DWNrwt7MlNk);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Paie & Rémunération
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bulletins & indemnités
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-xs font-bold uppercase tracking-wider text-ocean border-b border-ocean/10 pb-2">
+                    Accompagnement
+                  </p>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="
+                        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCuaPdn-jNR_TqEame2D9X6sbhS3xbJcmQJHQbYS3txX1xLeyV5aevB26FmajEJ9hUOZHWeMRTA_g31rtBKhE_D4t_lzQkmWiH9pKoGu4a0HcpUErr3Us21fc8AOVc561j4Za_Yi9JQpCuuBf52BANEWw-vIwloBd8uJBcbE-6QL24OEX3DJeqYdkHSXz33oLRqs1Az8NaSTtsjJ5HQcBkXCy-qi-kcwdtj-zKFxn_coGSEbDEnMKnSEUC3DlLKH3DOKKhxvvj8fvc);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Santé & Prévention
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Bien-être au travail
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item cursor-pointer">
+                    <div
+                      class="size-12 rounded bg-cover bg-center shrink-0 shadow-sm"
+                      style="background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAyVA4YiOnI_Mqnhaex0kpeLsg4mJnWetAom_HvjQWXBoXLvypj6nTTkxnMNZyv5Cy-cNFZc9-1kzBxy8BaFS7a-81GHWHUjlBvtd64ucvFLuKEKETeVkdoaIR_oYaYwsJYqMQaRIoap_ZrZd7QGlR3RKn8VbJc3l6HO0jSKgh-rib_0r4QhMS0kUsEiRzz3SNf5HXAJ9P2I1iOB45H5cTLrbvMl6_7_I_RvUAgAHUueIMawIYxRIJELj8dALy0sHQf4TAEJ3L7xQQ);"></div>
+                    <div>
+                      <p class="text-sm font-bold group-hover/item:text-ocean transition-colors">
+                        Formation
+                      </p>
+                      <p class="text-[11px] text-gray-500 leading-tight">
+                        Développement des compétences
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FIN FORMATION -->
+            
+              <a
+              class="text-primary/80 hover:text-primary text-sm font-semibold"
+              href="#">Carrière & Rénumération</a>
+              <a
+              class="text-primary/80 hover:text-primary text-sm font-semibold"
+              href="#">Aides & Dispositifs</a>
+              <a
+              class="text-primary/80 hover:text-primary text-sm font-semibold"
+              href="#">Emploi & Mobilité</a>
+              <a
+              class="text-primary/80 hover:text-primary text-sm font-semibold"
+              href="#">Comité Social Territoriale</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative hidden md:block">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+            <input
+              class="bg-gray-100 border-none rounded-full pl-10 pr-4 py-2 text-sm w-64 focus:ring-2 focus:ring-ocean/50"
+              placeholder="Rechercher une ressource..."
+            />
+          </div>
+          <button
+            class="bg-primary text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-secondary transition-colors shadow-md">
+            Tableau de bord Agent
+          </button>
+          <div
+            class="size-10 rounded-full border-2 border-ocean/20 overflow-hidden"
+          >
+            <img
+              alt="Profil"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDx4IQN7Qzxr1W1I9s5m9COEKZZft0XA0br22gczGMQLq21GLwMz0DDSj83clyB1qWZZ2UbLvyYRQpsU08dWh5BV59z9aM5EjP_yAdrH1IKpW8TXAxkbY83VQQw3Jhkh1VHt4LklymEHyHUumBQAKEHMUj0raZpCjod-h8DwHrqa_yjt0dH2SYO7Y-bKljRdBet7oXD8mB5iehdxFFIysP8n3YboXppFsLAi-tHQYtUGAZ_UaVaDTlX5xHtTgZmsLhaNOsVa8s1nI"/>
+          </div>
+        </div>
+      </header>
+      <!--FIN HEADER-->
+<main class="flex flex-col">
+<!-- Hero Section -->
+<section class="relative min-h-[500px] flex items-center overflow-hidden bg-background-dark">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="Modern professional office workspace with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTBxpOP_jidGh3fpR6W1hr4sC7eeEJ3kZ-4qmFO324_NCYJL3PV77cUFIAW5cpzOLpt8FyhUHB-9wNLNi1awTknSCBDj_sp0kuYaCms3mIELpIF_8ENylE6v5pTupib7cwBeT9uYMqjDa2fxadsmprzOalxf8k_phQ6PY9eAibfd8qrBPLDrtXJMXnWXPGZ8RkKwER0C5osRU8goQj8RsQCy4YwjWkCVWsu_tUiIlP2qT7HwiBfvwaNq1FZOY1ca2vNRAnaTCCMqk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative w-full max-w-[1440px] mx-auto px-4 lg:px-10 py-20">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6"><span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-white"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+</span>
+                        Direction des Ressources Humaines</div>
+<h1 class="text-white text-5xl lg:text-7xl font-black leading-[1.1] mb-8">Accompagner chaque agent, <br/><span class="text-white opacity-80">valoriser</span> chaque parcours.</h1>
+<p class="text-slate-300 text-lg lg:text-xl max-w-2xl leading-relaxed mb-10 font-light">
+                        La DRH s'engage quotidiennement à soutenir les agents de la collectivité tout au long de leur carrière professionnelle, en alliant excellence opérationnelle et bienveillance humaine.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:translate-y-[-2px] transition-all">
+                            Consulter le Portail RH <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">
+                            Annuaire Interne
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Nos Domaines d'Intervention -->
+<section class="py-24 bg-background-light dark:bg-slate-900/50">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-10">
+<div class="flex flex-col items-center mb-16 text-center">
+<h2 class="text-3xl lg:text-4xl font-black mb-4 flex items-center gap-3">
+<span class="w-12 h-1 bg-primary rounded-full"></span>
+                        Nos Domaines d'Intervention
+                        <span class="w-12 h-1 bg-primary rounded-full"></span>
+</h2>
+<p class="text-slate-500 max-w-xl">Une organisation structurée pour répondre aux besoins statutaires et au développement individuel de nos 2500 collaborateurs.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-background-dark p-8 lg:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-xl shadow-slate-200/50 dark:shadow-none relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">balance</span>
+</div>
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Gestion RH & Administrative</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                            Nous garantissons la conformité réglementaire de votre situation administrative. Nos experts assurent la fiabilité de la paie, le suivi rigoureux de votre carrière et le monitoring statutaire indispensable au bon fonctionnement du service public.
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Conformité réglementaire</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Gestion de la paie</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Suivi des carrières</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">Découvrir ce pôle <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-background-dark p-8 lg:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-xl shadow-slate-200/50 dark:shadow-none relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">trending_up</span>
+</div>
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Accompagnement & Développement</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                            Au-delà de l'administratif, nous plaçons l'humain au cœur de nos actions. Développement des compétences, mobilité choisie, recrutement de talents, prévention des risques et soutien social sont nos priorités quotidiennes.
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Mobilité &amp; Recrutement</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Formation continue</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Prévention &amp; Action sociale</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">Consulter les services <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<!--Card3-->
+<div class="grid md:grid-cols-2 gap-8 mt-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-background-dark p-8 lg:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-xl shadow-slate-200/50 dark:shadow-none relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">balance</span>
+</div>
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Gestion RH & Administrative</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                            Nous garantissons la conformité réglementaire de votre situation administrative. Nos experts assurent la fiabilité de la paie, le suivi rigoureux de votre carrière et le monitoring statutaire indispensable au bon fonctionnement du service public.
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Conformité réglementaire</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Gestion de la paie</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Suivi des carrières</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">Découvrir ce pôle <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-background-dark p-8 lg:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-xl shadow-slate-200/50 dark:shadow-none relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">trending_up</span>
+</div>
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Accompagnement & Développement</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                            Au-delà de l'administratif, nous plaçons l'humain au cœur de nos actions. Développement des compétences, mobilité choisie, recrutement de talents, prévention des risques et soutien social sont nos priorités quotidiennes.
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Mobilité &amp; Recrutement</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Formation continue</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Prévention &amp; Action sociale</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">Consulter les services <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Informations Institutionnelles -->
+<section class="py-24 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-10">
+<h2 class="text-3xl font-black mb-12 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                    Informations Institutionnelles &amp; Légales
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-2xl border-l-4 border-primary">
+<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Engagement</div>
+<h4 class="text-lg font-bold mb-4">Index Égalité F/H 2023</h4>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-5xl font-black text-primary">89</span>
+<span class="text-slate-400 text-sm font-bold">/100</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Une progression constante pour garantir l'équité de traitement au sein de la collectivité.</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-2xl border-l-4 border-primary">
+<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Conformité</div>
+<h4 class="text-lg font-bold mb-4">RGPD HR Compliance</h4>
+<div class="bg-green-500/10 text-green-500 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold mb-4">
+<span class="material-symbols-outlined text-sm">verified_user</span> Certifié Conforme
+                        </div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Vos données personnelles sont traitées avec le plus haut niveau de sécurité et de confidentialité.</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-2xl border-l-4 border-primary">
+<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Effectifs</div>
+<h4 class="text-lg font-bold mb-4">Statistiques 2023</h4>
+<div class="space-y-2 mb-4">
+<div class="flex justify-between text-sm"><span class="text-slate-400">Agents permanents</span> <span class="font-bold text-[#275b80]">2,482</span></div>
+<div class="flex justify-between text-sm"><span class="text-slate-400">Taux d'encadrement</span> <span class="font-bold text-[#275b80]">12.5%</span></div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Accédez au bilan social complet et aux chiffres clés de l'emploi territorial.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: L'équipe des Référents RH -->
+<section class="py-24 bg-primary-dark text-white">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-10">
+<div class="mb-16">
+<h2 class="text-4xl font-black mb-4">L'équipe des Référents RH</h2>
+<p class="text-slate-400">Des experts dédiés à chaque étape de votre vie professionnelle.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Referent 1 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all text-center">
+<div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-primary mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">badge</span>
+</div>
+<h4 class="text-xl font-bold mb-2">Référent Carrière</h4>
+<p class="text-sm text-slate-400">Expert en avancement, échelons et positions administratives.</p>
+</div>
+<!-- Referent 2 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all text-center">
+<div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-primary mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">directions_run</span>
+</div>
+<h4 class="text-xl font-bold mb-2">Référent Mobilité</h4>
+<p class="text-sm text-slate-400">Accompagne vos projets de changement de poste ou de service.</p>
+</div>
+<!-- Referent 3 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all text-center">
+<div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-primary mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h4 class="text-xl font-bold mb-2">Référent Formation</h4>
+<p class="text-sm text-slate-400">Conseille sur les dispositifs CPF, VAE et concours CNFPT.</p>
+</div>
+<!-- Referent 4 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all text-center">
+<div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-primary mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">health_and_safety</span>
+</div>
+<h4 class="text-xl font-bold mb-2">Référent Prévention</h4>
+<p class="text-sm text-slate-400">Dédié à la santé au travail et à l'amélioration du cadre de vie.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Contact -->
+<section class="py-24 text-white bg-primary-dark">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+<div class="max-w-xl">
+<h2 class="text-4xl font-black mb-6">Une question ? Un besoin ?</h2>
+<p class="text-white/80 text-lg mb-8">Nos équipes vous accueillent du lundi au vendredi pour vous orienter et répondre à vos interrogations.</p>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl">call</span>
+<div>
+<div class="text-xs font-bold uppercase opacity-60">Téléphone</div>
+<div class="text-xl font-bold">+1 (555) 012-3456</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl">alternate_email</span>
+<div>
+<div class="text-xs font-bold uppercase opacity-60">E-mail</div>
+<div class="text-xl font-bold">drh@collectivite.fr</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-3xl p-10 text-background-dark w-full max-w-md shadow-2xl">
+<h4 class="text-2xl font-bold mb-6">Horaires d'ouverture</h4>
+<ul class="space-y-4">
+<li class="flex justify-between items-center pb-2 border-b border-slate-100">
+<span class="font-medium">Lundi - Jeudi</span>
+<span class="font-bold text-[#275b80]">08:30 - 17:30</span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b border-slate-100">
+<span class="font-medium">Vendredi</span>
+<span class="font-bold text-[#275b80]">08:30 - 16:30</span>
+</li>
+<li class="flex justify-between items-center pt-2">
+<span class="font-medium text-slate-400 italic">Accueil physique sans RDV le matin uniquement.</span>
+</li>
+</ul>
+<button class="w-full bg-background-dark text-white font-bold py-4 rounded-xl mt-8 hover:bg-slate-800 transition-colors">
+                            Prendre RDV en ligne
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Institutional -->
+<footer class="bg-background-dark border-t border-white/10 py-16 text-slate-400">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-4 text-white mb-6">
+<div class="bg-primary p-2 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">account_balance</span>
+</div>
+<h2 class="text-white text-xl font-black">DRH Collectivité</h2>
+</div>
+<p class="text-sm leading-relaxed">
+                        Institution publique au service des agents territoriaux. <br/>
+                        Hôtel de Ville, Place de la République, 75000.
+                    </p>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Liens Utiles</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Intranet Agents</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portail Emploi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">CNFPT</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">CDG Local</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Statutaire</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Grilles Indiciaires</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Calendrier Paie</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">CST (Comité Social)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Élections Pro</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Newsletter RH</h5>
+<p class="text-sm mb-4">Recevez les dernières notes de service et actualités RH.</p>
+<div class="flex gap-2">
+<input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 w-full focus:ring-1 focus:ring-primary focus:border-primary outline-none text-white text-sm" placeholder="Votre email pro" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest font-bold">
+<p>© 2024 Direction des Ressources Humaines - Tous droits réservés</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Mentions Légales</a>
+<a class="hover:text-white" href="#">Confidentialité</a>
+<a class="hover:text-white" href="#">Accessibilité</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

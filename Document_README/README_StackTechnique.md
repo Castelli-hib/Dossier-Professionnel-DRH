@@ -102,5 +102,24 @@ v
 
 ---
 
-## 4 Schéma d’architecture simplifié (texte + concept)
+## 4 Schéma d’architecture simplifié 
 
+SITE DRH
+|
+|_____	Pages publiques
+|  	|----  Accueil
+|  	|----  Pôles RH
+|  	|----  Documents utiles
+|  	|----  Prévention
+|  	|----  Temps de travail
+|  	|----   Formation & concours
+|  	|----   Carrière & rénumération
+|  	|----   Aides & dispositifs
+|  	|----   Emploi & mobilité
+|  	|___    CST
+|
+|_____ 	 Espace sécurisé
+    |----  Agent
+    |----  RH
+    |___ Admin
+ 

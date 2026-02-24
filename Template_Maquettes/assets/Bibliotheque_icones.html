@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Style Guide - Bibliothèque d'Icônes &amp; Pictogrammes</title>
+<!-- Fonts: Roboto & Gastramond (Using Serif Fallback for Gastramond as it's a specific custom font) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons: Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#10142d',
+            secondary: '#022341',
+            accent1: '#073f61',
+            accent2: '#275b80',
+          },
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+            serif: ['Gastramond', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="typography">
+    /* Fallback for Gastramond if not locally available */
+    h1, h2, h3, h4 {
+      font-family: 'Gastramond', 'Georgia', serif;
+    }
+    
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+  </style>
+<style data-purpose="layout-custom">
+    .sidebar-link.active {
+      background-color: #275b80;
+      color: white;
+    }
+    .icon-card:hover {
+      border-color: #275b80;
+      background-color: #f8fafc;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+<!-- BEGIN: Main Layout Wrapper -->
+<div class="flex min-h-screen">
+<!-- BEGIN: Sidebar Navigation -->
+<aside class="w-72 bg-primary text-white sticky top-0 h-screen overflow-y-auto hidden lg:flex flex-col" data-purpose="sidebar-navigation">
+<div class="p-8">
+<div class="text-xs uppercase tracking-widest text-accent2 font-bold mb-2">HR Portal</div>
+<h1 class="text-2xl font-serif text-white">Style Guide</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg transition-colors hover:bg-accent1 active" href="#navigation">
+<span class="material-symbols-outlined">explore</span>
+<span>Navigation</span>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg transition-colors hover:bg-accent1" href="#actions">
+<span class="material-symbols-outlined">touch_app</span>
+<span>Actions</span>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg transition-colors hover:bg-accent1" href="#professional">
+<span class="material-symbols-outlined">business_center</span>
+<span>Professionnel</span>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg transition-colors hover:bg-accent1" href="#ui">
+<span class="material-symbols-outlined">widgets</span>
+<span>User Interface</span>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg transition-colors hover:bg-accent1" href="#avatars">
+<span class="material-symbols-outlined">account_box</span>
+<span>Avatars &amp; Portraits</span>
+</a>
+</nav>
+<div class="p-6 border-t border-accent1 mt-auto">
+<div class="text-sm text-slate-400">Version 1.0.0</div>
+</div>
+</aside>
+<!-- END: Sidebar Navigation -->
+<!-- BEGIN: Main Content Area -->
+<main class="flex-1 p-8 lg:p-12 max-w-6xl mx-auto" data-purpose="main-content">
+<!-- Header Section -->
+<header class="mb-12 border-b border-slate-200 pb-8">
+<div class="flex items-center gap-2 text-accent2 mb-4">
+<span class="material-symbols-outlined">design_services</span>
+<span class="uppercase tracking-widest text-sm font-bold">Ressources Visuelles</span>
+</div>
+<h1 class="text-5xl font-serif text-primary mb-4">Bibliothèque d'Icônes &amp; Pictogrammes</h1>
+<p class="text-xl text-slate-600 max-w-3xl leading-relaxed">
+          Cette bibliothèque centralise l'ensemble des éléments iconographiques utilisés au sein du Portail RH. 
+          Nous utilisons exclusivement la collection <strong class="text-accent1">Material Symbols Outlined</strong> pour garantir une cohérence visuelle optimale.
+        </p>
+</header>
+<!-- BEGIN: Navigation Section -->
+<section class="mb-16 scroll-mt-8" data-purpose="icon-category-section" id="navigation">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h2 class="text-3xl font-serif text-secondary flex items-center gap-3">
+<span class="material-symbols-outlined text-accent2">map</span>
+            Navigation
+          </h2>
+<div class="bg-blue-50 text-accent1 text-sm px-4 py-2 rounded-full border border-blue-100 italic" data-purpose="usage-note">
+            Usage : À utiliser pour les menus de navigation, le fil d'Ariane et les interactions de déplacement.
+          </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Icon Cards -->
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">account_balance</span>
+<span class="text-xs font-mono text-slate-500">account_balance</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">home</span>
+<span class="text-xs font-mono text-slate-500">home</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">search</span>
+<span class="text-xs font-mono text-slate-500">search</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">expand_more</span>
+<span class="text-xs font-mono text-slate-500">expand_more</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">chevron_right</span>
+<span class="text-xs font-mono text-slate-500">chevron_right</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">arrow_forward</span>
+<span class="text-xs font-mono text-slate-500">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- END: Navigation Section -->
+<!-- BEGIN: Actions Section -->
+<section class="mb-16 scroll-mt-8" data-purpose="icon-category-section" id="actions">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h2 class="text-3xl font-serif text-secondary flex items-center gap-3">
+<span class="material-symbols-outlined text-accent2">bolt</span>
+            Actions
+          </h2>
+<div class="bg-blue-50 text-accent1 text-sm px-4 py-2 rounded-full border border-blue-100 italic" data-purpose="usage-note">
+            Usage : Boutons interactifs, barres d'outils et déclencheurs de processus métiers.
+          </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">download</span>
+<span class="text-xs font-mono text-slate-500">download</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">edit</span>
+<span class="text-xs font-mono text-slate-500">edit</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">delete</span>
+<span class="text-xs font-mono text-slate-500">delete</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">save</span>
+<span class="text-xs font-mono text-slate-500">save</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">upload</span>
+<span class="text-xs font-mono text-slate-500">upload</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">print</span>
+<span class="text-xs font-mono text-slate-500">print</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">share</span>
+<span class="text-xs font-mono text-slate-500">share</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">mail</span>
+<span class="text-xs font-mono text-slate-500">mail</span>
+</div>
+</div>
+</section>
+<!-- END: Actions Section -->
+<!-- BEGIN: Professional Section -->
+<section class="mb-16 scroll-mt-8" data-purpose="icon-category-section" id="professional">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h2 class="text-3xl font-serif text-secondary flex items-center gap-3">
+<span class="material-symbols-outlined text-accent2">work</span>
+            Professionnel
+          </h2>
+<div class="bg-blue-50 text-accent1 text-sm px-4 py-2 rounded-full border border-blue-100 italic" data-purpose="usage-note">
+            Usage : Concepts métiers spécifiques aux RH (contrats, paie, formation, santé).
+          </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">work</span>
+<span class="text-xs font-mono text-slate-500">work</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">support_agent</span>
+<span class="text-xs font-mono text-slate-500">support_agent</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">payments</span>
+<span class="text-xs font-mono text-slate-500">payments</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">menu_book</span>
+<span class="text-xs font-mono text-slate-500">menu_book</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">folder_managed</span>
+<span class="text-xs font-mono text-slate-500">folder_managed</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">medical_services</span>
+<span class="text-xs font-mono text-slate-500">medical_services</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">groups</span>
+<span class="text-xs font-mono text-slate-500">groups</span>
+</div>
+</div>
+</section>
+<!-- END: Professional Section -->
+<!-- BEGIN: User Interface Section -->
+<section class="mb-16 scroll-mt-8" data-purpose="icon-category-section" id="ui">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h2 class="text-3xl font-serif text-secondary flex items-center gap-3">
+<span class="material-symbols-outlined text-accent2">desktop_windows</span>
+            User Interface
+          </h2>
+<div class="bg-blue-50 text-accent1 text-sm px-4 py-2 rounded-full border border-blue-100 italic" data-purpose="usage-note">
+            Usage : État du compte, sécurité, information et indicateurs de statut.
+          </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">person</span>
+<span class="text-xs font-mono text-slate-500">person</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">account_circle</span>
+<span class="text-xs font-mono text-slate-500">account_circle</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">visibility</span>
+<span class="text-xs font-mono text-slate-500">visibility</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">lock</span>
+<span class="text-xs font-mono text-slate-500">lock</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">shield</span>
+<span class="text-xs font-mono text-slate-500">shield</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">help</span>
+<span class="text-xs font-mono text-slate-500">help</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">info</span>
+<span class="text-xs font-mono text-slate-500">info</span>
+</div>
+<div class="icon-card flex flex-col items-center justify-center p-6 bg-white border border-slate-200 rounded-xl transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">warning</span>
+<span class="text-xs font-mono text-slate-500">warning</span>
+</div>
+</div>
+</section>
+<!-- END: User Interface Section -->
+<!-- BEGIN: Avatars Section -->
+<section class="mb-16 scroll-mt-8" data-purpose="avatar-section" id="avatars">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h2 class="text-3xl font-serif text-secondary flex items-center gap-3">
+<span class="material-symbols-outlined text-accent2">portrait</span>
+            Avatars &amp; Portraits
+          </h2>
+<div class="bg-blue-50 text-accent1 text-sm px-4 py-2 rounded-full border border-blue-100 italic" data-purpose="usage-note">
+            Usage : Identification visuelle des employés et gestionnaires.
+          </div>
+</div>
+<div class="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Default Avatars -->
+<div data-purpose="default-placeholders">
+<h4 class="text-lg font-bold text-primary mb-4 border-b border-slate-100 pb-2">Placeholders par défaut</h4>
+<div class="flex flex-wrap gap-6 items-end">
+<div class="text-center">
+<div class="w-16 h-16 rounded-full bg-accent2 flex items-center justify-center text-white text-2xl font-bold mb-2">JD</div>
+<span class="text-xs text-slate-400">Initiales</span>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 mb-2">
+<span class="material-symbols-outlined" style="font-size: 32px;">person</span>
+</div>
+<span class="text-xs text-slate-400">Silhouette</span>
+</div>
+</div>
+</div>
+<!-- Size Variations -->
+<div data-purpose="avatar-sizes">
+<h4 class="text-lg font-bold text-primary mb-4 border-b border-slate-100 pb-2">Échelles</h4>
+<div class="flex flex-wrap gap-6 items-center">
+<div class="text-center">
+<img alt="Portrait Large" class="w-20 h-20 rounded-full border-2 border-white shadow-md mb-2 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC2N-X0-rVwB8TaDuQiq8Vz2s4-3qFjW1cl59KbiAQuX295Zq3VFBb9_nQzNEsnN2h6eEGFxqRCNBS0uKyNjghiVkJlRwTU-3zPPCkM-NE_m2HRSm0ufu5DEe8ShMFi5_p7MMMKlZ2UKhQhxfPwoc7G102q80XupnmlA3zyV5ItIuY9RIAo3qTEqcmOBg7O4fHex5v8I0LNKPuihA69JSexvv1WjrxgdEYAnr6UBlNteX6Lzcp3_iR9iaVfzWYbrVMGMdFx97pj1o"/>
+<span class="text-xs text-slate-400">80px (Profil)</span>
+</div>
+<div class="text-center">
+<img alt="Portrait Medium" class="w-12 h-12 rounded-full border-2 border-white shadow-sm mb-2 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Y-4KvVx0uW5LmArRPQIleApIMJdfJIPNBCY7Wuk7tf-Fkg0czlTSxPwXIOdf8goqoLNLMdzKcfDLRgAj2U1riHAdtZ6fRl-DF09-GB6ERTeljDho9cYTke9ddSI7UiW5C0G4frb2xWq-ccuMzqAjeFf_aCocOd-T7z06FLX-YIKXVeinY5-_Xub90i1zihZVvFAxKY3560QRkLujZ65B2f78wCyk6WPulKGhF78CpCMdhr2JhL9IwGlsI2eiACvSkKked6lTUvU"/>
+<span class="text-xs text-slate-400">48px (Tableau)</span>
+</div>
+<div class="text-center">
+<img alt="Portrait Small" class="w-8 h-8 rounded-full border border-white shadow-sm mb-2 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKpijps3t8i-9AuoOFayi1JvtoUK3vbFKnGSffSFaUibnXlrR11Gi9Pit56va2iEMMOj-vCeAuDK37Uneef2MAxvwY6fLCPG64FfJ-jEsaQ_GveMw1wjhe9b9fQOnu719_DinU_yCzuGwjfvfjqS876NVCVzCOpD6gmYhu9bVrwUEerTbtamEPV17Q_yucO8ckyMjBdV8Ijw_xIxXzps045P9atsskPTwvkYe2duMyrlHQBIxYAHN0xKZgSCGGLdMJQG0bqTPAQSE"/>
+<span class="text-xs text-slate-400">32px (Menu)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Avatars Section -->
+<!-- BEGIN: Footer -->
+<footer class="mt-20 pt-8 border-t border-slate-200 text-slate-400 text-sm flex justify-between">
+<p>© 2023 HR Portal Project - Guide de Style</p>
+<p>Iconographie : Material Symbols Outlined</p>
+</footer>
+<!-- END: Footer -->
+</main>
+<!-- END: Main Content Area -->
+</div>
+<!-- END: Main Layout Wrapper -->
+<!-- BEGIN: Navigation Script -->
+<script data-purpose="sidebar-behavior">
+    // Simple script to handle active states in sidebar (simulated)
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active', 'bg-accent2'));
+        this.classList.add('active', 'bg-accent2');
+      });
+    });
+  </script>
+<!-- END: Navigation Script -->
+</body></html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Guide de Style Technique - Portail RH</title>
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Material Symbols Outlined -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rh-navy': '#10142d',
+                        'rh-gov-dark': '#022341',
+                        'rh-gov-light': '#073f61',
+                        'rh-ocean': '#275b80',
+                        'rh-bg-gray': '#F6F6F8',
+                    },
+                    fontFamily: {
+                        'body': ['Roboto', 'sans-serif'],
+                        'title': ['Gastramond', 'serif'], // Fallback handled in custom styles
+                    },
+                }
+            }
+        }
+    </script>
+    <style data-purpose="typography">
+        /* Gastramond Placeholder - Simulating an elegant serif since it's a specific custom font */
+        @font-face {
+            font-family: 'Gastramond';
+            src: local('Georgia'), local('Times New Roman');
+            /* Fallback for demo */
+        }
+
+        h1 {
+            font-family: 'Gastramond', serif;
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #10142d;
+        }
+
+        h2 {
+            font-family: 'Gastramond', serif;
+            font-size: 32px;
+            line-height: 1.3;
+            font-weight: 600;
+            color: #10142d;
+        }
+
+        h3 {
+            font-family: 'Gastramond', serif;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 600;
+            color: #022341;
+        }
+
+        .text-body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+        .text-caption {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+        }
+    </style>
+    <style data-purpose="layout">
+        body {
+            background-color: #F6F6F8;
+            color: #10142d;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .sticky-header {
+            height: 64px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .doc-section {
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #E5E7EB;
+            background-color: #FFFFFF;
+        }
+
+        .doc-section:nth-of-type(even) {
+            background-color: #F6F6F8;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- BEGIN: Sticky Header -->
+    <header class="sticky-header flex items-center px-8 shadow-sm">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-rh-ocean text-[32px]">folder_managed</span>
+            <h1 class="text-xl font-bold tracking-tight m-0"
+                style="font-size: 20px; font-family: 'Roboto', sans-serif;">Guide de Style Technique - Portail RH</h1>
+        </div>
+    </header>
+    <!-- END: Sticky Header -->
+    <main class="main-container">
+        <!-- BEGIN: Palette de Couleurs -->
+        <section class="doc-section" data-purpose="color-palette">
+            <div class="mb-10">
+                <h2 class="mb-2">01. Palette de Couleurs</h2>
+                <p class="text-slate-600">L'identité visuelle repose sur des variations de bleus institutionnels et
+                    profonds pour assurer professionnalisme et lisibilité.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Primary Navy -->
+                <div class="flex flex-col gap-3">
+                    <div class="h-32 w-full rounded-lg shadow-inner bg-[#10142d] border border-gray-200"></div>
+                    <div>
+                        <span class="font-bold block">Primary Deep Navy</span>
+                        <code class="text-sm text-rh-ocean">#10142d</code>
+                    </div>
+                </div>
+                <!-- Gov Blue Dark -->
+                <div class="flex flex-col gap-3">
+                    <div class="h-32 w-full rounded-lg shadow-inner bg-[#022341] border border-gray-200"></div>
+                    <div>
+                        <span class="font-bold block">Gov Blue Dark</span>
+                        <code class="text-sm text-rh-ocean">#022341</code>
+                    </div>
+                </div>
+                <!-- Gov Blue Light -->
+                <div class="flex flex-col gap-3">
+                    <div class="h-32 w-full rounded-lg shadow-inner bg-[#073f61] border border-gray-200"></div>
+                    <div>
+                        <span class="font-bold block">Gov Blue Light</span>
+                        <code class="text-sm text-rh-ocean">#073f61</code>
+                    </div>
+                </div>
+                <!-- Ocean / Main Action -->
+                <div class="flex flex-col gap-3">
+                    <div class="h-32 w-full rounded-lg shadow-inner bg-[#275b80] border border-gray-200"></div>
+                    <div>
+                        <span class="font-bold block">Ocean / Main Action</span>
+                        <code class="text-sm text-rh-ocean">#275b80</code>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-center p-4 rounded border bg-[#F6F6F8]">
+                    <div class="w-12 h-12 rounded border bg-[#F6F6F8] mr-4 shadow-sm"></div>
+                    <div>
+                        <span class="font-medium">Background Gray</span>
+                        <code class="block text-xs">#F6F6F8</code>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 rounded border bg-white">
+                    <div class="w-12 h-12 rounded border bg-white mr-4 shadow-sm"></div>
+                    <div>
+                        <span class="font-medium">Surface White</span>
+                        <code class="block text-xs">#FFFFFF</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Palette de Couleurs -->
+        <!-- BEGIN: Typographie -->
+        <section class="doc-section" data-purpose="typography-spec">
+            <div class="mb-10">
+                <h2 class="mb-2">02. Typographie</h2>
+                <p class="text-slate-600">Mélange d'élégance classique pour les titres et de modernité fonctionnelle
+                    pour l'interface.</p>
+            </div>
+            <div class="space-y-12">
+                <!-- Font Families -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="p-8 border rounded-xl bg-white">
+                        <span class="text-xs uppercase tracking-widest text-slate-400 mb-4 block">Headings &amp;
+                            Titles</span>
+                        <div class="text-5xl mb-4" style="font-family: 'Gastramond', serif;">Gastramond</div>
+                        <p class="text-sm text-slate-500 italic">Serif, élégant, utilisé pour les titres de page et les
+                            en-têtes majeurs.</p>
+                    </div>
+                    <div class="p-8 border rounded-xl bg-white">
+                        <span class="text-xs uppercase tracking-widest text-slate-400 mb-4 block">Body &amp; UI
+                            Elements</span>
+                        <div class="font-['Roboto'] text-5xl mb-4">Roboto</div>
+                        <p class="text-sm text-slate-500 italic">Sans-serif, propre, utilisé pour la lecture de données
+                            et les contrôles UI.</p>
+                    </div>
+                </div>
+                <!-- Hierarchy -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200">
+                                <th class="py-4 font-medium text-slate-400 uppercase text-xs">Niveau</th>
+                                <th class="py-4 font-medium text-slate-400 uppercase text-xs">Exemple</th>
+                                <th class="py-4 font-medium text-slate-400 uppercase text-xs text-right">Spécification
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="py-6 align-middle text-slate-500">H1</td>
+                                <td class="py-6">
+                                    <h1>Titre de Page Principal</h1>
+                                </td>
+                                <td class="py-6 text-right text-sm">Gastramond Bold / 48px</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 align-middle text-slate-500">H2</td>
+                                <td class="py-6">
+                                    <h2>Sous-titre de Section</h2>
+                                </td>
+                                <td class="py-6 text-right text-sm">Gastramond SemiBold / 32px</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 align-middle text-slate-500">H3</td>
+                                <td class="py-6">
+                                    <h3>Titre de Composant</h3>
+                                </td>
+                                <td class="py-6 text-right text-sm">Gastramond Medium / 24px</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 align-middle text-slate-500">Body</td>
+                                <td class="py-6">
+                                    <p class="text-body">Texte courant utilisé pour les descriptions et les paragraphes
+                                        informatifs.</p>
+                                </td>
+                                <td class="py-6 text-right text-sm">Roboto Regular / 16px</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 align-middle text-slate-500">Caption</td>
+                                <td class="py-6"><span class="text-caption text-slate-500 uppercase font-medium">Légende
+                                        ou métadonnée</span></td>
+                                <td class="py-6 text-right text-sm">Roboto Medium / 12px</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- END: Typographie -->
+        <!-- BEGIN: Composants d'Interface -->
+        <section class="doc-section" data-purpose="ui-components">
+            <div class="mb-10">
+                <h2 class="mb-2">03. Composants d'Interface</h2>
+                <p class="text-slate-600">Éléments interactifs standardisés pour la cohérence du parcours utilisateur.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Buttons -->
+                <div data-purpose="buttons-showcase">
+                    <h4 class="text-sm font-bold uppercase text-slate-400 mb-6">Boutons</h4>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <button
+                            class="bg-rh-navy text-white px-6 py-2.5 rounded-md font-medium hover:opacity-90 transition-all min-w-[120px]">Primary</button>
+                        <button
+                            class="bg-rh-ocean text-white px-6 py-2.5 rounded-md font-medium hover:opacity-90 transition-all min-w-[120px]">Secondary</button>
+                        <button
+                            class="border-2 border-rh-navy text-rh-navy px-6 py-2.5 rounded-md font-medium hover:bg-slate-50 transition-all min-w-[120px]">Outline</button>
+                        <button
+                            class="text-rh-gov-light px-4 py-2.5 rounded-md font-medium hover:bg-slate-100 transition-all">Ghost</button>
+                    </div>
+                </div>
+                <!-- Badges -->
+                <div data-purpose="badges-showcase">
+                    <h4 class="text-sm font-bold uppercase text-slate-400 mb-6">Badges de Statut</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-rh-navy text-white">PUBLIC</span>
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-bold bg-rh-gov-light text-white">RESTREINT</span>
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-rh-ocean border border-rh-ocean">VALIDÉ</span>
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-bold bg-slate-200 text-slate-600">BROUILLON</span>
+                    </div>
+                </div>
+                <!-- Inputs -->
+                <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8" data-purpose="inputs-showcase">
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-sm font-medium text-rh-gov-dark">Nom de l'utilisateur</label>
+                        <input class="rounded-md border-gray-300 focus:ring-rh-ocean focus:border-rh-ocean w-full"
+                            placeholder="Entrez le nom" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-sm font-medium text-rh-gov-dark">Département</label>
+                        <select class="rounded-md border-gray-300 focus:ring-rh-ocean focus:border-rh-ocean w-full">
+                            <option>Ressources Humaines</option>
+                            <option>Informatique</option>
+                            <option>Finance</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-sm font-medium text-rh-gov-dark">Recherche globale</label>
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                            <input
+                                class="pl-10 rounded-md border-gray-300 focus:ring-rh-ocean focus:border-rh-ocean w-full"
+                                placeholder="Rechercher..." type="text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Composants d'Interface -->
+        <!-- BEGIN: Iconographie -->
+        <section class="doc-section" data-purpose="iconography">
+            <div class="mb-10">
+                <h2 class="mb-2">04. Iconographie &amp; Pictogrammes</h2>
+                <p class="text-slate-600">Bibliothèque visuelle basée sur Material Symbols Outlined pour une
+                    identification rapide des actions.</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-8 mb-16">
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">account_balance</span>
+                    <span class="text-[10px] text-slate-500 font-mono">account_balance</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">search</span>
+                    <span class="text-[10px] text-slate-500 font-mono">search</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">person</span>
+                    <span class="text-[10px] text-slate-500 font-mono">person</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">medical_services</span>
+                    <span class="text-[10px] text-slate-500 font-mono">medical_services</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">work</span>
+                    <span class="text-[10px] text-slate-500 font-mono">work</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">payments</span>
+                    <span class="text-[10px] text-slate-500 font-mono">payments</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">menu_book</span>
+                    <span class="text-[10px] text-slate-500 font-mono">menu_book</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-rh-navy text-[32px]">folder_managed</span>
+                    <span class="text-[10px] text-slate-500 font-mono">folder_managed</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 border rounded bg-white flex items-center justify-between">
+                    <span class="text-sm font-medium">Micro / Standard</span>
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="material-symbols-outlined text-[16px] border border-dashed border-slate-300">person</span>
+                        <span
+                            class="material-symbols-outlined text-[24px] border border-dashed border-slate-300">person</span>
+                    </div>
+                    <span class="text-xs text-slate-400">16px / 24px</span>
+                </div>
+                <div class="p-6 border rounded bg-white flex items-center justify-between">
+                    <span class="text-sm font-medium">Header / Feature</span>
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="material-symbols-outlined text-[32px] border border-dashed border-slate-300">person</span>
+                        <span
+                            class="material-symbols-outlined text-[48px] border border-dashed border-slate-300">person</span>
+                    </div>
+                    <span class="text-xs text-slate-400">32px / 48px</span>
+                </div>
+                <div class="p-6 border rounded bg-white flex items-center justify-between">
+                    <span class="text-sm font-medium">Illustrations</span>
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="material-symbols-outlined text-[64px] border border-dashed border-slate-300">person</span>
+                    </div>
+                    <span class="text-xs text-slate-400">64px</span>
+                </div>
+            </div>
+        </section>
+        <!-- END: Iconographie -->
+        <!-- BEGIN: Structure & Layout -->
+        <section class="doc-section" data-purpose="layout-grid">
+            <div class="mb-10">
+                <h2 class="mb-2">05. Structure &amp; Layout</h2>
+                <p class="text-slate-600">Règles de disposition pour garantir une expérience utilisateur fluide sur tous
+                    les écrans.</p>
+            </div>
+            <div class="space-y-8">
+                <!-- Grid Spec -->
+                <div class="grid grid-cols-12 gap-4 h-24 mb-6">
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        1</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        2</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        3</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        4</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        5</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        6</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        7</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        8</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        9</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        10</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        11</div>
+                    <div
+                        class="col-span-1 bg-blue-50 border border-blue-200 rounded flex items-center justify-center text-[10px] text-blue-300">
+                        12</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rh-ocean"></span>
+                            <span class="text-sm"><strong>Max-width :</strong> 1280px centré pour le contenu
+                                principal.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rh-ocean"></span>
+                            <span class="text-sm"><strong>Sticky Header :</strong> Hauteur fixe de 64px avec ombre
+                                légère.</span>
+                        </li>
+                    </ul>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rh-ocean"></span>
+                            <span class="text-sm"><strong>Grille :</strong> Système 12 colonnes responsive
+                                Tailwind.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rh-ocean"></span>
+                            <span class="text-sm"><strong>Espacement :</strong> Incréments de 8px (p-2, p-4, m-8,
+                                etc.).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- END: Structure & Layout -->
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer class="bg-rh-navy text-white py-12 px-8">
+        <div class="main-container flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 opacity-80">
+                <span class="material-symbols-outlined">folder_managed</span>
+                <span class="font-medium tracking-wide">PORTAIL RH - DIRECTION TECHNIQUE</span>
+            </div>
+            <div class="text-xs text-slate-400">
+                © 2023 - Document de référence interne. Toute reproduction interdite.
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+</body>
+
+</html>

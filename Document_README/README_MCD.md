@@ -409,7 +409,7 @@ Règle	    Statut	        Justification
 un service dépend d’une direction
 id_agent → direction → service
 Dépendance transitive potentielle = Une dépendance transitive existe lorsqu’un attribut dépend d’un autre attribut qui dépend lui-même de la clé primaire.
--- id_agent → direction
+-- wid_agent → direction
 -- id_agent → service
 Mais dans la réalité
 direction → service

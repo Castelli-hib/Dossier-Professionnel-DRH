@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HR Portal - Upload New Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#99b4b1",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#10142d",
+                        "surface-dark": "#1a1f3d",
+                        "border-dark": "#99b4b1",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 bg-slate-900 dark:bg-background-dark border-r border-slate-200 dark:border-primary/20 flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined">business_center</span>
+                </div>
+                <div>
+                    <h1 class="text-white text-base font-bold leading-none">Publication RH</h1>
+                    <p class="text-slate-400 text-xs mt-1">Admin Workspace</p>
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-2 mt-4">
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors"
+                    href="dashboard_RH.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="text-sm font-medium">Tableau de board</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 bg-primary/20 text-primary rounded-xl transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">description</span>
+                    <span class="text-sm font-medium">Documents</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="text-sm font-medium">Unités RH</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="text-sm font-medium">Publications</span>
+                </a>
+                <div class="pt-4 mt-4 border-t border-slate-800">
+                    <a class="flex items-center gap-3 px-3 py-2 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="text-sm font-medium">Paramètres</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="p-4 bg-slate-800/50 dark:bg-primary/5 m-4 rounded-xl">
+                <div class="flex items-center gap-3">
+                    <img alt="User profile" class="w-10 h-10 rounded-full border-2 border-primary/30"
+                        data-alt="Professional portrait of a male HR manager"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7s617zyUGp2vM_eF18GNLOv5OhVhqaelqrxh0_hZJOHHnsxp-mqyGVWnxWZYQWjbpr3ZbreIloIkubDbKT6kNw01unRsF92bY6-RORa2hefwD_FiTrPXKnNHP_Ys-NfaxzAexM99N2cCFmR4bRYRXNOZdbGMtcMgD6sRmvo7cEi80sRNDohw8e0fJh30oruJ7ZHlDCVnq3xZZ7CqgKe3dZJYglhKf8JvRPjcIXm3uFyx3IQB1jBx4HW06pHlstPzL53RjBh9Rvpk" />
+                    <div class="overflow-hidden">
+                        <p class="text-white text-sm font-semibold truncate">Alex Rivera</p>
+                        <p class="text-slate-400 text-xs truncate">Senior HR Admin</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            <!-- Header -->
+            <header
+                class="h-16 border-b border-slate-200 dark:border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md flex items-center justify-between px-8 sticky top-0 z-10">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+                        <span>Documents</span>
+                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                        <span class="text-slate-900 dark:text-slate-100 font-medium">Upload New</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                        <input
+                            class="pl-10 pr-4 py-1.5 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary w-64"
+                            placeholder="Search documents..." type="text" />
+                    </div>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                </div>
+            </header>
+            <!-- Page Content -->
+            <div class="p-8 max-w-5xl mx-auto w-full">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Upload New
+                        Document</h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-2">Ingest and categorize new files for the
+                        organization's knowledge base.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left: Upload and Form -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Drop Zone -->
+                        <div
+                            class="bg-white dark:bg-slate-900/50 p-1 border-2 border-dashed border-slate-300 dark:border-primary/30 rounded-xl hover:border-primary transition-colors group">
+                            <div class="flex flex-col items-center justify-center py-12 px-6 text-center">
+                                <div
+                                    class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-4xl">upload_file</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Drag and drop files
+                                    here</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Supported formats: PDF, DOCX,
+                                    XLSX. Max size: 25MB</p>
+                                <button
+                                    class="mt-6 px-6 py-2 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                                    Browse Files
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Metadata Form -->
+                        <div
+                            class="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden">
+                            <div class="p-6 border-b border-slate-200 dark:border-primary/10 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">edit_note</span>
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100">Document Metadata</h3>
+                            </div>
+                            <div class="p-6 grid grid-cols-2 gap-6">
+                                <div class="col-span-2">
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Document
+                                        Title</label>
+                                    <input
+                                        class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 px-4 py-2.5"
+                                        placeholder="e.g., Q4 Employee Handbook Update" type="text" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Department
+                                        / Pole</label>
+                                    <select
+                                        class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 px-4 py-2.5">
+                                        <option>Engineering</option>
+                                        <option>Human Resources</option>
+                                        <option>Marketing & Sales</option>
+                                        <option>Finance</option>
+                                        <option>Legal</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Document
+                                        Type</label>
+                                    <select
+                                        class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 px-4 py-2.5">
+                                        <option>Policy</option>
+                                        <option>Contract</option>
+                                        <option>Training Material</option>
+                                        <option>Onboarding</option>
+                                    </select>
+                                </div>
+                                <div class="col-span-1">
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Version</label>
+                                    <div class="flex gap-2">
+                                        <input
+                                            class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 px-4 py-2.5"
+                                            step="0.1" type="number" value="1.0" />
+                                        <button
+                                            class="bg-slate-100 dark:bg-slate-800 px-3 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined">autorenew</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Access Control -->
+                    <div class="space-y-6">
+                        <div
+                            class="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden">
+                            <div class="p-6 border-b border-slate-200 dark:border-primary/10 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">lock</span>
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100">Access Control</h3>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p
+                                    class="text-xs text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider font-bold">
+                                    Authorized Roles</p>
+                                <label
+                                    class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-primary/5 transition-colors cursor-pointer group">
+                                    <input checked=""
+                                        class="rounded text-primary focus:ring-primary bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-600"
+                                        type="checkbox" />
+                                    <div class="flex-1">
+                                        <p class="text-sm font-bold text-slate-900 dark:text-slate-100">Administrator
+                                        </p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Full control &
+                                            deletion</p>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-primary/5 transition-colors cursor-pointer group">
+                                    <input checked=""
+                                        class="rounded text-primary focus:ring-primary bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-600"
+                                        type="checkbox" />
+                                    <div class="flex-1">
+                                        <p class="text-sm font-bold text-slate-900 dark:text-slate-100">HR Personnel</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Can view & edit
+                                            metadata</p>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-primary/5 transition-colors cursor-pointer group">
+                                    <input
+                                        class="rounded text-primary focus:ring-primary bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-600"
+                                        type="checkbox" />
+                                    <div class="flex-1">
+                                        <p class="text-sm font-bold text-slate-900 dark:text-slate-100">All Staff</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Read-only view access</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-6 border border-primary/20">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary">info</span>
+                                <div class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    <strong>Note:</strong> All uploaded documents are automatically encrypted and
+                                    scanned for malware before being stored in the secure vault.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Action Footer -->
+                <div
+                    class="mt-12 flex items-center justify-end gap-4 border-t border-slate-200 dark:border-primary/10 pt-8 pb-12">
+                    <button
+                        class="px-6 py-2.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Cancel & Discard
+                    </button>
+                    <button
+                        class="px-8 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
+                        Upload Document
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

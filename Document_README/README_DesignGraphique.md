@@ -220,14 +220,3 @@ Elle détaille l'identité du responsable de traitement, les coordonnées du Dé
 ### STYLES
 @apply n’est pas du CSS standard. C’est une directive Tailwind, traitée uniquement au moment du build par PostCSS + Tailwind.
 
-**reste a faire**
-reprendre
-
-finaliser l'interface par une vue de la Barre de navigation dynamique avec ses illustrations
-Mettre a jour la page d'accueil et le footer
-Genérer des variantes
-faire en mobilfirst
-mentions legales
-RGAA
-
-Reprendre diagramme de classe
