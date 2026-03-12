@@ -1,0 +1,52 @@
+services:
+
+  database:
+    image: mysql:8
+    container_name: drh_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: drh
+      MYSQL_USER: drh_user
+      MYSQL_PASSWORD: drh_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  php:
+    build: .
+    container_name: drh_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./symfony:/var/www/html
+    depends_on:
+      - database
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: drh_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+    depends_on:
+      - database
+
+  web:
+    image: nginx:latest
+    container_name: drh_nginx
+    restart: unless-stopped
+    ports:
+      - "8888:80"
+    volumes:
+      - ./symfony:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php
+
+volumes:
+  db_data:
