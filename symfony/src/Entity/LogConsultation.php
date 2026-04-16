@@ -32,11 +32,29 @@ class LogConsultation
     #[ORM\Column(type: 'string', length: 100)]
     private ?string $origine = null;
 
+    #[ORM\ManyToOne]
+    private ?Document $document = null;
+
+    #[ORM\ManyToOne]
+    private ?ActualiteRH $actualite = null;
+
     // ===== Getters / Setters =====
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setDocument(?Document $document): static
+    {
+        $this->document = $document;
+
+        if ($document) {
+            $this->type_ressource = 'document';
+            
+        }
+
+        return $this;
     }
 
     public function getDateConsultation(): ?\DateTimeInterface
@@ -103,5 +121,10 @@ class LogConsultation
     {
         $this->origine = $origine;
         return $this;
+    }
+
+    public function __construct()
+    {
+        $this->date_consultation = new \DateTime();
     }
 }

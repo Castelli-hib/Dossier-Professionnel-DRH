@@ -6,6 +6,9 @@ use App\Repository\ActualiteRHRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Enum\StatutActualite;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: ActualiteRHRepository::class)]
 class ActualiteRH
@@ -15,59 +18,106 @@ class ActualiteRH
     #[ORM\Column]
     private ?int $id = null;
 
-    // Titre
+    // ======= Contenu =======
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message: "Le titre est requis.")]
     private ?string $titre = null;
 
-    // Contenu
     #[ORM\Column(type: Types::TEXT)]
     #[Assert\NotBlank(message: "Le contenu est requis.")]
     private ?string $contenu = null;
 
-    // Visibilité publique (intranet)
     #[ORM\Column]
     private bool $est_public = false;
 
-    // Statut éditorial
-    #[ORM\Column(length: 50)]
-    private string $statut = 'brouillon';
+    #[ORM\Column(type: 'string', enumType: StatutActualite::class)]
+    private StatutActualite $statut = StatutActualite::BROUILLON;
 
-    // Auteur RH
-    #[ORM\ManyToOne(inversedBy: 'actualiteRHs')]
+    // ======= Relations =======
+    #[ORM\ManyToOne(inversedBy: 'actualitesRedigees')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Agent $auteur = null;
 
-    // Validateur (Direction / DRH)
-    #[ORM\ManyToOne]
+    #[ORM\ManyToOne(targetEntity: Agent::class, inversedBy: 'actualitesValidees')]
+    #[ORM\JoinColumn(nullable: true)]
     private ?Agent $validateur = null;
 
-    // Date création
+    // simple réfrérence pour éviter les problèmes de cascade 
+    #[ORM\OneToMany(mappedBy: 'actualite', targetEntity: Document::class)]
+    private Collection $documents;
+
+    // #[ORM\OneToMany(mappedBy: 'actualite', targetEntity: Document::class, cascade: ['persist', 'remove'])]
+    // private Collection $documents;
+
+    // ======= Dates =======
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date_creation = null;
 
-    // Date publication réelle
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $date_publication = null;
 
-    // Date archivage
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $date_archivage = null;
 
+    // ======= Constructeur =======
     public function __construct()
     {
         $this->date_creation = new \DateTime();
+        $this->documents = new ArrayCollection();
+        
     }
 
-    // =============================
-    // Getters / Setters
-    // =============================
+    // ======= Flux métier =======
+    public function valider(): void
+    {
+        if ($this->statut !== StatutActualite::BROUILLON) {
+            throw new \LogicException('Seul un brouillon peut être mis en validation.');
+        }
+        $this->statut = StatutActualite::EN_VALIDATION;
+    }
 
+    public function publier(): void
+    {
+        if ($this->statut !== StatutActualite::EN_VALIDATION) {
+            throw new \LogicException('Une actualité doit être validée avant publication.');
+        }
+        $this->statut = StatutActualite::PUBLIEE;
+        $this->date_publication = new \DateTime();
+        $this->est_public = true; // automatiquement public après publication
+    }
+
+    public function archiver(): void
+    {
+        $this->statut = StatutActualite::ARCHIVEE;
+        $this->date_archivage = new \DateTime();
+        $this->est_public = false; // plus visible
+    }
+
+    // ======= Relation Document =======
+    public function addDocument(Document $document): static
+    {
+        if (!$this->documents->contains($document)) {
+            $this->documents->add($document);
+            $document->setActualite($this);
+        }
+        return $this;
+    }
+
+    public function removeDocument(Document $document): static
+    {
+        if ($this->documents->removeElement($document)) {
+            if ($document->getActualite() === $this) {
+                $document->setActualite(null);
+            }
+        }
+        return $this;
+    }
+
+    // ======= Getters / Setters =======
     public function getId(): ?int
     {
         return $this->id;
     }
-
     public function getTitre(): ?string
     {
         return $this->titre;
@@ -77,7 +127,6 @@ class ActualiteRH
         $this->titre = $titre;
         return $this;
     }
-
     public function getContenu(): ?string
     {
         return $this->contenu;
@@ -87,27 +136,19 @@ class ActualiteRH
         $this->contenu = $contenu;
         return $this;
     }
-
     public function isEstPublic(): bool
     {
         return $this->est_public;
     }
-    public function setEstPublic(bool $est_public): static
-    {
-        $this->est_public = $est_public;
-        return $this;
-    }
-
-    public function getStatut(): string
+    public function getStatut(): StatutActualite
     {
         return $this->statut;
     }
-    public function setStatut(string $statut): static
+    public function setStatut(StatutActualite $statut): static
     {
         $this->statut = $statut;
         return $this;
     }
-
     public function getAuteur(): ?Agent
     {
         return $this->auteur;
@@ -117,7 +158,6 @@ class ActualiteRH
         $this->auteur = $auteur;
         return $this;
     }
-
     public function getValidateur(): ?Agent
     {
         return $this->validateur;
@@ -127,29 +167,20 @@ class ActualiteRH
         $this->validateur = $validateur;
         return $this;
     }
-
     public function getDateCreation(): ?\DateTimeInterface
     {
         return $this->date_creation;
     }
-
     public function getDatePublication(): ?\DateTimeInterface
     {
         return $this->date_publication;
     }
-    public function setDatePublication(?\DateTimeInterface $date_publication): static
-    {
-        $this->date_publication = $date_publication;
-        return $this;
-    }
-
     public function getDateArchivage(): ?\DateTimeInterface
     {
         return $this->date_archivage;
     }
-    public function setDateArchivage(?\DateTimeInterface $date_archivage): static
-    {
-        $this->date_archivage = $date_archivage;
-        return $this;
-    }
+    // public function getDocuments(): Collection
+    // {
+    //     return $this->documents;
+    // }
 }

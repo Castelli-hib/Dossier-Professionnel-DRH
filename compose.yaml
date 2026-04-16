@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
-      - ./symfony:/var/www/html
+      - ./Symfony:/var/www/html
     depends_on:
       - database
 
@@ -43,7 +43,7 @@ services:
     ports:
       - "8888:80"
     volumes:
-      - ./symfony:/var/www/html
+      - ./Symfony:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - php

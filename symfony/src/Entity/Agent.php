@@ -2,6 +2,12 @@
 
 namespace App\Entity;
 
+use App\Enum\Direction;
+use App\Enum\Pole;
+use App\Entity\Service;
+use App\Entity\Document;
+use App\Entity\ActualiteRH;
+use App\Entity\LogConsultation;
 use App\Repository\AgentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -31,12 +37,14 @@ class Agent
     #[Assert\Email(message: "L'adresse email '{{ value }}' n'est pas valide.")]
     private ?string $email = null;
 
-    #[ORM\Column(length: 50)]
-    #[Assert\Choice(
-        choices: ['AGENT', 'RH', 'ADMIN', 'DIRECTION'],
-        message: "Rôle invalide."
-    )]
-    private ?string $role = null;
+    // NOUVEAU SYSTEME DE ROLES (Symfony Security)
+    #[ORM\Column(type: 'json')]
+    private array $roles = [];
+
+    // CONSTANTES (propre et réutilisable partout)
+    public const ROLE_AGENT = 'ROLE_AGENT';
+    public const ROLE_RH = 'ROLE_RH';
+    public const ROLE_ADMIN = 'ROLE_ADMIN';
 
     // ================= Organisation =================
 
@@ -44,14 +52,13 @@ class Agent
     #[Assert\NotBlank]
     private ?string $poste = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $service = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $direction = null;
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Service $service = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $pole = null;
+    #[ORM\Column(enumType: Pole::class)]
+    private ?Pole $pole = null;
 
     // ================= Relations =================
 
@@ -67,12 +74,22 @@ class Agent
     #[ORM\OneToMany(mappedBy: 'utilisateur', targetEntity: LogConsultation::class, orphanRemoval: true)]
     private Collection $logConsultations;
 
+    // #[ORM\ManyToOne(targetEntity: Service::class, inversedBy: 'agents')]
+    // #[ORM\JoinColumn(nullable: true)]
+    // private ?Service $service = null;
+
+
+    // ================= Constructeur =================
+
     public function __construct()
     {
         $this->documents = new ArrayCollection();
         $this->actualitesRedigees = new ArrayCollection();
         $this->actualitesValidees = new ArrayCollection();
         $this->logConsultations = new ArrayCollection();
+
+        // ROLE PAR DEFAUT (IMPORTANT)
+        $this->roles = [self::ROLE_AGENT];
     }
 
     // ================= Getters / Setters =================
@@ -112,15 +129,31 @@ class Agent
         return $this;
     }
 
-    public function getRole(): ?string
+    // ================= ROLES =================
+
+    public function getRoles(): array
     {
-        return $this->role;
+        $roles = $this->roles;
+
+        // garantit toujours au moins ROLE_AGENT
+        $roles[] = self::ROLE_AGENT;
+
+        return array_unique($roles);
     }
-    public function setRole(string $role): static
+
+    public function setRoles(array $roles): static
     {
-        $this->role = $role;
+        $this->roles = $roles;
         return $this;
     }
+
+    // MÉTHODE PRATIQUE
+    public function hasRole(string $role): bool
+    {
+        return in_array($role, $this->getRoles());
+    }
+
+    // ================= Organisation =================
 
     public function getPoste(): ?string
     {
@@ -132,31 +165,22 @@ class Agent
         return $this;
     }
 
-    public function getService(): ?string
+    public function getService(): ?Service
     {
         return $this->service;
     }
-    public function setService(?string $service): static
+    public function setService(?Service $service): static
     {
         $this->service = $service;
         return $this;
     }
 
-    public function getDirection(): ?string
-    {
-        return $this->direction;
-    }
-    public function setDirection(?string $direction): static
-    {
-        $this->direction = $direction;
-        return $this;
-    }
-
-    public function getPole(): ?string
+    public function getPole(): ?Pole
     {
         return $this->pole;
     }
-    public function setPole(?string $pole): static
+
+    public function setPole(?Pole $pole): static
     {
         $this->pole = $pole;
         return $this;
@@ -173,22 +197,22 @@ class Agent
     {
         if (!$this->documents->contains($document)) {
             $this->documents->add($document);
-            $document->setAgent($this);
+
+            if ($document->getAgent() !== $this) {
+                $document->setAgent($this);
+            }
         }
+
         return $this;
     }
 
     public function removeDocument(Document $document): static
     {
-        if ($this->documents->removeElement($document)) {
-            if ($document->getAgent() === $this) {
-                $document->setAgent(null);
-            }
-        }
+        $this->documents->removeElement($document);
         return $this;
     }
 
-    // ================= Actualités rédigées =================
+    // ================= Actualités =================
 
     public function getActualitesRedigees(): Collection
     {
@@ -206,15 +230,9 @@ class Agent
 
     public function removeActualiteRedigee(ActualiteRH $actualite): static
     {
-        if ($this->actualitesRedigees->removeElement($actualite)) {
-            if ($actualite->getAuteur() === $this) {
-                $actualite->setAuteur(null);
-            }
-        }
+        $this->actualitesRedigees->removeElement($actualite);
         return $this;
     }
-
-    // ================= Actualités validées =================
 
     public function getActualitesValidees(): Collection
     {
@@ -240,7 +258,7 @@ class Agent
         return $this;
     }
 
-    // ================= LogConsultations =================
+    // ================= Logs =================
 
     public function getLogConsultations(): Collection
     {
@@ -258,8 +276,9 @@ class Agent
 
     public function removeLogConsultation(LogConsultation $log): static
     {
-        // On supprime juste de la collection, on ne met plus null
         $this->logConsultations->removeElement($log);
         return $this;
     }
+
+   
 }
